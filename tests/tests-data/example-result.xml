@@ -1,0 +1,603 @@
+<FlexQueryResponse queryName="Slack updates" type="AF">
+<FlexStatements count="11">
+<FlexStatement accountId="U1812119" fromDate="20170517" toDate="20170517" period="LastBusinessDay" whenGenerated="20170518;114734">
+<AccountInformation accountId="U1812119" acctAlias="Commo 119" currency="EUR" name="Warwyck Multi Calex" />
+<EquitySummaryInBase>
+<EquitySummaryByReportDateInBase total="1012563.976647199" totalLong="1012563.976647199" totalShort="0" reportDate="20170516" />
+<EquitySummaryByReportDateInBase total="973032.904882946" totalLong="973032.904882946" totalShort="0" reportDate="20170517" />
+</EquitySummaryInBase>
+<ChangeInNAV mtm="-39536.201878" startingValue="1012563.976647199" endingValue="973032.904882946" />
+<MTMPerformanceSummaryInBase>
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="CCH8" description="CC 15MAR18" underlyingSymbol="CC" multiplier="10" strike="" expiry="20180315" putCall="" total="-50179.36" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="CCU7" description="CC 15SEP17" underlyingSymbol="CC" multiplier="10" strike="" expiry="20170915" putCall="" total="114695.68" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="CCZ7" description="CC 14DEC17" underlyingSymbol="CC" multiplier="10" strike="" expiry="20171214" putCall="" total="-53763.6" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="CSCK7" description="CSC MAY17" underlyingSymbol="CSC" multiplier="20000" strike="" expiry="20170601" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="CSCQ7" description="CSC 30AUG17" underlyingSymbol="CSC" multiplier="20000" strike="" expiry="20170830" putCall="" total="985.666" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="CSCU7" description="CSC SEP17" underlyingSymbol="CSC" multiplier="20000" strike="" expiry="20171004" putCall="" total="1075.272" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="CTH8" description="CT 14MAR18" underlyingSymbol="CT" multiplier="50000" strike="" expiry="20180314" putCall="" total="-1630.8292" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="CTZ7" description="CT 13DEC17" underlyingSymbol="CT" multiplier="50000" strike="" expiry="20171213" putCall="" total="752.6904" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="CTZ8" description="CT 13DEC18" underlyingSymbol="CT" multiplier="50000" strike="" expiry="20181213" putCall="" total="761.651" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="DYQ7" description="DY 30AUG17" underlyingSymbol="DY" multiplier="44000" strike="" expiry="20170830" putCall="" total="-5854.85604" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="DYU7" description="DY SEP17" underlyingSymbol="DY" multiplier="44000" strike="" expiry="20171004" putCall="" total="-1478.499" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="DYV7" description="DY OCT17" underlyingSymbol="DY" multiplier="44000" strike="" expiry="20171101" putCall="" total="-9.85666" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="KCH8" description="KC 20MAR18" underlyingSymbol="KC" multiplier="37500" strike="" expiry="20180320" putCall="" total="-2.4731256" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="KCN8" description="KC 20JUL18" underlyingSymbol="KC" multiplier="37500" strike="" expiry="20180720" putCall="" total="-907.26075" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="KCU8" description="KC 19SEP18" underlyingSymbol="KC" multiplier="37500" strike="" expiry="20180919" putCall="" total="904.7876244" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="LCV7" description="LE 31OCT17" underlyingSymbol="LE" multiplier="40000" strike="" expiry="20171031" putCall="" total="112903.56" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="LCZ7" description="LE 29DEC17" underlyingSymbol="LE" multiplier="40000" strike="" expiry="20171229" putCall="" total="-119175.98" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="LHM7" description="HE 16JUN17" underlyingSymbol="HE" multiplier="40000" strike="" expiry="20170616" putCall="" total="-9408.63" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="LHN7" description="HE 19JUL17" underlyingSymbol="HE" multiplier="40000" strike="" expiry="20170719" putCall="" total="-25537.71" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="SM   DEC 17" description="ZM 14DEC17" underlyingSymbol="ZM" multiplier="100" strike="" expiry="20171214" putCall="" total="13799.324" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="SM   OCT 17" description="ZM 13OCT17" underlyingSymbol="ZM" multiplier="100" strike="" expiry="20171013" putCall="" total="-13799.324" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ZS   JAN 18" description="ZS 12JAN18" underlyingSymbol="ZS" multiplier="5000" strike="" expiry="20180112" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ZS   NOV 17" description="ZS 14NOV17" underlyingSymbol="ZS" multiplier="5000" strike="" expiry="20171114" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ZW   JUL 17" description="ZW 14JUL17" underlyingSymbol="ZW" multiplier="5000" strike="" expiry="20170714" putCall="" total="4928.33" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ZW   MAR 19" description="ZW 14MAR19" underlyingSymbol="ZW" multiplier="5000" strike="" expiry="20190314" putCall="" total="-2240.15" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="CAD" description="CAD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-1.031694" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="EUR" description="EUR" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="USD" description="USD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-6358.548684" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="" symbol="" description="Total P/L" underlyingSymbol="" multiplier="" strike="" expiry="" putCall="" total="-39541.1481292" />
+</MTMPerformanceSummaryInBase><OpenPositions>
+<OpenPosition currency="USD" assetCategory="FUT" symbol="CCU7" description="CC 15SEP17" conid="208561324" securityID="" underlyingSymbol="CC" issuer="" multiplier="10" strike="" expiry="20170915" putCall="" positionValue="16512000" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="CSCK7" description="CSC MAY17" conid="196152647" securityID="" underlyingSymbol="CSC" issuer="" multiplier="20000" strike="" expiry="20170601" putCall="" positionValue="308600" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="CTZ7" description="CT 13DEC17" conid="179029811" securityID="" underlyingSymbol="CT" issuer="" multiplier="50000" strike="" expiry="20171213" putCall="" positionValue="521220" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="CTZ8" description="CT 13DEC18" conid="217935099" securityID="" underlyingSymbol="CT" issuer="" multiplier="50000" strike="" expiry="20181213" putCall="" positionValue="359750" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="DYQ7" description="DY 30AUG17" conid="205488910" securityID="" underlyingSymbol="DY" issuer="" multiplier="44000" strike="" expiry="20170830" putCall="" positionValue="441650" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="DYU7" description="DY SEP17" conid="208558524" securityID="" underlyingSymbol="DY" issuer="" multiplier="44000" strike="" expiry="20171004" putCall="" positionValue="119592" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="DYV7" description="DY OCT17" conid="211631383" securityID="" underlyingSymbol="DY" issuer="" multiplier="44000" strike="" expiry="20171101" putCall="" positionValue="19349" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="KCU8" description="KC 19SEP18" conid="208561321" securityID="" underlyingSymbol="KC" issuer="" multiplier="37500" strike="" expiry="20180919" putCall="" positionValue="56175" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="LCV7" description="LE 31OCT17" conid="244198715" securityID="" underlyingSymbol="LE" issuer="" multiplier="40000" strike="" expiry="20171031" putCall="" positionValue="32361000" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="LHN7" description="HE 19JUL17" conid="222321904" securityID="" underlyingSymbol="HE" issuer="" multiplier="40000" strike="" expiry="20170719" putCall="" positionValue="4740000" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="SM   OCT 17" description="ZM 13OCT17" conid="140039761" securityID="" underlyingSymbol="ZM" issuer="" multiplier="100" strike="" expiry="20171013" putCall="" positionValue="3471600" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ZS   NOV 17" description="ZS 14NOV17" conid="138298487" securityID="" underlyingSymbol="ZS" issuer="" multiplier="5000" strike="" expiry="20171114" putCall="" positionValue="4838750" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ZW   JUL 17" description="ZW 14JUL17" conid="160548319" securityID="" underlyingSymbol="ZW" issuer="" multiplier="5000" strike="" expiry="20170714" putCall="" positionValue="854000" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="CCH8" description="CC 15MAR18" conid="228089658" securityID="" underlyingSymbol="CC" issuer="" multiplier="10" strike="" expiry="20180315" putCall="" positionValue="-8392000" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="CCZ7" description="CC 14DEC17" conid="217935092" securityID="" underlyingSymbol="CC" issuer="" multiplier="10" strike="" expiry="20171214" putCall="" positionValue="-8312000" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="CSCQ7" description="CSC 30AUG17" conid="205488907" securityID="" underlyingSymbol="CSC" issuer="" multiplier="20000" strike="" expiry="20170830" putCall="" positionValue="-173600" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="CSCU7" description="CSC SEP17" conid="208558532" securityID="" underlyingSymbol="CSC" issuer="" multiplier="20000" strike="" expiry="20171004" putCall="" positionValue="-420240" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="CTH8" description="CT 14MAR18" conid="189284065" securityID="" underlyingSymbol="CT" issuer="" multiplier="50000" strike="" expiry="20180314" putCall="" positionValue="-516250" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="KCN8" description="KC 20JUL18" conid="202059707" securityID="" underlyingSymbol="KC" issuer="" multiplier="37500" strike="" expiry="20180720" putCall="" positionValue="-55462.5" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="LCZ7" description="LE 29DEC17" conid="250094962" securityID="" underlyingSymbol="LE" issuer="" multiplier="40000" strike="" expiry="20171229" putCall="" positionValue="-32570999.999999996" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="LHM7" description="HE 16JUN17" conid="215229258" securityID="" underlyingSymbol="HE" issuer="" multiplier="40000" strike="" expiry="20170616" putCall="" positionValue="-4734000" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="SM   DEC 17" description="ZM 14DEC17" conid="140039764" securityID="" underlyingSymbol="ZM" issuer="" multiplier="100" strike="" expiry="20171214" putCall="" positionValue="-3483700" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ZS   JAN 18" description="ZS 12JAN18" conid="212511056" securityID="" underlyingSymbol="ZS" issuer="" multiplier="5000" strike="" expiry="20180112" putCall="" positionValue="-4876250" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ZW   MAR 19" description="ZW 14MAR19" conid="240497204" securityID="" underlyingSymbol="ZW" issuer="" multiplier="5000" strike="" expiry="20190314" putCall="" positionValue="-1062000" />
+</OpenPositions>
+</FlexStatement><FlexStatement accountId="U1812038" fromDate="20170517" toDate="20170517" period="LastBusinessDay" whenGenerated="20170518;114734">
+<AccountInformation accountId="U1812038" acctAlias="Fixed 038" currency="EUR" name="Warwyck Multi Calex" />
+<EquitySummaryInBase>
+<EquitySummaryByReportDateInBase total="1417519.48550397" totalLong="1480677.16749381" totalShort="-63157.68198984" reportDate="20170516" />
+<EquitySummaryByReportDateInBase total="1421829.229464711" totalLong="1484730.942832111" totalShort="-62901.7133674" reportDate="20170517" />
+</EquitySummaryInBase>
+<ChangeInNAV mtm="4786.848939" startingValue="1417519.48550397" endingValue="1421829.229464711" />
+<MTMPerformanceSummaryInBase>
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="DCK7" description="DA MAY17" underlyingSymbol="DA" multiplier="2000" strike="" expiry="20170601" putCall="" total="35.8424" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="GNFK7" description="NF MAY17" underlyingSymbol="NF" multiplier="44000" strike="" expiry="20170601" putCall="" total="591.3996" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="HGZ7" description="HG 27DEC17" underlyingSymbol="HG" multiplier="25000" strike="" expiry="20171227" putCall="" total="2688.18" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ZW   DEC 17" description="ZW 14DEC17" underlyingSymbol="ZW" multiplier="5000" strike="" expiry="20171214" putCall="" total="7862.9265" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="LOF8 P4000" description="CL JAN18 40.0 P" underlyingSymbol="CLF8" multiplier="1000" strike="40" expiry="20171214" putCall="P" total="89.606" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="LOF8 P4500" description="CL JAN18 45.0 P" underlyingSymbol="CLF8" multiplier="1000" strike="45" expiry="20171214" putCall="P" total="-89.606" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="LOM7 P4500" description="CL JUN17 45.0 P" underlyingSymbol="CLM7" multiplier="1000" strike="45" expiry="20170517" putCall="P" total="-224.015" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="LOZ7 C6000" description="CL DEC17 60.0 C" underlyingSymbol="CLZ7" multiplier="1000" strike="60" expiry="20171115" putCall="C" total="-1612.908" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="LOZ7 P4000" description="CL DEC17 40.0 P" underlyingSymbol="CLZ7" multiplier="1000" strike="40" expiry="20171115" putCall="P" total="1881.726" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="LOZ7 P4500" description="CL DEC17 45.0 P" underlyingSymbol="CLZ7" multiplier="1000" strike="45" expiry="20171115" putCall="P" total="-1881.726" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="AUD" description="AUD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-103.67388" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="CNH" description="CNH" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="17775.251794" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="EUR" description="EUR" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="NZD" description="NZD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-25.292093" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="USD" description="USD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-22227.755534" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="ZAR" description="ZAR" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="26.893152" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="" symbol="" description="Total P/L" underlyingSymbol="" multiplier="" strike="" expiry="" putCall="" total="4786.848939" />
+</MTMPerformanceSummaryInBase><OpenPositions>
+<OpenPosition currency="USD" assetCategory="FUT" symbol="GNFK7" description="NF MAY17" conid="196152642" securityID="" underlyingSymbol="NF" issuer="" multiplier="44000" strike="" expiry="20170601" putCall="" positionValue="77836" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ZW   DEC 17" description="ZW 14DEC17" conid="199882305" securityID="" underlyingSymbol="ZW" issuer="" multiplier="5000" strike="" expiry="20171214" putCall="" positionValue="1800825" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="LOZ7 P4500" description="CL DEC17 45.0 P" conid="56479721" securityID="" underlyingSymbol="CLZ7" issuer="" multiplier="1000" strike="45" expiry="20171115" putCall="P" positionValue="43680" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="LOF8 P4500" description="CL JAN18 45.0 P" conid="177317440" securityID="" underlyingSymbol="CLF8" issuer="" multiplier="1000" strike="45" expiry="20171214" putCall="P" positionValue="2330" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="DCK7" description="DA MAY17" conid="196152624" securityID="" underlyingSymbol="DA" issuer="" multiplier="2000" strike="" expiry="20170601" putCall="" positionValue="-62480" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="HGZ7" description="HG 27DEC17" conid="119750055" securityID="" underlyingSymbol="HG" issuer="" multiplier="25000" strike="" expiry="20171227" putCall="" positionValue="-1930875" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="LOZ7 P4000" description="CL DEC17 40.0 P" conid="56865804" securityID="" underlyingSymbol="CLZ7" issuer="" multiplier="1000" strike="40" expiry="20171115" putCall="P" positionValue="-38640" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="LOZ7 C6000" description="CL DEC17 60.0 C" conid="56217107" securityID="" underlyingSymbol="CLZ7" issuer="" multiplier="1000" strike="60" expiry="20171115" putCall="C" positionValue="-18800" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="LOF8 P4000" description="CL JAN18 40.0 P" conid="177317722" securityID="" underlyingSymbol="CLF8" issuer="" multiplier="1000" strike="40" expiry="20171214" putCall="P" positionValue="-2200" />
+</OpenPositions>
+</FlexStatement><FlexStatement accountId="U1760542" fromDate="20170517" toDate="20170517" period="LastBusinessDay" whenGenerated="20170518;114736">
+<AccountInformation accountId="U1760542" acctAlias="Hedge 542" currency="EUR" name="Warwyck Multi Calex" />
+<EquitySummaryInBase>
+<EquitySummaryByReportDateInBase total="234728.609349198" totalLong="292419.866749198" totalShort="-57691.2574" reportDate="20170516" />
+<EquitySummaryByReportDateInBase total="247960.171573158" totalLong="326509.687233158" totalShort="-78549.51566" reportDate="20170517" />
+</EquitySummaryInBase>
+<ChangeInNAV mtm="13135.801385" startingValue="234728.609349198" endingValue="247960.171573158" />
+<MTMPerformanceSummaryInBase>
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ECM7" description="EUR 19JUN17" underlyingSymbol="EUR" multiplier="125000" strike="" expiry="20170619" putCall="" total="11984.8025" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ESZ7" description="ES 15DEC17" underlyingSymbol="ES" multiplier="50" strike="" expiry="20171215" putCall="" total="1814.5215" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="AUD" description="AUD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-0.295697" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="CAD" description="CAD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-0.070986" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="CHF" description="CHF" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-1.257757" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="EUR" description="EUR" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="USD" description="USD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-661.898175" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="" symbol="" description="Total P/L" underlyingSymbol="" multiplier="" strike="" expiry="" putCall="" total="13135.801385" />
+</MTMPerformanceSummaryInBase><OpenPositions>
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ECM7" description="EUR 19JUN17" conid="132757570" securityID="" underlyingSymbol="EUR" issuer="" multiplier="125000" strike="" expiry="20170619" putCall="" positionValue="2791500" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ESZ7" description="ES 15DEC17" conid="247950613" securityID="" underlyingSymbol="ES" issuer="" multiplier="50" strike="" expiry="20171215" putCall="" positionValue="-117545" />
+</OpenPositions>
+</FlexStatement><FlexStatement accountId="U1932389" fromDate="20170517" toDate="20170517" period="LastBusinessDay" whenGenerated="20170518;114736">
+<AccountInformation accountId="U1932389" acctAlias="Income 389" currency="EUR" name="Warwyck Multi Calex" />
+<EquitySummaryInBase>
+<EquitySummaryByReportDateInBase total="1025627.8665452" totalLong="1035806.9467362" totalShort="-10179.080191" reportDate="20170516" />
+<EquitySummaryByReportDateInBase total="1014839.122436054" totalLong="1023120.751176254" totalShort="-8281.6287402" reportDate="20170517" />
+</EquitySummaryInBase>
+<ChangeInNAV mtm="-10741.7505284" startingValue="1025627.8665452" endingValue="1014839.122436054" />
+<MTMPerformanceSummaryInBase>
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="IHYG" description="ISHARES EURO HY CORP" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-163.98" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="IHYU" description="ISHARES USD HY CORP USD DIST" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-499.3652774" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="IUES" description="ISHARES S&amp;P 500 ENERGY" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-358.424" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="RUSp" description="LYX ETF DOW JONES RUSSIA" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-2700" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="6LM7" description="BRE 01JUN17" underlyingSymbol="BRE" multiplier="100000" strike="" expiry="20170601" putCall="" total="-1478.499" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ECM7" description="EUR 19JUN17" underlyingSymbol="EUR" multiplier="125000" strike="" expiry="20170619" putCall="" total="599.240125" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="RUM7" description="RUR 15JUN17" underlyingSymbol="RUR" multiplier="2500000" strike="" expiry="20170615" putCall="" total="-1904.1275" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ZB   JUN 17" description="ZB 21JUN17" underlyingSymbol="ZB" multiplier="1000" strike="" expiry="20170621" putCall="" total="-3920.2625" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="LON7 P4600" description="CL JUL17 46.0 P" underlyingSymbol="CLN7" multiplier="1000" strike="46" expiry="20170615" putCall="P" total="376.3452" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="LON7 P4650" description="CL JUL17 46.5 P" underlyingSymbol="CLN7" multiplier="1000" strike="46.5" expiry="20170615" putCall="P" total="143.3696" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="LON7 P4700" description="CL JUL17 47.0 P" underlyingSymbol="CLN7" multiplier="1000" strike="47" expiry="20170615" putCall="P" total="358.424" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="P OZB  JUN 17  15100" description="ZB JUN17 151.0 P" underlyingSymbol="ZB   JUN 17" multiplier="1000" strike="151" expiry="20170526" putCall="P" total="308.020625" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="P OZB  JUN 17  15200" description="ZB JUN17 152.0 P" underlyingSymbol="ZB   JUN 17" multiplier="1000" strike="152" expiry="20170526" putCall="P" total="644.043125" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="CHF" description="CHF" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-0.639769" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="EUR" description="EUR" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="HKD" description="HKD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="40.000816" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="JPY" description="JPY" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-19.155236" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="USD" description="USD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-2166.740737" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="" symbol="" description="Total P/L" underlyingSymbol="" multiplier="" strike="" expiry="" putCall="" total="-10741.7505284" />
+</MTMPerformanceSummaryInBase><OpenPositions>
+<OpenPosition currency="EUR" assetCategory="STK" symbol="IHYG" description="ISHARES EURO HY CORP" conid="78958323" securityID="IE00B66F4759" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="292540.32" />
+<OpenPosition currency="EUR" assetCategory="STK" symbol="RUSp" description="LYX ETF DOW JONES RUSSIA" conid="39873571" securityID="FR0010326140" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="171000" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="IHYU" description="ISHARES USD HY CORP USD DIST" conid="94305746" securityID="IE00B4PY7Y77" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="252743.13" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="IUES" description="ISHARES S&amp;P 500 ENERGY" conid="212969176" securityID="IE00B42NKQ00" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="102750" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="6LM7" description="BRE 01JUN17" conid="86084100" securityID="" underlyingSymbol="BRE" issuer="" multiplier="100000" strike="" expiry="20170601" putCall="" positionValue="191400" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ECM7" description="EUR 19JUN17" conid="132757570" securityID="" underlyingSymbol="EUR" issuer="" multiplier="125000" strike="" expiry="20170619" putCall="" positionValue="139575" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="RUM7" description="RUR 15JUN17" conid="108816220" securityID="" underlyingSymbol="RUR" issuer="" multiplier="2500000" strike="" expiry="20170615" putCall="" positionValue="217812.5" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ZB   JUN 17" description="ZB 21JUN17" conid="248792581" securityID="" underlyingSymbol="ZB" issuer="" multiplier="1000" strike="" expiry="20170621" putCall="" positionValue="-307562.5" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="LON7 P4600" description="CL JUL17 46.0 P" conid="158711334" securityID="" underlyingSymbol="CLN7" issuer="" multiplier="1000" strike="46" expiry="20170615" putCall="P" positionValue="-3780" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="LON7 P4650" description="CL JUL17 46.5 P" conid="158709827" securityID="" underlyingSymbol="CLN7" issuer="" multiplier="1000" strike="46.5" expiry="20170615" putCall="P" positionValue="-1520" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="LON7 P4700" description="CL JUL17 47.0 P" conid="158710727" securityID="" underlyingSymbol="CLN7" issuer="" multiplier="1000" strike="47" expiry="20170615" putCall="P" positionValue="-3560" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="P OZB  JUN 17  15100" description="ZB JUN17 151.0 P" conid="249063759" securityID="" underlyingSymbol="ZB   JUN 17" issuer="" multiplier="1000" strike="151" expiry="20170526" putCall="P" positionValue="-93.75" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="P OZB  JUN 17  15200" description="ZB JUN17 152.0 P" conid="249063701" securityID="" underlyingSymbol="ZB   JUN 17" issuer="" multiplier="1000" strike="152" expiry="20170526" putCall="P" positionValue="-218.75" />
+</OpenPositions>
+</FlexStatement><FlexStatement accountId="U2036485" fromDate="20170517" toDate="20170517" period="LastBusinessDay" whenGenerated="20170518;114737">
+<AccountInformation accountId="U2036485" acctAlias="Macro 485" currency="EUR" name="Warwyck Multi Calex" />
+<EquitySummaryInBase>
+<EquitySummaryByReportDateInBase total="713694.000426" totalLong="756067.473142" totalShort="-42373.472716" reportDate="20170516" />
+<EquitySummaryByReportDateInBase total="715354.7732184" totalLong="760826.888778" totalShort="-45472.1155596" reportDate="20170517" />
+</EquitySummaryInBase>
+<ChangeInNAV mtm="1702.65841" startingValue="713694.000426" endingValue="715354.7732184" />
+<MTMPerformanceSummaryInBase>
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ESM7" description="ES 16JUN17" underlyingSymbol="ES" multiplier="50" strike="" expiry="20170616" putCall="" total="7096.7952" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="GCM7" description="GC 28JUN17" underlyingSymbol="GC" multiplier="100" strike="" expiry="20170628" putCall="" total="-3996.4276" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="PLN7" description="PL 27JUL17" underlyingSymbol="PL" multiplier="50" strike="" expiry="20170727" putCall="" total="1630.8292" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="6EM7 C1075" description="EUR 09JUN17 1.075 C" underlyingSymbol="ECM7" multiplier="125000" strike="1.075" expiry="20170609" putCall="C" total="2284.953" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="6EM7 C1100" description="EUR 09JUN17 1.1 C" underlyingSymbol="ECM7" multiplier="125000" strike="1.1" expiry="20170609" putCall="C" total="-3494.634" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="6EM7 P1055" description="EUR 09JUN17 1.055 P" underlyingSymbol="ECM7" multiplier="125000" strike="1.055" expiry="20170609" putCall="P" total="22.4015" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="6JM7 C0955" description="JPY 09JUN17 0.00955 C" underlyingSymbol="JYM7" multiplier="12500000" strike="0.00955" expiry="20170609" putCall="C" total="-224.015" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="6JM7 P0875" description="JPY 09JUN17 0.00875 P" underlyingSymbol="JYM7" multiplier="12500000" strike="0.00875" expiry="20170609" putCall="P" total="1792.12" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="6JM7 P0885" description="JPY 09JUN17 0.00885 P" underlyingSymbol="JYM7" multiplier="12500000" strike="0.00885" expiry="20170609" putCall="P" total="3942.664" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="6JM7 P0890" description="JPY 09JUN17 0.0089 P" underlyingSymbol="JYM7" multiplier="12500000" strike="0.0089" expiry="20170609" putCall="P" total="-2598.574" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="6JM7 P0910" description="JPY 09JUN17 0.0091 P" underlyingSymbol="JYM7" multiplier="12500000" strike="0.0091" expiry="20170609" putCall="P" total="-4928.33" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="6SM7 C1020" description="CHF 09JUN17 1.02 C" underlyingSymbol="SFM7" multiplier="125000" strike="1.02" expiry="20170609" putCall="C" total="-1388.893" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="CON7 C2000" description="CC JUL17 2000.0 C" underlyingSymbol="CCN7" multiplier="10" strike="2000" expiry="20170602" putCall="C" total="1209.681" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="CON7 C2100" description="CC JUL17 2100.0 C" underlyingSymbol="CCN7" multiplier="10" strike="2100" expiry="20170602" putCall="C" total="-537.636" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="EW3K7 P2335" description="ES 19MAY17 2335.0 P" underlyingSymbol="ESM7" multiplier="50" strike="2335" expiry="20170519" putCall="P" total="-837.6727304" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="JPUU7 P0860" description="JPY 08SEP17 0.0086 P" underlyingSymbol="JYU7" multiplier="12500000" strike="0.0086" expiry="20170908" putCall="P" total="1702.514" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="JPUU7 P0885" description="JPY 08SEP17 0.00885 P" underlyingSymbol="JYU7" multiplier="12500000" strike="0.00885" expiry="20170908" putCall="P" total="-1926.529" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="LOM7 C5200" description="CL JUN17 52.0 C" underlyingSymbol="CLM7" multiplier="1000" strike="52" expiry="20170517" putCall="C" total="-26.8818" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="LOM7 C5500" description="CL JUN17 55.0 C" underlyingSymbol="CLM7" multiplier="1000" strike="55" expiry="20170517" putCall="C" total="53.7636" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="LOM7 P4850" description="CL JUN17 48.5 P" underlyingSymbol="CLM7" multiplier="1000" strike="48.5" expiry="20170517" putCall="P" total="752.6904" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="LOZ7 C5200" description="CL DEC17 52.0 C" underlyingSymbol="CLZ7" multiplier="1000" strike="52" expiry="20171115" putCall="C" total="1503.947104" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="LOZ7 P4100" description="CL DEC17 41.0 P" underlyingSymbol="CLZ7" multiplier="1000" strike="41" expiry="20171115" putCall="P" total="79.928552" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="EUR" description="EUR" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="USD" description="USD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-443.40529" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="" symbol="" description="Total P/L" underlyingSymbol="" multiplier="" strike="" expiry="" putCall="" total="1669.2891356" />
+</MTMPerformanceSummaryInBase><OpenPositions>
+<OpenPosition currency="USD" assetCategory="FUT" symbol="PLN7" description="PL 27JUL17" conid="231380069" securityID="" underlyingSymbol="PL" issuer="" multiplier="50" strike="" expiry="20170727" putCall="" positionValue="189220" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="CON7 C2000" description="CC JUL17 2000.0 C" conid="251518100" securityID="" underlyingSymbol="CCN7" issuer="" multiplier="10" strike="2000" expiry="20170602" putCall="C" positionValue="13350" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="LOZ7 C5200" description="CL DEC17 52.0 C" conid="155070350" securityID="" underlyingSymbol="CLZ7" issuer="" multiplier="1000" strike="52" expiry="20171115" putCall="C" positionValue="34800" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="6EM7 C1075" description="EUR 09JUN17 1.075 C" conid="236068656" securityID="" underlyingSymbol="ECM7" issuer="" multiplier="125000" strike="1.075" expiry="20170609" putCall="C" positionValue="21000" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="JPUU7 P0885" description="JPY 08SEP17 0.00885 P" conid="247654010" securityID="" underlyingSymbol="JYU7" issuer="" multiplier="12500000" strike="0.00885" expiry="20170908" putCall="P" positionValue="5200" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="6JM7 P0890" description="JPY 09JUN17 0.0089 P" conid="236062873" securityID="" underlyingSymbol="JYM7" issuer="" multiplier="12500000" strike="0.0089" expiry="20170609" putCall="P" positionValue="2000" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="6JM7 P0910" description="JPY 09JUN17 0.0091 P" conid="236062890" securityID="" underlyingSymbol="JYM7" issuer="" multiplier="12500000" strike="0.0091" expiry="20170609" putCall="P" positionValue="7250" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ESM7" description="ES 16JUN17" conid="225652200" securityID="" underlyingSymbol="ES" issuer="" multiplier="50" strike="" expiry="20170616" putCall="" positionValue="-471500" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="GCM7" description="GC 28JUN17" conid="90384435" securityID="" underlyingSymbol="GC" issuer="" multiplier="100" strike="" expiry="20170628" putCall="" positionValue="-251740" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="CON7 C2100" description="CC JUL17 2100.0 C" conid="220820514" securityID="" underlyingSymbol="CCN7" issuer="" multiplier="10" strike="2100" expiry="20170602" putCall="C" positionValue="-11700" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="6SM7 C1020" description="CHF 09JUN17 1.02 C" conid="236056657" securityID="" underlyingSymbol="SFM7" issuer="" multiplier="125000" strike="1.02" expiry="20170609" putCall="C" positionValue="-4700" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="LOZ7 P4100" description="CL DEC17 41.0 P" conid="155066611" securityID="" underlyingSymbol="CLZ7" issuer="" multiplier="1000" strike="41" expiry="20171115" putCall="P" positionValue="-5500" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="EW3K7 P2335" description="ES 19MAY17 2335.0 P" conid="263728610" securityID="" underlyingSymbol="ESM7" issuer="" multiplier="50" strike="2335" expiry="20170519" putCall="P" positionValue="-1200" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="6EM7 P1055" description="EUR 09JUN17 1.055 P" conid="236068839" securityID="" underlyingSymbol="ECM7" issuer="" multiplier="125000" strike="1.055" expiry="20170609" putCall="P" positionValue="-50" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="6EM7 C1100" description="EUR 09JUN17 1.1 C" conid="236068679" securityID="" underlyingSymbol="ECM7" issuer="" multiplier="125000" strike="1.1" expiry="20170609" putCall="C" positionValue="-19800" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="JPUU7 P0860" description="JPY 08SEP17 0.0086 P" conid="247653988" securityID="" underlyingSymbol="JYU7" issuer="" multiplier="12500000" strike="0.0086" expiry="20170908" putCall="P" positionValue="-3800" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="6JM7 P0875" description="JPY 09JUN17 0.00875 P" conid="236062861" securityID="" underlyingSymbol="JYM7" issuer="" multiplier="12500000" strike="0.00875" expiry="20170609" putCall="P" positionValue="-1000" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="6JM7 P0885" description="JPY 09JUN17 0.00885 P" conid="236062870" securityID="" underlyingSymbol="JYM7" issuer="" multiplier="12500000" strike="0.00885" expiry="20170609" putCall="P" positionValue="-2600" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="6JM7 C0955" description="JPY 09JUN17 0.00955 C" conid="236062680" securityID="" underlyingSymbol="JYM7" issuer="" multiplier="12500000" strike="0.00955" expiry="20170609" putCall="C" positionValue="-300" />
+</OpenPositions>
+</FlexStatement><FlexStatement accountId="U2106037" fromDate="20170517" toDate="20170517" period="LastBusinessDay" whenGenerated="20170518;114737">
+<AccountInformation accountId="U2106037" acctAlias="Option 037" currency="EUR" name="Warwyck Multi Calex" />
+<EquitySummaryInBase>
+<EquitySummaryByReportDateInBase total="499912.238585377" totalLong="505511.157117377" totalShort="-5598.918532" reportDate="20170516" />
+<EquitySummaryByReportDateInBase total="501230.826393624" totalLong="643789.699954424" totalShort="-142558.8735608" reportDate="20170517" />
+</EquitySummaryInBase>
+<ChangeInNAV mtm="1457.8574046" startingValue="499912.238585377" endingValue="501230.826393624" />
+<MTMPerformanceSummaryInBase>
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SPX   170616P02225000" description="SPX 16JUN17 2225.0 P" underlyingSymbol="SPX" multiplier="100" strike="2225" expiry="20170616" putCall="P" total="733.216865656" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SPX   170616P02275000" description="SPX 16JUN17 2275.0 P" underlyingSymbol="SPX" multiplier="100" strike="2275" expiry="20170616" putCall="P" total="-1173.742183944" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SPX   170616P02350000" description="SPX 16JUN17 2350.0 P" underlyingSymbol="SPX" multiplier="100" strike="2350" expiry="20170616" putCall="P" total="-1337.339263172" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SPX   170616P02400000" description="SPX 16JUN17 2400.0 P" underlyingSymbol="SPX" multiplier="100" strike="2400" expiry="20170616" putCall="P" total="2408.191536828" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SPX   170721P02280000" description="SPX 21JUL17 2280.0 P" underlyingSymbol="SPX" multiplier="100" strike="2280" expiry="20170721" putCall="P" total="3652.582854624" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SPX   170721P02330000" description="SPX 21JUL17 2330.0 P" underlyingSymbol="SPX" multiplier="100" strike="2330" expiry="20170721" putCall="P" total="-11498.904287552" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SPX   170721P02370000" description="SPX 21JUL17 2370.0 P" underlyingSymbol="SPX" multiplier="100" strike="2370" expiry="20170721" putCall="P" total="6483.415606624" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SVXY  170519P00132000" description="SVXY 19MAY17 132.0 P" underlyingSymbol="SVXY" multiplier="100" strike="132" expiry="20170519" putCall="P" total="-8831.388148" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SVXY  170519P00140000" description="SVXY 19MAY17 140.0 P" underlyingSymbol="SVXY" multiplier="100" strike="140" expiry="20170519" putCall="P" total="9590.261362" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SVXY  170526P00130000" description="SVXY 26MAY17 130.0 P" underlyingSymbol="SVXY" multiplier="100" strike="130" expiry="20170526" putCall="P" total="-9039.663450873" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SVXY  170526P00132000" description="SVXY 26MAY17 132.0 P" underlyingSymbol="SVXY" multiplier="100" strike="132" expiry="20170526" putCall="P" total="5207.63907048" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SVXY  170526P00137000" description="SVXY 26MAY17 137.0 P" underlyingSymbol="SVXY" multiplier="100" strike="137" expiry="20170526" putCall="P" total="7004.35675434" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SVXY  170616C00174000" description="SVXY 16JUN17 174.0 C" underlyingSymbol="SVXY" multiplier="100" strike="174" expiry="20170616" putCall="C" total="1375.989736" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SVXY  170623P00117000" description="SVXY 23JUN17 117.0 P" underlyingSymbol="SVXY" multiplier="100" strike="117" expiry="20170623" putCall="P" total="-3249.261877643" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="EUR" description="EUR" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="USD" description="USD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="0.093233" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="" symbol="" description="Total P/L" underlyingSymbol="" multiplier="" strike="" expiry="" putCall="" total="1325.447808368" />
+</MTMPerformanceSummaryInBase><OpenPositions>
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SPX   170721P02280000" description="SPX 21JUL17 2280.0 P" conid="272525580" securityID="" underlyingSymbol="SPX" issuer="" multiplier="100" strike="2280" expiry="20170721" putCall="P" positionValue="40960" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SPX   170721P02370000" description="SPX 21JUL17 2370.0 P" conid="272525611" securityID="" underlyingSymbol="SPX" issuer="" multiplier="100" strike="2370" expiry="20170721" putCall="P" positionValue="82231.2" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SVXY  170519P00140000" description="SVXY 19MAY17 140.0 P" conid="270359222" securityID="" underlyingSymbol="SVXY" issuer="" multiplier="100" strike="140" expiry="20170519" putCall="P" positionValue="10912.4" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SVXY  170526P00132000" description="SVXY 26MAY17 132.0 P" conid="272285390" securityID="" underlyingSymbol="SVXY" issuer="" multiplier="100" strike="132" expiry="20170526" putCall="P" positionValue="15039.2" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SVXY  170526P00137000" description="SVXY 26MAY17 137.0 P" conid="272285426" securityID="" underlyingSymbol="SVXY" issuer="" multiplier="100" strike="137" expiry="20170526" putCall="P" positionValue="10262.4" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SPX   170721P02330000" description="SPX 21JUL17 2330.0 P" conid="272525597" securityID="" underlyingSymbol="SPX" issuer="" multiplier="100" strike="2330" expiry="20170721" putCall="P" positionValue="-120793.28" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SVXY  170519P00132000" description="SVXY 19MAY17 132.0 P" conid="270359188" securityID="" underlyingSymbol="SVXY" issuer="" multiplier="100" strike="132" expiry="20170519" putCall="P" positionValue="-10000.4" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SVXY  170526P00130000" description="SVXY 26MAY17 130.0 P" conid="272285372" securityID="" underlyingSymbol="SVXY" issuer="" multiplier="100" strike="130" expiry="20170526" putCall="P" positionValue="-13401" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SVXY  170616C00174000" description="SVXY 16JUN17 174.0 C" conid="274773989" securityID="" underlyingSymbol="SVXY" issuer="" multiplier="100" strike="174" expiry="20170616" putCall="C" positionValue="-487.6" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SVXY  170623P00117000" description="SVXY 23JUN17 117.0 P" conid="275155948" securityID="" underlyingSymbol="SVXY" issuer="" multiplier="100" strike="117" expiry="20170623" putCall="P" positionValue="-14322.4" />
+</OpenPositions>
+</FlexStatement><FlexStatement accountId="U1935148" fromDate="20170517" toDate="20170517" period="LastBusinessDay" whenGenerated="20170518;114739">
+<AccountInformation accountId="U1935148" acctAlias="Season 148" currency="EUR" name="Warwyck Multi Calex" />
+<EquitySummaryInBase>
+<EquitySummaryByReportDateInBase total="451805.332832" totalLong="451961.159454" totalShort="-155.826622" reportDate="20170516" />
+<EquitySummaryByReportDateInBase total="448774.1158712" totalLong="448940.2519588" totalShort="-166.1360876" reportDate="20170517" />
+</EquitySummaryInBase>
+<ChangeInNAV mtm="-3020.907496" startingValue="451805.332832" endingValue="448774.1158712" />
+<MTMPerformanceSummaryInBase>
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="BO   AUG 17" description="ZL 14AUG17" underlyingSymbol="ZL" multiplier="60000" strike="" expiry="20170814" putCall="" total="-80.6454" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="BO   JAN 18" description="ZL 12JAN18" underlyingSymbol="ZL" multiplier="60000" strike="" expiry="20180112" putCall="" total="182.79624" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="BO   JUL 17" description="ZL 14JUL17" underlyingSymbol="ZL" multiplier="60000" strike="" expiry="20170714" putCall="" total="-75.26904" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="BO   MAR 18" description="ZL 14MAR18" underlyingSymbol="ZL" multiplier="60000" strike="" expiry="20180314" putCall="" total="-86.02176" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="BO   SEP 17" description="ZL 14SEP17" underlyingSymbol="ZL" multiplier="60000" strike="" expiry="20170914" putCall="" total="-225.80712" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="C   DEC 18" description="ZC 14DEC18" underlyingSymbol="ZC" multiplier="5000" strike="" expiry="20181214" putCall="" total="112.0075" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="C   JUL 18" description="ZC 13JUL18" underlyingSymbol="ZC" multiplier="5000" strike="" expiry="20180713" putCall="" total="268.818" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="C   MAR 18" description="ZC 14MAR18" underlyingSymbol="ZC" multiplier="5000" strike="" expiry="20180314" putCall="" total="-156.8105" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="C   MAY 18" description="ZC 14MAY18" underlyingSymbol="ZC" multiplier="5000" strike="" expiry="20180514" putCall="" total="145.60975" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="CLQ7" description="CL AUG17" underlyingSymbol="CL" multiplier="1000" strike="" expiry="20170720" putCall="" total="-367.3846" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="CLX7" description="CL NOV17" underlyingSymbol="CL" multiplier="1000" strike="" expiry="20171020" putCall="" total="385.3058" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="CLZ7" description="CL DEC17" underlyingSymbol="CL" multiplier="1000" strike="" expiry="20171120" putCall="" total="-752.6904" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="CTK8" description="CT 15MAY18" underlyingSymbol="CT" multiplier="50000" strike="" expiry="20180515" putCall="" total="125.4484" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="CTN7" description="CT 14JUL17" underlyingSymbol="CT" multiplier="50000" strike="" expiry="20170714" putCall="" total="1030.469" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="CTV7" description="CT 16OCT17" underlyingSymbol="CT" multiplier="50000" strike="" expiry="20171016" putCall="" total="322.5816" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="CTZ7" description="CT 13DEC17" underlyingSymbol="CT" multiplier="50000" strike="" expiry="20171213" putCall="" total="161.2908" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="GCM7" description="GC 28JUN17" underlyingSymbol="GC" multiplier="100" strike="" expiry="20170628" putCall="" total="-1998.2138" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="HOF8" description="HO JAN18" underlyingSymbol="HO" multiplier="42000" strike="" expiry="20171229" putCall="" total="1309.681296" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="HOX7" description="HO NOV17" underlyingSymbol="HO" multiplier="42000" strike="" expiry="20171031" putCall="" total="-2009.683368" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="KCK8" description="KC 21MAY18" underlyingSymbol="KC" multiplier="37500" strike="" expiry="20180521" putCall="" total="924.061875" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="KCN7" description="KC 20JUL17" underlyingSymbol="KC" multiplier="37500" strike="" expiry="20170720" putCall="" total="-991.266375" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="KCN8" description="KC 20JUL18" underlyingSymbol="KC" multiplier="37500" strike="" expiry="20180720" putCall="" total="1814.5215" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="KCU7" description="KC 20SEP17" underlyingSymbol="KC" multiplier="37500" strike="" expiry="20170920" putCall="" total="-1948.9305" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="KCZ7" description="KC 19DEC17" underlyingSymbol="KC" multiplier="37500" strike="" expiry="20171219" putCall="" total="-974.46525" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="KE   JUL 17" description="KE 14JUL17" underlyingSymbol="KE" multiplier="5000" strike="" expiry="20170714" putCall="" total="-89.606" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="KE   SEP 17" description="KE 14SEP17" underlyingSymbol="KE" multiplier="5000" strike="" expiry="20170914" putCall="" total="-179.212" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="NGJ8" description="NG APR18" underlyingSymbol="NG" multiplier="10000" strike="" expiry="20180327" putCall="" total="17.9212" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="NGK8" description="NG MAY18" underlyingSymbol="NG" multiplier="10000" strike="" expiry="20180426" putCall="" total="35.8424" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="NGN7" description="NG JUL17" underlyingSymbol="NG" multiplier="10000" strike="" expiry="20170628" putCall="" total="286.7392" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="NGV7" description="NG OCT17" underlyingSymbol="NG" multiplier="10000" strike="" expiry="20170927" putCall="" total="197.1332" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="NGX7" description="NG NOV17" underlyingSymbol="NG" multiplier="10000" strike="" expiry="20171027" putCall="" total="-152.3302" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="NGZ7" description="NG DEC17" underlyingSymbol="NG" multiplier="10000" strike="" expiry="20171128" putCall="" total="-116.4878" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="PLN7" description="PL 27JUL17" underlyingSymbol="PL" multiplier="50" strike="" expiry="20170727" putCall="" total="815.4146" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="RBU7" description="RB SEP17" underlyingSymbol="RB" multiplier="42000" strike="" expiry="20170831" putCall="" total="293.549256" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="RBV7" description="RB OCT17" underlyingSymbol="RB" multiplier="42000" strike="" expiry="20170929" putCall="" total="-229.570572" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="RBZ7" description="RB DEC17" underlyingSymbol="RB" multiplier="42000" strike="" expiry="20171130" putCall="" total="654.840648" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="S   NOV 18" description="ZS 14NOV18" underlyingSymbol="ZS" multiplier="5000" strike="" expiry="20181114" putCall="" total="56.00375" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="SM   DEC 17" description="ZM 14DEC17" underlyingSymbol="ZM" multiplier="100" strike="" expiry="20171214" putCall="" total="125.4484" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="SM   JUL 17" description="ZM 14JUL17" underlyingSymbol="ZM" multiplier="100" strike="" expiry="20170714" putCall="" total="-456.9906" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="SM   OCT 17" description="ZM 13OCT17" underlyingSymbol="ZM" multiplier="100" strike="" expiry="20171013" putCall="" total="-250.8968" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="SM   SEP 17" description="ZM 14SEP17" underlyingSymbol="ZM" multiplier="100" strike="" expiry="20170914" putCall="" total="125.4484" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ZC   DEC 17" description="ZC 14DEC17" underlyingSymbol="ZC" multiplier="5000" strike="" expiry="20171214" putCall="" total="-784.0525" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ZL   OCT 17" description="ZL 13OCT17" underlyingSymbol="ZL" multiplier="60000" strike="" expiry="20171013" putCall="" total="-161.2908" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ZM   JAN 18" description="ZM 12JAN18" underlyingSymbol="ZM" multiplier="100" strike="" expiry="20180112" putCall="" total="-116.4878" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ZS   JAN 18" description="ZS 12JAN18" underlyingSymbol="ZS" multiplier="5000" strike="" expiry="20180112" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ZS   JUL 17" description="ZS 14JUL17" underlyingSymbol="ZS" multiplier="5000" strike="" expiry="20170714" putCall="" total="-89.606" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ZS   MAR 18" description="ZS 14MAR18" underlyingSymbol="ZS" multiplier="5000" strike="" expiry="20180314" putCall="" total="-44.803" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ZS   NOV 17" description="ZS 14NOV17" underlyingSymbol="ZS" multiplier="5000" strike="" expiry="20171114" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ZS   SEP 17" description="ZS 14SEP17" underlyingSymbol="ZS" multiplier="5000" strike="" expiry="20170914" putCall="" total="-89.606" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ZW   JUL 17" description="ZW 14JUL17" underlyingSymbol="ZW" multiplier="5000" strike="" expiry="20170714" putCall="" total="-123.20825" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ZW   SEP 17" description="ZW 14SEP17" underlyingSymbol="ZW" multiplier="5000" strike="" expiry="20170914" putCall="" total="-179.212" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="EUR" description="EUR" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="USD" description="USD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="318.708124" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="" symbol="" description="Total P/L" underlyingSymbol="" multiplier="" strike="" expiry="" putCall="" total="-3020.907496" />
+</MTMPerformanceSummaryInBase><OpenPositions>
+<OpenPosition currency="USD" assetCategory="FUT" symbol="BO   JAN 18" description="ZL 12JAN18" conid="215229153" securityID="" underlyingSymbol="ZL" issuer="" multiplier="60000" strike="" expiry="20180112" putCall="" positionValue="40380" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="C   DEC 18" description="ZC 14DEC18" conid="176830392" securityID="" underlyingSymbol="ZC" issuer="" multiplier="5000" strike="" expiry="20181214" putCall="" positionValue="20312.5" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="C   JUL 18" description="ZC 13JUL18" conid="176830391" securityID="" underlyingSymbol="ZC" issuer="" multiplier="5000" strike="" expiry="20180713" putCall="" positionValue="40975" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="C   MAY 18" description="ZC 14MAY18" conid="215229138" securityID="" underlyingSymbol="ZC" issuer="" multiplier="5000" strike="" expiry="20180514" putCall="" positionValue="20225" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="CLX7" description="CL NOV17" conid="97589613" securityID="" underlyingSymbol="CL" issuer="" multiplier="1000" strike="" expiry="20171020" putCall="" positionValue="50380" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="CTK8" description="CT 15MAY18" conid="196110752" securityID="" underlyingSymbol="CT" issuer="" multiplier="50000" strike="" expiry="20180515" putCall="" positionValue="36900" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="CTZ7" description="CT 13DEC17" conid="179029811" securityID="" underlyingSymbol="CT" issuer="" multiplier="50000" strike="" expiry="20171213" putCall="" positionValue="111690" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="HOF8" description="HO JAN18" conid="139384392" securityID="" underlyingSymbol="HO" issuer="" multiplier="42000" strike="" expiry="20171229" putCall="" positionValue="134307.6" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="KCK8" description="KC 21MAY18" conid="196110748" securityID="" underlyingSymbol="KC" issuer="" multiplier="37500" strike="" expiry="20180521" putCall="" positionValue="54693.75" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="KCN8" description="KC 20JUL18" conid="202059707" securityID="" underlyingSymbol="KC" issuer="" multiplier="37500" strike="" expiry="20180720" putCall="" positionValue="110925" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="NGK8" description="NG MAY18" conid="70558062" securityID="" underlyingSymbol="NG" issuer="" multiplier="10000" strike="" expiry="20180426" putCall="" positionValue="57420" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="NGX7" description="NG NOV17" conid="56197202" securityID="" underlyingSymbol="NG" issuer="" multiplier="10000" strike="" expiry="20171027" putCall="" positionValue="33830" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="NGZ7" description="NG DEC17" conid="56197207" securityID="" underlyingSymbol="NG" issuer="" multiplier="10000" strike="" expiry="20171128" putCall="" positionValue="35040" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="PLN7" description="PL 27JUL17" conid="231380069" securityID="" underlyingSymbol="PL" issuer="" multiplier="50" strike="" expiry="20170727" putCall="" positionValue="94610" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="RBU7" description="RB SEP17" conid="165630976" securityID="" underlyingSymbol="RB" issuer="" multiplier="42000" strike="" expiry="20170831" putCall="" positionValue="132946.8" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="RBZ7" description="RB DEC17" conid="175454391" securityID="" underlyingSymbol="RB" issuer="" multiplier="42000" strike="" expiry="20171130" putCall="" positionValue="119918.4" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="SM   JUL 17" description="ZM 14JUL17" conid="140039741" securityID="" underlyingSymbol="ZM" issuer="" multiplier="100" strike="" expiry="20170714" putCall="" positionValue="94590" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="SM   OCT 17" description="ZM 13OCT17" conid="140039761" securityID="" underlyingSymbol="ZM" issuer="" multiplier="100" strike="" expiry="20171013" putCall="" positionValue="63120" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ZM   JAN 18" description="ZM 12JAN18" conid="215229081" securityID="" underlyingSymbol="ZM" issuer="" multiplier="100" strike="" expiry="20180112" putCall="" positionValue="31710" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ZS   JUL 17" description="ZS 14JUL17" conid="138298470" securityID="" underlyingSymbol="ZS" issuer="" multiplier="5000" strike="" expiry="20170714" putCall="" positionValue="195150" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ZS   MAR 18" description="ZS 14MAR18" conid="212511061" securityID="" underlyingSymbol="ZS" issuer="" multiplier="5000" strike="" expiry="20180314" putCall="" positionValue="97850" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ZS   NOV 17" description="ZS 14NOV17" conid="138298487" securityID="" underlyingSymbol="ZS" issuer="" multiplier="5000" strike="" expiry="20171114" putCall="" positionValue="96775" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ZS   SEP 17" description="ZS 14SEP17" conid="173780204" securityID="" underlyingSymbol="ZS" issuer="" multiplier="5000" strike="" expiry="20170914" putCall="" positionValue="194100" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="BO   AUG 17" description="ZL 14AUG17" conid="176830314" securityID="" underlyingSymbol="ZL" issuer="" multiplier="60000" strike="" expiry="20170814" putCall="" positionValue="-19950" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="BO   JUL 17" description="ZL 14JUL17" conid="140039684" securityID="" underlyingSymbol="ZL" issuer="" multiplier="60000" strike="" expiry="20170714" putCall="" positionValue="-19890" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="BO   MAR 18" description="ZL 14MAR18" conid="215229156" securityID="" underlyingSymbol="ZL" issuer="" multiplier="60000" strike="" expiry="20180314" putCall="" positionValue="-20280" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="BO   SEP 17" description="ZL 14SEP17" conid="176830319" securityID="" underlyingSymbol="ZL" issuer="" multiplier="60000" strike="" expiry="20170914" putCall="" positionValue="-60012" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="C   MAR 18" description="ZC 14MAR18" conid="215229132" securityID="" underlyingSymbol="ZC" issuer="" multiplier="5000" strike="" expiry="20180314" putCall="" positionValue="-19925" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="CLQ7" description="CL AUG17" conid="97589585" securityID="" underlyingSymbol="CL" issuer="" multiplier="1000" strike="" expiry="20170720" putCall="" positionValue="-49700" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="CLZ7" description="CL DEC17" conid="55928744" securityID="" underlyingSymbol="CL" issuer="" multiplier="1000" strike="" expiry="20171120" putCall="" positionValue="-101060" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="CTN7" description="CT 14JUL17" conid="162749915" securityID="" underlyingSymbol="CT" issuer="" multiplier="50000" strike="" expiry="20170714" putCall="" positionValue="-80170" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="CTV7" description="CT 16OCT17" conid="172683047" securityID="" underlyingSymbol="CT" issuer="" multiplier="50000" strike="" expiry="20171016" putCall="" positionValue="-76560" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="GCM7" description="GC 28JUN17" conid="90384435" securityID="" underlyingSymbol="GC" issuer="" multiplier="100" strike="" expiry="20170628" putCall="" positionValue="-125870" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="HOX7" description="HO NOV17" conid="139384416" securityID="" underlyingSymbol="HO" issuer="" multiplier="42000" strike="" expiry="20171031" putCall="" positionValue="-199306.8" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="KCN7" description="KC 20JUL17" conid="162749905" securityID="" underlyingSymbol="KC" issuer="" multiplier="37500" strike="" expiry="20170720" putCall="" positionValue="-50400" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="KCU7" description="KC 20SEP17" conid="168907763" securityID="" underlyingSymbol="KC" issuer="" multiplier="37500" strike="" expiry="20170920" putCall="" positionValue="-102562.5" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="KCZ7" description="KC 19DEC17" conid="179029817" securityID="" underlyingSymbol="KC" issuer="" multiplier="37500" strike="" expiry="20171219" putCall="" positionValue="-52575" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="KE   JUL 17" description="KE 14JUL17" conid="160548356" securityID="" underlyingSymbol="KE" issuer="" multiplier="5000" strike="" expiry="20170714" putCall="" positionValue="-21325" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="KE   SEP 17" description="KE 14SEP17" conid="199882320" securityID="" underlyingSymbol="KE" issuer="" multiplier="5000" strike="" expiry="20170914" putCall="" positionValue="-44375" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="NGJ8" description="NG APR18" conid="70558059" securityID="" underlyingSymbol="NG" issuer="" multiplier="10000" strike="" expiry="20180327" putCall="" positionValue="-58660" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="NGN7" description="NG JUL17" conid="56197187" securityID="" underlyingSymbol="NG" issuer="" multiplier="10000" strike="" expiry="20170628" putCall="" positionValue="-32830" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="NGV7" description="NG OCT17" conid="56197196" securityID="" underlyingSymbol="NG" issuer="" multiplier="10000" strike="" expiry="20170927" putCall="" positionValue="-33300" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="RBV7" description="RB OCT17" conid="168660856" securityID="" underlyingSymbol="RB" issuer="" multiplier="42000" strike="" expiry="20170929" putCall="" positionValue="-61647.6" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="S   NOV 18" description="ZS 14NOV18" conid="173780210" securityID="" underlyingSymbol="ZS" issuer="" multiplier="5000" strike="" expiry="20181114" putCall="" positionValue="-48062.5" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="SM   DEC 17" description="ZM 14DEC17" conid="140039764" securityID="" underlyingSymbol="ZM" issuer="" multiplier="100" strike="" expiry="20171214" putCall="" positionValue="-31670" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="SM   SEP 17" description="ZM 14SEP17" conid="176830417" securityID="" underlyingSymbol="ZM" issuer="" multiplier="100" strike="" expiry="20170914" putCall="" positionValue="-31660" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ZC   DEC 17" description="ZC 14DEC17" conid="140039778" securityID="" underlyingSymbol="ZC" issuer="" multiplier="5000" strike="" expiry="20171214" putCall="" positionValue="-97250" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ZL   OCT 17" description="ZL 13OCT17" conid="140039694" securityID="" underlyingSymbol="ZL" issuer="" multiplier="60000" strike="" expiry="20171013" putCall="" positionValue="-40068" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ZS   JAN 18" description="ZS 12JAN18" conid="212511056" securityID="" underlyingSymbol="ZS" issuer="" multiplier="5000" strike="" expiry="20180112" putCall="" positionValue="-48762.5" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ZW   JUL 17" description="ZW 14JUL17" conid="160548319" securityID="" underlyingSymbol="ZW" issuer="" multiplier="5000" strike="" expiry="20170714" putCall="" positionValue="-21350" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ZW   SEP 17" description="ZW 14SEP17" conid="199882300" securityID="" underlyingSymbol="ZW" issuer="" multiplier="5000" strike="" expiry="20170914" putCall="" positionValue="-44025" />
+</OpenPositions>
+</FlexStatement><FlexStatement accountId="U1812091" fromDate="20170517" toDate="20170517" period="LastBusinessDay" whenGenerated="20170518;114739">
+<AccountInformation accountId="U1812091" acctAlias="Stock 091" currency="EUR" name="Warwyck Multi Calex" />
+<EquitySummaryInBase>
+<EquitySummaryByReportDateInBase total="164374.178915853" totalLong="996197.524672" totalShort="-831823.345756147" reportDate="20170516" />
+<EquitySummaryByReportDateInBase total="127727.32756082" totalLong="976841.0276416" totalShort="-849113.70008078" reportDate="20170517" />
+</EquitySummaryInBase>
+<ChangeInNAV mtm="-15120.4651538" startingValue="164374.178915853" endingValue="127727.32756082" />
+<MTMPerformanceSummaryInBase>
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="AGFS" description="AGROFRESH SOLUTIONS INC" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-1881.726" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="BRK B" description="BERKSHIRE HATHAWAY INC-CL B" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-210.5741" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="EEMV" description="ISHARES EDGE MSCI MIN VOL EM" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-555.5572" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="EMDV" description="PROSHARES MSCI EMERGING MARK" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-762.726272" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="JOE" description="ST JOE CO/THE" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-134.409" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="SMDV" description="PROSHRS RSL 2000 DVD GRW ETF" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-591.3996" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="URA" description="GLOBAL X URANIUM ETF" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-23745.59" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="XSLV" description="POWERSHARES S&amp;P SMALLCAP LOW" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-663.0844" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SPY   181221P00210000" description="SPY 21DEC18 210.0 P" underlyingSymbol="SPY" multiplier="100" strike="210" expiry="20181221" putCall="P" total="142.5989884" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SPY   181221P00220000" description="SPY 21DEC18 220.0 P" underlyingSymbol="SPY" multiplier="100" strike="220" expiry="20181221" putCall="P" total="172.2406532" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SPY   181221P00230000" description="SPY 21DEC18 230.0 P" underlyingSymbol="SPY" multiplier="100" strike="230" expiry="20181221" putCall="P" total="198.9432412" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SPY   181221P00240000" description="SPY 21DEC18 240.0 P" underlyingSymbol="SPY" multiplier="100" strike="240" expiry="20181221" putCall="P" total="233.5490784" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SPY   191220P00200000" description="SPY 20DEC19 200.0 P" underlyingSymbol="SPY" multiplier="100" strike="200" expiry="20191220" putCall="P" total="288.889744" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SPY   191220P00210000" description="SPY 20DEC19 210.0 P" underlyingSymbol="SPY" multiplier="100" strike="210" expiry="20191220" putCall="P" total="490.7810226" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SPY   191220P00220000" description="SPY 20DEC19 220.0 P" underlyingSymbol="SPY" multiplier="100" strike="220" expiry="20191220" putCall="P" total="1839.521574" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SPY   191220P00230000" description="SPY 20DEC19 230.0 P" underlyingSymbol="SPY" multiplier="100" strike="230" expiry="20191220" putCall="P" total="2516.8891704" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SPY   191220P00240000" description="SPY 20DEC19 240.0 P" underlyingSymbol="SPY" multiplier="100" strike="240" expiry="20191220" putCall="P" total="2453.591492" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SPY   191220P00250000" description="SPY 20DEC19 250.0 P" underlyingSymbol="SPY" multiplier="100" strike="250" expiry="20191220" putCall="P" total="267.787531" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="ESH8 P2300" description="ES 16MAR18 2300.0 P" underlyingSymbol="ESH8" multiplier="50" strike="2300" expiry="20180316" putCall="P" total="887.0994" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="ESU7 P2200" description="ES 15SEP17 2200.0 P" underlyingSymbol="ESU7" multiplier="50" strike="2200" expiry="20170915" putCall="P" total="542.1163" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="ESU7 P2250" description="ES 15SEP17 2250.0 P" underlyingSymbol="ESU7" multiplier="50" strike="2250" expiry="20170915" putCall="P" total="654.1238" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="ESU7 P2300" description="ES 15SEP17 2300.0 P" underlyingSymbol="ESU7" multiplier="50" strike="2300" expiry="20170915" putCall="P" total="801.9737" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="ESU7 P2350" description="ES 15SEP17 2350.0 P" underlyingSymbol="ESU7" multiplier="50" strike="2350" expiry="20170915" putCall="P" total="976.7054" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="ESZ7 P2250" description="ES 15DEC17 2250.0 P" underlyingSymbol="ESZ7" multiplier="50" strike="2250" expiry="20171215" putCall="P" total="761.651" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="ESZ7 P2300" description="ES 15DEC17 2300.0 P" underlyingSymbol="ESZ7" multiplier="50" strike="2300" expiry="20171215" putCall="P" total="878.1388" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="ESZ7 P2330" description="ES 15DEC17 2330.0 P" underlyingSymbol="ESZ7" multiplier="50" strike="2330" expiry="20171215" putCall="P" total="958.7842" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="ESZ7 P2350" description="ES 15DEC17 2350.0 P" underlyingSymbol="ESZ7" multiplier="50" strike="2350" expiry="20171215" putCall="P" total="1012.5478" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="AUD" description="AUD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-241.163942" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="CHF" description="CHF" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="EUR" description="EUR" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="USD" description="USD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-2412.167535" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="" symbol="" description="Total P/L" underlyingSymbol="" multiplier="" strike="" expiry="" putCall="" total="-15120.4651538" />
+</MTMPerformanceSummaryInBase><OpenPositions>
+<OpenPosition currency="USD" assetCategory="STK" symbol="AGFS" description="AGROFRESH SOLUTIONS INC" conid="202007772" securityID="00856G109" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="68200" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="BRK B" description="BERKSHIRE HATHAWAY INC-CL B" conid="72063691" securityID="084670702" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="16126" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="EEMV" description="ISHARES EDGE MSCI MIN VOL EM" conid="96079926" securityID="464286533" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="54860" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="EMDV" description="PROSHARES MSCI EMERGING MARK" conid="220581761" securityID="74347B847" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="51705" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="JOE" description="ST JOE CO/THE" conid="12170" securityID="790148100" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="17700" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="SMDV" description="PROSHRS RSL 2000 DVD GRW ETF" conid="183005008" securityID="74347B698" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="52440" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="URA" description="GLOBAL X URANIUM ETF" conid="211651685" securityID="37954Y871" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="661000" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="XSLV" description="POWERSHARES S&amp;P SMALLCAP LOW" conid="122263360" securityID="73937B639" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="42190" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SPY   181221P00210000" description="SPY 21DEC18 210.0 P" conid="217296524" securityID="" underlyingSymbol="SPY" issuer="" multiplier="100" strike="210" expiry="20181221" putCall="P" positionValue="1098.07" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SPY   181221P00220000" description="SPY 21DEC18 220.0 P" conid="217296535" securityID="" underlyingSymbol="SPY" issuer="" multiplier="100" strike="220" expiry="20181221" putCall="P" positionValue="1387.88" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SPY   181221P00230000" description="SPY 21DEC18 230.0 P" conid="217296541" securityID="" underlyingSymbol="SPY" issuer="" multiplier="100" strike="230" expiry="20181221" putCall="P" positionValue="1740.18" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SPY   181221P00240000" description="SPY 21DEC18 240.0 P" conid="217296548" securityID="" underlyingSymbol="SPY" issuer="" multiplier="100" strike="240" expiry="20181221" putCall="P" positionValue="2173.05" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SPY   191220P00200000" description="SPY 20DEC19 200.0 P" conid="260040260" securityID="" underlyingSymbol="SPY" issuer="" multiplier="100" strike="200" expiry="20191220" putCall="P" positionValue="2738.52" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SPY   191220P00210000" description="SPY 20DEC19 210.0 P" conid="260040267" securityID="" underlyingSymbol="SPY" issuer="" multiplier="100" strike="210" expiry="20191220" putCall="P" positionValue="4964.01" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SPY   191220P00220000" description="SPY 20DEC19 220.0 P" conid="260040270" securityID="" underlyingSymbol="SPY" issuer="" multiplier="100" strike="220" expiry="20191220" putCall="P" positionValue="19876.5" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SPY   191220P00230000" description="SPY 20DEC19 230.0 P" conid="260040272" securityID="" underlyingSymbol="SPY" issuer="" multiplier="100" strike="230" expiry="20191220" putCall="P" positionValue="28583.52" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SPY   191220P00240000" description="SPY 20DEC19 240.0 P" conid="260040277" securityID="" underlyingSymbol="SPY" issuer="" multiplier="100" strike="240" expiry="20191220" putCall="P" positionValue="28352.8" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SPY   191220P00250000" description="SPY 20DEC19 250.0 P" conid="260040282" securityID="" underlyingSymbol="SPY" issuer="" multiplier="100" strike="250" expiry="20191220" putCall="P" positionValue="3335.83" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="ESZ7 P2250" description="ES 15DEC17 2250.0 P" conid="259824497" securityID="" underlyingSymbol="ESZ7" issuer="" multiplier="50" strike="2250" expiry="20171215" putCall="P" positionValue="3355" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="ESZ7 P2300" description="ES 15DEC17 2300.0 P" conid="259824523" securityID="" underlyingSymbol="ESZ7" issuer="" multiplier="50" strike="2300" expiry="20171215" putCall="P" positionValue="4050" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="ESZ7 P2330" description="ES 15DEC17 2330.0 P" conid="259824538" securityID="" underlyingSymbol="ESZ7" issuer="" multiplier="50" strike="2330" expiry="20171215" putCall="P" positionValue="4545" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="ESZ7 P2350" description="ES 15DEC17 2350.0 P" conid="259824547" securityID="" underlyingSymbol="ESZ7" issuer="" multiplier="50" strike="2350" expiry="20171215" putCall="P" positionValue="4910" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="ESU7 P2200" description="ES 15SEP17 2200.0 P" conid="248622638" securityID="" underlyingSymbol="ESU7" issuer="" multiplier="50" strike="2200" expiry="20170915" putCall="P" positionValue="1570" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="ESU7 P2250" description="ES 15SEP17 2250.0 P" conid="248622663" securityID="" underlyingSymbol="ESU7" issuer="" multiplier="50" strike="2250" expiry="20170915" putCall="P" positionValue="2000" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="ESU7 P2300" description="ES 15SEP17 2300.0 P" conid="248622684" securityID="" underlyingSymbol="ESU7" issuer="" multiplier="50" strike="2300" expiry="20170915" putCall="P" positionValue="2575" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="ESU7 P2350" description="ES 15SEP17 2350.0 P" conid="248622708" securityID="" underlyingSymbol="ESU7" issuer="" multiplier="50" strike="2350" expiry="20170915" putCall="P" positionValue="3355" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="ESH8 P2300" description="ES 16MAR18 2300.0 P" conid="270501768" securityID="" underlyingSymbol="ESH8" issuer="" multiplier="50" strike="2300" expiry="20180316" putCall="P" positionValue="5320" />
+</OpenPositions>
+</FlexStatement><FlexStatement accountId="U2075304" fromDate="20170517" toDate="20170517" period="LastBusinessDay" whenGenerated="20170518;114740">
+<AccountInformation accountId="U2075304" acctAlias="Ura 304" currency="EUR" name="Warwyck Multi Calex" />
+<EquitySummaryInBase>
+<EquitySummaryByReportDateInBase total="483127.401926744" totalLong="483135.415071344" totalShort="-8.0131446" reportDate="20170516" />
+<EquitySummaryByReportDateInBase total="465602.418822441" totalLong="465610.401744841" totalShort="-7.9829224" reportDate="20170517" />
+</EquitySummaryInBase>
+<ChangeInNAV mtm="-17525.013326" startingValue="483127.401926744" endingValue="465602.418822441" />
+<MTMPerformanceSummaryInBase>
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="BKY" description="BERKELEY ENERGIA LTD" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-2637.162" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="CCJ" description="CAMECO CORP" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-3046.604" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="DML" description="DENISON MINES CORP" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-1778.625" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="FCU" description="FISSION URANIUM CORP" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-1185.75" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="LAM" description="LARAMIDE RESOURCES" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-197.625" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="MGA" description="MEGA URANIUM LTD" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-823.4375" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="NXE" description="NEXGEN ENERGY LTD" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-4479.5" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="PEN" description="PENINSULA ENERGY LTD" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-266.38" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="U" description="URANIUM PARTICIPATION CORP" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-177.8625" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="UEC" description="URANIUM ENERGY CORP" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-501.7936" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="UEX" description="UEX CORPORATION" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-276.675" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="URE" description="UR-ENERGY INC" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-98.8125" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="URG" description="UR-ENERGY INC" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-1917.12037" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="UUUU" description="ENERGY FUELS INC" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-1344.09" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ECDM7" description="ECD 19JUN17" underlyingSymbol="ECD" multiplier="125000" strike="" expiry="20170619" putCall="" total="1012.828125" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="ESU7 P2350" description="ES 15SEP17 2350.0 P" underlyingSymbol="ESU7" multiplier="50" strike="2350" expiry="20170915" putCall="P" total="976.7054" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="ESZ7 P2200" description="ES 15DEC17 2200.0 P" underlyingSymbol="ESZ7" multiplier="50" strike="2200" expiry="20171215" putCall="P" total="658.6041" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="ESZ7 P2250" description="ES 15DEC17 2250.0 P" underlyingSymbol="ESZ7" multiplier="50" strike="2250" expiry="20171215" putCall="P" total="761.651" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FOP" symbol="ESZ7 P2350" description="ES 15DEC17 2350.0 P" underlyingSymbol="ESZ7" multiplier="50" strike="2350" expiry="20171215" putCall="P" total="1012.5478" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="AUD" description="AUD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-373.428" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="CAD" description="CAD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-1569.346441" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="EUR" description="EUR" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="USD" description="USD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-1273.13784" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="" symbol="" description="Total P/L" underlyingSymbol="" multiplier="" strike="" expiry="" putCall="" total="-17525.013326" />
+</MTMPerformanceSummaryInBase><OpenPositions>
+<OpenPosition currency="AUD" assetCategory="STK" symbol="BKY" description="BERKELEY ENERGIA LTD" conid="44188692" securityID="AU000000BKY0" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="55440" />
+<OpenPosition currency="AUD" assetCategory="STK" symbol="PEN" description="PENINSULA ENERGY LTD" conid="44205079" securityID="AU000000PEN6" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="30400" />
+<OpenPosition currency="CAD" assetCategory="STK" symbol="DML" description="DENISON MINES CORP" conid="41943554" securityID="CA2483561072" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="61200" />
+<OpenPosition currency="CAD" assetCategory="STK" symbol="FCU" description="FISSION URANIUM CORP" conid="126961833" securityID="CA33812R1091" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="57600" />
+<OpenPosition currency="CAD" assetCategory="STK" symbol="LAM" description="LARAMIDE RESOURCES" conid="14891890" securityID="CA51669T1012" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="3500" />
+<OpenPosition currency="CAD" assetCategory="STK" symbol="MGA" description="MEGA URANIUM LTD" conid="36350155" securityID="CA58516W1041" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="23125" />
+<OpenPosition currency="CAD" assetCategory="STK" symbol="NXE" description="NEXGEN ENERGY LTD" conid="126537850" securityID="CA65340P1062" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="124800" />
+<OpenPosition currency="CAD" assetCategory="STK" symbol="U" description="URANIUM PARTICIPATION CORP" conid="14893844" securityID="CA9170171057" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="51840" />
+<OpenPosition currency="CAD" assetCategory="STK" symbol="UEX" description="UEX CORPORATION" conid="28377446" securityID="CA9026661061" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="18060" />
+<OpenPosition currency="CAD" assetCategory="STK" symbol="URE" description="UR-ENERGY INC" conid="37060554" securityID="CA91688R1082" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="3750" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="CCJ" description="CAMECO CORP" conid="1447060" securityID="13321L108" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="95600" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="UEC" description="URANIUM ENERGY CORP" conid="37451201" securityID="916896103" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="19600" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="URG" description="UR-ENERGY INC" conid="41654643" securityID="91688R108" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="30129" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="UUUU" description="ENERGY FUELS INC" conid="137823153" securityID="292671708" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="40500" />
+<OpenPosition currency="CAD" assetCategory="FUT" symbol="ECDM7" description="ECD 19JUN17" conid="215229345" securityID="" underlyingSymbol="ECD" issuer="" multiplier="125000" strike="" expiry="20170619" putCall="" positionValue="190087.5" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="ESZ7 P2200" description="ES 15DEC17 2200.0 P" conid="259824473" securityID="" underlyingSymbol="ESZ7" issuer="" multiplier="50" strike="2200" expiry="20171215" putCall="P" positionValue="2785" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="ESZ7 P2250" description="ES 15DEC17 2250.0 P" conid="259824497" securityID="" underlyingSymbol="ESZ7" issuer="" multiplier="50" strike="2250" expiry="20171215" putCall="P" positionValue="3355" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="ESZ7 P2350" description="ES 15DEC17 2350.0 P" conid="259824547" securityID="" underlyingSymbol="ESZ7" issuer="" multiplier="50" strike="2350" expiry="20171215" putCall="P" positionValue="4910" />
+<OpenPosition currency="USD" assetCategory="FOP" symbol="ESU7 P2350" description="ES 15SEP17 2350.0 P" conid="248622708" securityID="" underlyingSymbol="ESU7" issuer="" multiplier="50" strike="2350" expiry="20170915" putCall="P" positionValue="3355" />
+</OpenPositions>
+</FlexStatement><FlexStatement accountId="U1812955" fromDate="20170517" toDate="20170517" period="LastBusinessDay" whenGenerated="20170518;114741">
+<AccountInformation accountId="U1812955" acctAlias="Value 955" currency="EUR" name="Warwyck Multi Calex" />
+<EquitySummaryInBase>
+<EquitySummaryByReportDateInBase total="1688807.108171848" totalLong="3130665.195" totalShort="-1441858.086828152" reportDate="20170516" />
+<EquitySummaryByReportDateInBase total="1675140.924120512" totalLong="3078816.236924999" totalShort="-1403675.312804488" reportDate="20170517" />
+</EquitySummaryInBase>
+<ChangeInNAV mtm="-13586.0779246" startingValue="1688807.108171848" endingValue="1675140.924120512" />
+<MTMPerformanceSummaryInBase>
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="AFG" description="AMERICAN FINANCIAL GROUP INC" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-641.2922208" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="AGII" description="ARGO GROUP INTERNATIONAL" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-4432.80882" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="AHL" description="ASPEN INSURANCE HOLDINGS LTD" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-1320.971652" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="AIZ" description="ASSURANT INC" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-1683.4996068" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="ALE" description="ALLETE INC" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="584.8404408" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="ANAT" description="AMERICAN NATIONAL INSURANCE" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-2228.6087472" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="APLE" description="APPLE HOSPITALITY REIT INC" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-1290.864036" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="AVA" description="AVISTA CORP" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="952.7268344" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="AVX" description="AVX CORP" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-5149.65682" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="AXS" description="AXIS CAPITAL HOLDINGS LTD" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-918.2464456" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="BHLB" description="BERKSHIRE HILLS BANCORP INC" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-2084.728393" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="BWINB" description="BALDWIN &amp; LYONS INC -CL B" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="BXMT" description="BLACKSTONE MORTGAGE TRU-CL A" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-521.3635504" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="CIM" description="CHIMERA INVESTMENT CORP" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-516.0588752" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="EE" description="EL PASO ELECTRIC CO" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-87.903486" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="FAF" description="FIRST AMERICAN FINANCIAL" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="371.1301308" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="FDUS" description="FIDUS INVESTMENT CORP" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-1933.6616376" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="GXP" description="GREAT PLAINS ENERGY INC" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-56.4159376" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="KAMN" description="KAMAN CORP" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-1566.3487224" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="NHC" description="NATIONAL HEALTHCARE CORP" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-2086.7266068" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="NRZ" description="NEW RESIDENTIAL INVESTMENT" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-995.4868176" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="NWE" description="NORTHWESTERN CORP" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-162.63489" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="OMI" description="OWENS &amp; MINOR INC" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-677.152542" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="ORI" description="OLD REPUBLIC INTL CORP" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-1587.1193932" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="PNM" description="PNM RESOURCES INC" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-639.069992" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="POR" description="PORTLAND GENERAL ELECTRIC CO" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="210.8339574" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="SPY" description="SPDR S&amp;P 500 ETF TRUST" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="1065.0031524" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="SR" description="SPIRE INC" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="148.835566" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="THG" description="HANOVER INSURANCE GROUP INC/" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-461.1752002" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="VR" description="VALIDUS HOLDINGS LTD" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-1387.459304" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="WRB" description="WR BERKLEY CORP" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-37.455308" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="FUT" symbol="ESZ7" description="ES 15DEC17" underlyingSymbol="ES" multiplier="50" strike="" expiry="20171215" putCall="" total="27217.8225" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="AUD" description="AUD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="0.064584" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="CAD" description="CAD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="EUR" description="EUR" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="GBP" description="GBP" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="USD" description="USD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-11670.626086" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="" symbol="" description="Total P/L" underlyingSymbol="" multiplier="" strike="" expiry="" putCall="" total="-13586.0779246" />
+</MTMPerformanceSummaryInBase><OpenPositions>
+<OpenPosition currency="USD" assetCategory="STK" symbol="AFG" description="AMERICAN FINANCIAL GROUP INC" conid="661377" securityID="025932104" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="109294.56" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="AGII" description="ARGO GROUP INTERNATIONAL" conid="45615187" securityID="BMG0464B1072" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="178383" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="AHL" description="ASPEN INSURANCE HOLDINGS LTD" conid="26976177" securityID="BMG053841059" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="122235.75" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="AIZ" description="ASSURANT INC" conid="27727424" securityID="04621X108" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="103966.08" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="ALE" description="ALLETE INC" conid="30839976" securityID="018522300" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="124680.01" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="ANAT" description="AMERICAN NATIONAL INSURANCE" conid="266204" securityID="028591105" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="116296.08" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="APLE" description="APPLE HOSPITALITY REIT INC" conid="194322803" securityID="03784Y200" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="125606.6" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="AVA" description="AVISTA CORP" conid="6227138" securityID="05379B107" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="116396.8" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="AVX" description="AVX CORP" conid="1122797" securityID="002444107" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="133084.1" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="AXS" description="AXIS CAPITAL HOLDINGS LTD" conid="18963197" securityID="BMG0692U1099" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="94112.15" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="BHLB" description="BERKSHIRE HILLS BANCORP INC" conid="14486571" securityID="084680107" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="88164" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="BWINB" description="BALDWIN &amp; LYONS INC -CL B" conid="267171" securityID="057755209" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="97227.9" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="BXMT" description="BLACKSTONE MORTGAGE TRU-CL A" conid="127149807" securityID="09257W100" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="125968.36" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="CIM" description="CHIMERA INVESTMENT CORP" conid="187296614" securityID="16934Q208" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="128142.2" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="EE" description="EL PASO ELECTRIC CO" conid="2016326" securityID="283677854" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="101337.3" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="FAF" description="FIRST AMERICAN FINANCIAL" conid="75472985" securityID="31847R102" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="98620.86" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="FDUS" description="FIDUS INVESTMENT CORP" conid="90053147" securityID="316500107" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="131943.84" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="GXP" description="GREAT PLAINS ENERGY INC" conid="8854" securityID="391164100" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="87703.28" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="KAMN" description="KAMAN CORP" conid="270922" securityID="483548103" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="99471.8" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="NHC" description="NATIONAL HEALTHCARE CORP" conid="755810" securityID="635906100" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="148433.5" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="NRZ" description="NEW RESIDENTIAL INVESTMENT" conid="169688387" securityID="64828T201" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="97949.64" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="NWE" description="NORTHWESTERN CORP" conid="31918434" securityID="668074305" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="99462" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="OMI" description="OWENS &amp; MINOR INC" conid="10814" securityID="690732102" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="110263.5" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="ORI" description="OLD REPUBLIC INTL CORP" conid="10840" securityID="680223104" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="156430.93" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="PNM" description="PNM RESOURCES INC" conid="11251" securityID="69349H107" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="130159" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="POR" description="PORTLAND GENERAL ELECTRIC CO" conid="38608398" securityID="736508847" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="95998.32" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="SR" description="SPIRE INC" conid="231408961" securityID="84857L101" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="114609" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="THG" description="HANOVER INSURANCE GROUP INC/" conid="37075152" securityID="410867105" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="112100.69" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="VR" description="VALIDUS HOLDINGS LTD" conid="45127747" securityID="BMG9319H1025" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="115687.6" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="WRB" description="WR BERKLEY CORP" conid="266822" securityID="084423102" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="69398.45" />
+<OpenPosition currency="USD" assetCategory="STK" symbol="SPY" description="SPDR S&amp;P 500 ETF TRUST" conid="756733" securityID="78462F103" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="-65793.78" />
+<OpenPosition currency="USD" assetCategory="FUT" symbol="ESZ7" description="ES 15DEC17" conid="247950613" securityID="" underlyingSymbol="ES" issuer="" multiplier="50" strike="" expiry="20171215" putCall="" positionValue="-1763175" />
+</OpenPositions>
+</FlexStatement><FlexStatement accountId="U1812946" fromDate="20170517" toDate="20170517" period="LastBusinessDay" whenGenerated="20170518;114741">
+<AccountInformation accountId="U1812946" acctAlias="Vol 946" currency="EUR" name="Warwyck Multi Calex" />
+<EquitySummaryInBase>
+<EquitySummaryByReportDateInBase total="1062059.329316604" totalLong="1134485.763014604" totalShort="-72426.433698" reportDate="20170516" />
+<EquitySummaryByReportDateInBase total="922865.418899109" totalLong="945299.067632109" totalShort="-22433.648733" reportDate="20170517" />
+</EquitySummaryInBase>
+<ChangeInNAV mtm="-139147.3697338" startingValue="1062059.329316604" endingValue="922865.418899109" />
+<MTMPerformanceSummaryInBase>
+<MTMPerformanceSummaryUnderlying code="" assetCategory="STK" symbol="SVXY" description="PROSHARES SHORT VIX ST FUTUR" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-130197.518" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SVXY  170616C00150000" description="SVXY 16JUN17 150.0 C" underlyingSymbol="SVXY" multiplier="100" strike="150" expiry="20170616" putCall="C" total="-37722.0471408" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SVXY  170616C00156000" description="SVXY 16JUN17 156.0 C" underlyingSymbol="SVXY" multiplier="100" strike="156" expiry="20170616" putCall="C" total="25974.09122" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SVXY  170616C00166000" description="SVXY 16JUN17 166.0 C" underlyingSymbol="SVXY" multiplier="100" strike="166" expiry="20170616" putCall="C" total="5166.144324" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SVXY  170915P00120000" description="SVXY 15SEP17 120.0 P" underlyingSymbol="SVXY" multiplier="100" strike="120" expiry="20170915" putCall="P" total="36283.70955" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SVXY  170915C00180000" description="SVXY 15SEP17 180.0 C" underlyingSymbol="SVXY" multiplier="100" strike="180" expiry="20170915" putCall="C" total="-56291.38526" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="OPT" symbol="SVXY  170915C00225000" description="SVXY 15SEP17 225.0 C" underlyingSymbol="SVXY" multiplier="100" strike="225" expiry="20170915" putCall="C" total="18399.69604" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="EUR" description="EUR" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="0" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="CASH" symbol="USD" description="USD" underlyingSymbol="" multiplier="0" strike="" expiry="" putCall="" total="-452.039842" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="BOND" symbol="BBDBCN 5 3/4 03/15/22 2AR8" description="BBDBCN 5 3/4 03/15/22" underlyingSymbol="" multiplier="1" strike="" expiry="" putCall="" total="-308.020625" />
+<MTMPerformanceSummaryUnderlying code="" assetCategory="" symbol="" description="Total P/L" underlyingSymbol="" multiplier="" strike="" expiry="" putCall="" total="-139147.3697338" />
+</MTMPerformanceSummaryInBase><OpenPositions>
+<OpenPosition currency="USD" assetCategory="STK" symbol="SVXY" description="PROSHARES SHORT VIX ST FUTUR" conid="95501103" securityID="74347W627" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="650250" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SVXY  170616C00150000" description="SVXY 16JUN17 150.0 C" conid="253751904" securityID="" underlyingSymbol="SVXY" issuer="" multiplier="100" strike="150" expiry="20170616" putCall="C" positionValue="8860.68" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SVXY  170915P00120000" description="SVXY 15SEP17 120.0 P" conid="263576766" securityID="" underlyingSymbol="SVXY" issuer="" multiplier="100" strike="120" expiry="20170915" putCall="P" positionValue="72408" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SVXY  170915C00180000" description="SVXY 15SEP17 180.0 C" conid="263576553" securityID="" underlyingSymbol="SVXY" issuer="" multiplier="100" strike="180" expiry="20170915" putCall="C" positionValue="39505" />
+<OpenPosition currency="USD" assetCategory="BOND" symbol="BBDBCN 5 3/4 03/15/22 2AR8" description="BBDBCN 5 3/4 03/15/22" conid="104143793" securityID="C10602AR8" underlyingSymbol="" issuer="" multiplier="1" strike="" expiry="" putCall="" positionValue="24750" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SVXY  170616C00156000" description="SVXY 16JUN17 156.0 C" conid="274773931" securityID="" underlyingSymbol="SVXY" issuer="" multiplier="100" strike="156" expiry="20170616" putCall="C" positionValue="-5722.5" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SVXY  170616C00166000" description="SVXY 16JUN17 166.0 C" conid="274773960" securityID="" underlyingSymbol="SVXY" issuer="" multiplier="100" strike="166" expiry="20170616" putCall="C" positionValue="-1066.2" />
+<OpenPosition currency="USD" assetCategory="OPT" symbol="SVXY  170915C00225000" description="SVXY 15SEP17 225.0 C" conid="264471125" securityID="" underlyingSymbol="SVXY" issuer="" multiplier="100" strike="225" expiry="20170915" putCall="C" positionValue="-17956" />
+</OpenPositions>
+</FlexStatement>
+</FlexStatements>
+</FlexQueryResponse>
