@@ -3,6 +3,11 @@ from datetime import date
 
 
 def parse_flex_result(content):
+    """
+    
+    :param content: xml IBrokers Flex string
+    :return: dict key-ed by account id
+    """
     accounts = dict()
     tree = ElementTree.fromstring(content)
     for node_account in tree.findall('FlexStatements/FlexStatement'):
