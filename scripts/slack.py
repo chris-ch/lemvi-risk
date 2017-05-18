@@ -104,10 +104,10 @@ def main(args):
             )
             attachment = {'color': '#F35A00', 'text': attachment_description}
             account_fields = [
-                {'title': 'NAV change ({})'.format(account_data['as_of_date']),
-                 'value': '{0:,g}'.format(account_data['nav_change']), 'short': False},
-                {'title': 'NAV', 'value': '{0:,g}'.format(account_data['nav_end']), 'short': True},
-                {'title': 'NAV (prev)', 'value': '{0:,g}'.format(account_data['nav_start']), 'short': True}
+                {'title': 'NAV change ({0}, from {1:,d} to {2:,d})'.format(account_data['as_of_date'],
+                                                                           account_data['nav_start'],
+                                                                           account_data['nav_end']),
+                 'value': '{0:,d}'.format(account_data['nav_change']), 'short': False}
             ]
             attachment['fields'] = account_fields
             attachments.append(attachment)
@@ -119,7 +119,9 @@ def main(args):
                           channel='#' + _SLACK_CHANNEL,
                           text=message_body,
                           mrkdwn=True,
-                          attachments=attachments)
+                          attachments=attachments,
+                          username='Reporting - Daily NAV changes'
+                          )
 
 
 if __name__ == '__main__':
