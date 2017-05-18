@@ -71,6 +71,7 @@ def main(args):
         slack_api_token = args.slack_api_token
 
     else:
+        logging.info('loading secrets file from location: {0}'.format(secrets_file_path))
         with open(secrets_file_path) as json_data:
             secrets_content = json.load(json_data)
             slack_api_token = secrets_content['slack.api.token']
