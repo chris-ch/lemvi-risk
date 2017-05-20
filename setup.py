@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name='lemvi-risk',
@@ -8,5 +8,6 @@ setup(
     license='',
     author='christophe',
     author_email='christophe.alexandre@lemvi.ch',
-    description='', requires=['slackclient']
+    description='',
+    install_requires=['slackclient']
 )
