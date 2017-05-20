@@ -41,11 +41,21 @@ def flex_request(token):
     :return: 
     """
     request_step_1 = create_flex_request_step_1(token)
+    logging.info('requesting: "{0}"'.format(request_step_1))
     response_1 = requests.get(request_step_1)
     tree_1 = ElementTree.fromstring(response_1.content)
+    error_code = tree_1.findtext('ErrorCode')
+    if error_code:
+        error_message = tree_1.findtext('ErrorMessage')
+        logging.error('failed to access IBrokers Flex service: "{0}" (code {1})'.format(error_message, error_code))
+        raise Exception(error_message, error_code)
+
     reference_code = tree_1.findtext('ReferenceCode')
     url = tree_1.findtext('Url')
+    logging.info('reference code: {0}'.format(reference_code))
+    logging.info('url: {0}'.format(url))
     request_step_2 = create_flex_request_step_2(url, reference_code, token)
+    logging.info('requesting url "{0}"'.format(request_step_2))
     error_code = '1019'  # goes through the loop at least once
     attempt = 1
     attempt_total = 6
