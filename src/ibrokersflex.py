@@ -34,7 +34,6 @@ def parse_flex_result(content):
             'nav_start': nav_start,
             'nav_end': nav_end,
             'cash': cash_value,
-            'margin': float(cash_value) / float(nav_end)
         }
 
     return accounts

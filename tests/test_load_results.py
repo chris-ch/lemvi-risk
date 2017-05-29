@@ -22,8 +22,14 @@ class LoadResultsTestCase(unittest.TestCase):
         self.assertEqual(accounts['U1812946']['account_alias'], 'Vol 946')
         self.assertEqual(accounts['U1812119']['cash'], 1102309)
         self.assertEqual(accounts['U1812946']['cash'], 233816)
-        self.assertAlmostEqual(accounts['U1812119']['margin'], 1.0, places=3)
-        self.assertAlmostEqual(accounts['U1812946']['margin'], 0.225, places=3)
+        total_cash = 0.
+        total_nav = 0.
+        for account_code in accounts:
+            total_cash += accounts[account_code]['cash']
+            total_nav += accounts[account_code]['nav_end']
+
+        self.assertAlmostEqual(total_cash, 2676123, places=0)
+        self.assertAlmostEqual(total_nav, 8768683, places=0)
 
     def test_calculate_margin(self):
         accounts = parse_flex_result(self.content)
