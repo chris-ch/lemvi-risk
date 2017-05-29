@@ -1,3 +1,4 @@
+from collections import OrderedDict
 from xml.etree import ElementTree
 from datetime import date
 
@@ -36,4 +37,8 @@ def parse_flex_result(content):
             'cash': cash_value,
         }
 
-    return accounts
+    ordered_accounts = OrderedDict()
+    for account_data in sorted(accounts.values(), key=lambda account: account['account_alias']):
+        ordered_accounts[account_data['account_id']] = account_data
+
+    return ordered_accounts

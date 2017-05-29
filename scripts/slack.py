@@ -36,9 +36,9 @@ def create_flex_request_step_2(url, reference_code, token):
 
 def flex_request(token):
     """
-    Requesting IBrokers Flex data
+    Requesting IBrokers Flex data.
     :param token: 
-    :return: 
+    :return: dict() of accounts data using account id as key
     """
     request_step_1 = create_flex_request_step_1(token)
     logging.info('requesting: "{0}"'.format(request_step_1))
@@ -106,6 +106,8 @@ def main(args):
 
             accounts = flex_request(ibrokers_flex_token)
 
+        total_cash = 0.
+        total_nav = 0.
         for account_id in accounts:
             account_data = accounts[account_id]
             attachment_description = '{} ({}) - {}'.format(
@@ -123,7 +125,11 @@ def main(args):
             attachment['fields'] = account_fields
             attachments.append(attachment)
 
-        message_body = '*Daily reporting - NAV changes*'
+            total_cash += accounts[account_id]['cash']
+            total_nav += accounts[account_id]['nav_end']
+
+        message_body = '\n'.join(['*Daily reporting - NAV changes*', 'NAV: {0:,d}'.format(int(total_nav)),
+                                  'Cash: {0:,d}'.format(int(total_cash))])
 
     slack_client = SlackClient(slack_api_token)
     slack_client.api_call('chat.postMessage',
