@@ -22,6 +22,9 @@ def parse_flex_result(content):
         nav_change = int(float(node_change_in_nav.get('mtm')))
         nav_start = int(float(node_change_in_nav.get('startingValue')))
         nav_end = int(float(node_change_in_nav.get('endingValue')))
+        cash_node_pattern = "./EquitySummaryInBase/EquitySummaryByReportDateInBase[@reportDate='{}']".format(date_yyyymmdd)
+        cash_node = node_account.find(cash_node_pattern)
+        cash_value = int(float(cash_node.get('cash')))
         accounts[account_id] = {
             'as_of_date': as_of_date,
             'account_alias': account_alias,
@@ -30,6 +33,8 @@ def parse_flex_result(content):
             'nav_change': nav_change,
             'nav_start': nav_start,
             'nav_end': nav_end,
+            'cash': cash_value,
+            'margin': float(cash_value) / float(nav_end)
         }
 
     return accounts
