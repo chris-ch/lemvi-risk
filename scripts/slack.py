@@ -5,7 +5,7 @@ import os
 from string import Template
 from time import sleep
 from xml.etree import ElementTree
-
+import six
 import requests
 from slackclient import SlackClient
 
