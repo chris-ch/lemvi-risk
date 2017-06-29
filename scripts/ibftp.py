@@ -22,9 +22,11 @@ def retrieve_margin_report(host, ibrokers_ftp_user, ibrokers_ftp_password, retri
 
 
 def data_saver(filename):
+    target_file = open(filename, 'wb')
+    logging.info('writing data to file {}'.format(os.path.abspath(filename)))
+
     def content_writer(content):
-        logging.info('writing data to file {}'.format(os.path.abspath(filename)))
-        open(filename, 'wb').write(content)
+        target_file.write(content)
 
     return content_writer
 
