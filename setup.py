@@ -9,5 +9,5 @@ setup(
     author='christophe',
     author_email='christophe.alexandre@lemvi.ch',
     description='',
-    install_requires=['six>=1.10.0', 'slackclient>=1.0.5']
+    install_requires=['six>=1.10.0', 'slackclient>=1.0.5', 'pandas>=0.20.2']
 )

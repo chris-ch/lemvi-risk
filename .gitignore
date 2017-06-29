@@ -103,3 +103,5 @@ ENV/
 .idea
 
 secrets.json
+
+.DS_Store
