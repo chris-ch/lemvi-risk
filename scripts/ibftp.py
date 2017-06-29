@@ -66,7 +66,30 @@ def main(args):
         ibrokers_data.seek(0)
         ib_margin_data = parse_csv_margin_data(ibrokers_data)
         result = get_margin_data(ib_margin_data)
-        print(result)
+        output_data = {
+            'as_of_date': result['as_of_date'],
+            'currency': result['base_currency'],
+            'nav': result['net_liquidation_value'],
+            'cash': result['cash_value'],
+            'initial_margin': result['initial_margin_requirement'],
+            'maintenance_margin': result['maintenance_margin_requirement'],
+        }
+        lines = ["*Daily reporting - Margin {currency} {as_of_date}*",
+                 "NAV: {nav}","Cash: {cash}",
+                 "Initial Margin: {initial_margin}",
+                 "Maintenance Margin: {maintenance_margin}"
+                 ]
+        output_content = '\n'.join(lines).format(**output_data)
+
+        os.makedirs(args.output_path, exist_ok=True)
+        if args.output_file:
+            target_file = os.sep.join([args.output_path, args.output_file])
+            logging.info('saving data to {}'.format(os.path.abspath(target_file)))
+            with open(target_file, 'w') as output_file:
+                output_file.write(output_content)
+
+        else:
+            print(output_content)
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO, format='%(asctime)s:%(name)s:%(levelname)s:%(message)s')
