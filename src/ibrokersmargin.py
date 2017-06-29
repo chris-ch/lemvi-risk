@@ -3,21 +3,27 @@ from collections import defaultdict
 import pandas
 
 
-def parse_csv_margin_data(file_path):
+def parse_csv_margin_file(file_path):
+    with open(file_path, 'r') as file_data:
+        result = parse_csv_margin_data(file_data)
+
+    return result
+
+
+def parse_csv_margin_data(file_data):
     ib_raw_data = defaultdict(list)
     ib_data = defaultdict(list)
-    with open(file_path, 'r') as content:
-        starting_field = None
-        for line in content:
-            fields = line.split(',')
-            if fields[0] != starting_field:
-                starting_field = fields[0]
+    starting_field = None
+    for line in file_data:
+        fields = line.split(',')
+        if fields[0] != starting_field:
+            starting_field = fields[0]
 
-            ib_raw_data[starting_field].append(','.join(fields[2:]))
+        ib_raw_data[starting_field].append(','.join(fields[2:]))
 
-        for category in ib_raw_data:
-            lines = ib_raw_data[category]
-            ib_data[category] = pandas.DataFrame(list(csv.DictReader(lines)))
+    for category in ib_raw_data:
+        lines = ib_raw_data[category]
+        ib_data[category] = pandas.DataFrame(list(csv.DictReader(lines)))
 
     return ib_data
 
