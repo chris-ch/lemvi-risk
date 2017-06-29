@@ -23,6 +23,8 @@ def parse_csv_margin_data(file_path):
 
 
 def get_margin_data(ib_margin_data):
+    as_of_date = ib_margin_data['Account']['AsOfDateTime'].iloc[0]
+    base_currency = ib_margin_data['Account']['BaseCurrency'].iloc[0]
     margin_summary = ib_margin_data['MarginSummary'].set_index('Parameter')['Total']
     net_liquidation_value = round(float((margin_summary['NetLiquidationValue'])))
     cash_value = round(float(margin_summary['CashValue']))
@@ -32,7 +34,9 @@ def get_margin_data(ib_margin_data):
         'net_liquidation_value': net_liquidation_value,
         'cash_value': cash_value,
         'initial_margin_requirement': initial_margin_requirement,
-        'maintenance_margin_requirement': maintenance_margin_requirement
+        'maintenance_margin_requirement': maintenance_margin_requirement,
+        'as_of_date': as_of_date,
+        'base_currency': base_currency
     }
     return margin_data
 

@@ -33,12 +33,11 @@ class MarginReportTestCase(unittest.TestCase):
         self.assertEqual(cash_value, 5158671)
         self.assertEqual(initial_margin_requirement, 4533994)
         self.assertEqual(maintenance_margin_requirement, 3815870)
+        self.assertEqual(margin_data['as_of_date'], '2017-06-28T07:40:42Z')
+        self.assertEqual(margin_data['base_currency'], 'EUR')
         self.assertEqual(round(float(margin_summary['AvailableFunds'])), available_funds)
         self.assertEqual(round(float(margin_summary['ExcessLiquidity'])), excess_liquidity)
         self.assertAlmostEqual(float(margin_summary['Margin Ratio (%)']) / 100, margin_ratio, places=2)
-
-    def test_account(self):
-        print(self.ib_data['SpanMarginOverview'])
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s:%(name)s:%(levelname)s:%(message)s')
