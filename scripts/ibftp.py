@@ -1,5 +1,6 @@
 import logging
 import argparse
+from datetime import datetime
 from ftplib import FTP
 import os
 import json
@@ -70,15 +71,25 @@ def main(args):
         ibrokers_data.seek(0)
         ib_margin_data = parse_csv_margin_data(ibrokers_data)
         result = get_margin_data(ib_margin_data)
+        net_liquidation_value = int(result['net_liquidation_value'])
+        initial_margin_requirement = int(result['initial_margin_requirement'])
+        cash_value = int(result['cash_value'])
+        maintenance_margin_requirement = int(result['maintenance_margin_requirement'])
+        available_funds = net_liquidation_value - initial_margin_requirement
+        margin_ratio = float(initial_margin_requirement) / net_liquidation_value
         output_data = {
-            'as_of_date': result['as_of_date'],
+            'as_of_date': datetime.strptime(result['as_of_date'], '%Y-%m-%dT%H:%M:%SZ'),
             'currency': result['base_currency'],
-            'nav': result['net_liquidation_value'],
-            'cash': result['cash_value'],
-            'initial_margin': result['initial_margin_requirement'],
-            'maintenance_margin': result['maintenance_margin_requirement'],
+            'nav': '{0:,d}'.format(net_liquidation_value),
+            'cash': '{0:,d}'.format(cash_value),
+            'initial_margin': '{0:,d}'.format(initial_margin_requirement),
+            'maintenance_margin': '{0:,d}'.format(maintenance_margin_requirement),
+            'available_funds': '{0:,d}'.format(available_funds),
+            'margin_ratio': '{0:.0f}%'.format(margin_ratio * 100.),
         }
         lines = ["*Daily reporting - Margin {currency} {as_of_date}*",
+                 "Margin ratio: {margin_ratio}",
+                 "Available funds: {available_funds}",
                  "NAV: {nav}","Cash: {cash}",
                  "Initial Margin: {initial_margin}",
                  "Maintenance Margin: {maintenance_margin}"
