@@ -20,18 +20,26 @@ def main(args):
 
     attachments = list()
     message_body = None
-    if args.use_message_plain:
-        message_body = args.use_message_plain
 
-    elif args.use_message_json:
-        json_message = json.loads(args.use_message_json)
+    if args.message_type == 'plain' and args.use_message:
+        message_body = args.use_message
+
+    elif args.message_type == 'json' and args.use_message:
+        json_message = json.loads(args.use_message)
         message_body = json_message['message_body']
         attachments = json_message['attachments']
 
-    elif args.use_file_json:
-        json_message = json.loads(open(args.use_file_json, 'r').read())
+    elif args.message_type == 'plain' and args.use_file:
+        message_body = open(args.use_file, 'r').read()
+
+    elif args.message_type == 'json' and args.use_file:
+        json_message = json.loads(open(args.use_file, 'r').read())
         message_body = json_message['message_body']
         attachments = json_message['attachments']
+
+    if message_body is None:
+        logging.warning('message not specified: nothing sent')
+        return
 
     slack_client = SlackClient(slack_api_token)
     slack_client.api_call('chat.postMessage',
@@ -39,7 +47,7 @@ def main(args):
                           text=message_body,
                           mrkdwn=True,
                           attachments=attachments,
-                          username='Reporting - Daily NAV changes'
+                          username='InteractiveBrokers Reporting'
                           )
 
 
@@ -54,10 +62,9 @@ if __name__ == '__main__':
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter
                                      )
     parser.add_argument('--slack-api-token', type=str, help='slack API token')
-    parser.add_argument('--use-message-plain', type=str, help='sends message using indicated plain text')
-    parser.add_argument('--use-message-json', type=str, help='sends message using indicated json text')
-    parser.add_argument('--use-file-plain', type=str, help='sends message using indicated plain text file')
-    parser.add_argument('--use-file-json', type=str, help='sends message using indicated json file')
+    parser.add_argument('--message-type', type=str, choices=('plain', 'json'), help='specifies message type', required=True)
+    parser.add_argument('--use-file', type=str, help='sends message using indicated file')
+    parser.add_argument('--use-message', type=str, help='sends message using indicated string')
     parser.add_argument('--channel', type=str, help='use specified channel')
 
     args = parser.parse_args()
