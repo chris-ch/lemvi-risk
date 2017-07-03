@@ -20,6 +20,10 @@ def retrieve_margin_report(host, ibrokers_ftp_user, ibrokers_ftp_password, retri
             return
 
         most_recent_file = sorted(available_files)[-1]
+        ftp.voidcmd('TYPE I')
+        if ftp.size(most_recent_file) == 0:
+            most_recent_file = sorted(available_files)[-2]
+
         logging.info('loading file {}'.format(most_recent_file))
         ftp.retrbinary('RETR {}'.format(most_recent_file), retriever_func(most_recent_file))
 
