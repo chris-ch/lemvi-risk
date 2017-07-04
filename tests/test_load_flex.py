@@ -1,7 +1,6 @@
 import unittest
 import os
 import logging
-from pprint import pprint
 
 from ibrokersflex import parse_flex_accounts, parse_flex_positions
 

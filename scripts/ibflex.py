@@ -67,7 +67,7 @@ def flex_request(token):
         attempt += 1
 
     accounts = parse_flex_accounts(response_2.text)
-    return accounts
+    return accounts, response_2.text
 
 
 def main(args):
@@ -84,7 +84,15 @@ def main(args):
             secrets_content = json.load(json_data)
             ibrokers_flex_token = secrets_content['ibrokers.flex.token']
 
-    accounts = flex_request(ibrokers_flex_token)
+    accounts, ibrokers_response = flex_request(ibrokers_flex_token)
+
+    os.makedirs(args.output_path, exist_ok=True)
+
+    if args.save_ibrokers_data:
+        target_ibrokers_file = os.path.abspath(os.sep.join([args.output_path, args.save_ibrokers_data]))
+        with open(target_ibrokers_file, 'w') as ibrokers_data:
+            logging.info('saving InteractiveBorkers response to file {}'.format(target_ibrokers_file))
+            ibrokers_data.write(ibrokers_response)
 
     total_cash = 0.
     total_nav = 0.
@@ -112,7 +120,6 @@ def main(args):
                               'Cash: {0:,d}'.format(int(total_cash))])
 
     output_content = serialize_message(message_body, attachments)
-    os.makedirs(args.output_path, exist_ok=True)
     if args.output_file:
         target_file = os.sep.join([args.output_path, args.output_file])
         logging.info('saving data to {}'.format(os.path.abspath(target_file)))
@@ -140,6 +147,7 @@ if __name__ == '__main__':
     parser.add_argument('--ibrokers-flex-token', type=str, help='InteractiveBrokers Flex token')
     parser.add_argument('--output-path', type=str, help='output path', default='.')
     parser.add_argument('--output-file', type=str, help='output file name')
+    parser.add_argument('--save-ibrokers-data', type=str, help='keep InteractiveBrokers response data')
 
     args = parser.parse_args()
     main(args)
