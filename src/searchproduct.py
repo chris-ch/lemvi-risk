@@ -33,17 +33,6 @@ def load_search_page(con_id):
         result = urlcaching._requests_session.post(target_url, data=form_data)
         content = result.text
 
-    # TODO: testing if IBrokers returned an anti-robots form
-    """
-    no result returned: b'<form type="post">\nTo continue please enter the text from the image below\n
-    <br>\n<img src="image.php?str=FXatg1">\n
-    <!--img src="https://chatsrv1.interactivebrokers.com/cstools/contract_info/v3.8/image.php?str=FXatg1"-->
-    <br>\nText: <input type="text" name="filter"><input type=\'hidden\' name=\'action\' value=\'Conid Info\'/>
-    <input type=\'hidden\' name=\'conid\' value=\'189284065\'/>\n<input type=\'hidden\' name=\'contract_id\' value=\'\'/>
-    <input type=\'hidden\' name=\'noBanner\' value=\'\'/>\n<input type=\'hidden\' name=\'rescnt\' value=\'100\'/>
-    ...
-    <input type=\'hidden\' name=\'lang\' value=\'en\'/>\n<input type=\'Submit\' value=\'Submit\'/>'
-    """
     return content
 
 
