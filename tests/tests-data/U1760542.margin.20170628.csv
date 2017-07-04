@@ -1,0 +1,392 @@
+Account,Header,AccountID,AccountAlias,BaseCurrency,AsOfDateTime
+Account,Data,U1760542,Hedge 542,EUR,2017-06-28T07:40:42Z
+MarginSummary,Header,Parameter,Security,Futures,Total
+MarginSummary,Data,NetLiquidationValue,7671938.08565315,2613692.1323553,10285630.21800845
+MarginSummary,Data,CashValue,2576097.95293765,2582572.7381541,5158670.69109175
+MarginSummary,Data,StockAndBondValue,4982309.349199001,0,4982309.349199001
+MarginSummary,Data,MutualFundValue,0,0,0
+MarginSummary,Data,OptionValue,124526.0023857,31119.3942012,155645.3965869
+MarginSummary,Data,Commodities,0,0,0
+MarginSummary,Data,InterestPayableReceivableValue,-19685.2516398,0,-19685.2516398
+MarginSummary,Data,DividendPayableReceivableValue,8690.0327706,0,8690.0327706
+MarginSummary,Data,InitialMarginRequirement,2246523.5128669,2287470.8708391,4533994.383706
+MarginSummary,Data,AvailableFunds,5425414.572786249,326221.2615162,5751635.83430245
+MarginSummary,Data,MaintenanceMarginRequirement,2049755.482926,1766114.5860378,3815870.0689638
+MarginSummary,Data,ExcessLiquidity,5622182.60272715,847577.5463175,6469760.14904465
+MarginSummary,Data,Margin Ratio (%),29.282346752,87.518757183,44.080861237
+MarginDetailSecuritiesRulesBased,Header,Discriminator,Currency,Description,Symbol,Quantity,Price,TotalPositionValue,InitialMargin,MaintenanceMargin,MaintenancePercentage,ConversionRateToBase
+MarginDetailSecuritiesRulesBased,Data,UnderlyingSummary,CAD,DENISON MINES CORP,DML,,,,49512.06,49512.06,,0.6682
+MarginDetailSecuritiesRulesBased,Data,ComboPosition,CAD,LongStockPosition,,,,49512.06,49512.06,49512.06,100.00,0.6682
+MarginDetailSecuritiesRulesBased,Data,PositionComponent,CAD,DENISON MINES CORP,DML,90000,0.550134,,,,,0.6682
+MarginDetailSecuritiesRulesBased,Data,UnderlyingSummary,CAD,FISSION URANIUM CORP,FCU,,,,53080.92,53080.92,,0.6682
+MarginDetailSecuritiesRulesBased,Data,ComboPosition,CAD,LongStockPosition,,,,53080.92,53080.92,53080.92,100.00,0.6682
+MarginDetailSecuritiesRulesBased,Data,PositionComponent,CAD,FISSION URANIUM CORP,FCU,90000,0.589788,,,,,0.6682
+MarginDetailSecuritiesRulesBased,Data,UnderlyingSummary,CAD,LARAMIDE RESOURCES,LAM,,,,3397.68,3397.68,,0.6682
+MarginDetailSecuritiesRulesBased,Data,ComboPosition,CAD,LongStockPosition,,,,3397.68,3397.68,3397.68,100.00,0.6682
+MarginDetailSecuritiesRulesBased,Data,PositionComponent,CAD,LARAMIDE RESOURCES,LAM,10000,0.339768,,,,,0.6682
+MarginDetailSecuritiesRulesBased,Data,UnderlyingSummary,CAD,MEGA URANIUM LTD,MGA,,,,23429.38,23429.38,,0.6682
+MarginDetailSecuritiesRulesBased,Data,ComboPosition,CAD,LongStockPosition,,,,23429.38,23429.38,23429.38,100.00,0.6682
+MarginDetailSecuritiesRulesBased,Data,PositionComponent,CAD,MEGA URANIUM LTD,MGA,125000,0.187435,,,,,0.6682
+MarginDetailSecuritiesRulesBased,Data,UnderlyingSummary,CAD,NEXGEN ENERGY LTD,NXE,,,,108462.4,108462.4,,0.6682
+MarginDetailSecuritiesRulesBased,Data,ComboPosition,CAD,LongStockPosition,,,,108462.4,108462.4,108462.4,100.00,0.6682
+MarginDetailSecuritiesRulesBased,Data,PositionComponent,CAD,NEXGEN ENERGY LTD,NXE,40000,2.71156,,,,,0.6682
+MarginDetailSecuritiesRulesBased,Data,UnderlyingSummary,CAD,UEX CORPORATION,UEX,,,,16589.16,16589.16,,0.6682
+MarginDetailSecuritiesRulesBased,Data,ComboPosition,CAD,LongStockPosition,,,,16589.16,16589.16,16589.16,100.00,0.6682
+MarginDetailSecuritiesRulesBased,Data,PositionComponent,CAD,UEX CORPORATION,UEX,84000,0.19749,,,,,0.6682
+MarginDetailSecuritiesRulesBased,Data,UnderlyingSummary,CAD,UR-ENERGY INC,URE,,,,3924.93,3924.93,,0.6682
+MarginDetailSecuritiesRulesBased,Data,ComboPosition,CAD,LongStockPosition,,,,3924.93,3924.93,3924.93,100.00,0.6682
+MarginDetailSecuritiesRulesBased,Data,PositionComponent,CAD,UR-ENERGY INC,URE,5000,0.784987,,,,,0.6682
+MarginDetailSecuritiesRulesBased,Data,UnderlyingSummary,CAD,URANIUM PARTICIPATION CORP,U,,,,53930.47,53930.47,,0.6682
+MarginDetailSecuritiesRulesBased,Data,ComboPosition,CAD,LongStockPosition,,,,53930.47,53930.47,53930.47,100.00,0.6682
+MarginDetailSecuritiesRulesBased,Data,PositionComponent,CAD,URANIUM PARTICIPATION CORP,U,13500,3.99485,,,,,0.6682
+MarginDetailSecuritiesRulesBased,Data,UnderlyingSummary,EUR,EUR Currency Margin,,,,,471561.8,387208.95,,1
+MarginDetailSecuritiesRulesBased,Data,UnderlyingSummary,USD,ISHARES USD HY CORP USD DIST,IHYU,,,,63445.91,63445.91,,0.88197
+MarginDetailSecuritiesRulesBased,Data,ComboPosition,USD,LongStockPosition,,,,253783.63,63445.91,63445.91,25.00,0.88197
+MarginDetailSecuritiesRulesBased,Data,PositionComponent,USD,ISHARES USD HY CORP USD DIST,IHYU,2423,104.739,,,,,0.88197
+MarginDetailSecuritiesRiskBased,Header,SubSectionName,Discriminator,Currency,CombinedPortfolioName,ProductGroupName,ClassGroupName,Exchange,Description,Symbol,Quantity,InitialMargin,MaintenanceMargin,ConversionRateToBase
+MarginDetailSecuritiesRiskBased,Data,BaseCurrencySummary,ProductGroups,EUR,,,,,,,,210014.5,198246.2,1
+MarginDetailSecuritiesRiskBased,Data,BaseCurrencySummary,CombinedPortfolios,EUR,,,,,,,,155460.6296604,151349.3527239,1
+MarginDetailSecuritiesRiskBased,Data,BaseCurrencySummary,Total,EUR,,,,,,,,365475.1296604,349595.5527239,1
+MarginDetailSecuritiesRiskBased,Data,ProductGroups,ProductGroup,EUR,,55IHY,,,,,,58841.49,47073.19,1
+MarginDetailSecuritiesRiskBased,Data,ProductGroups,ClassGroup,EUR,,55IHY,IHYG,BVME.ETF,,,,0,0,1
+MarginDetailSecuritiesRiskBased,Data,ProductGroups,PositionComponent,EUR,,55IHY,IHYG,BVME.ETF,ISHARES EURO HY CORP,IHYG,2733,,,1
+MarginDetailSecuritiesRiskBased,Data,ProductGroups,ProductGroup,EUR,,55RUS,,,,,,151173.01,151173.01,1
+MarginDetailSecuritiesRiskBased,Data,ProductGroups,ClassGroup,EUR,,55RUS,RUS,BVME.ETF,,,,0,0,1
+MarginDetailSecuritiesRiskBased,Data,ProductGroups,PositionComponent,EUR,,55RUS,RUS,BVME.ETF,LYX ETF DOW JONES RUSSIA,RUSp,6000,,,1
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,AUD,BKY,,,ASX,,,,47425.48,47425.48,0.66882
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,PositionComponent,AUD,BKY,,,ASX,BERKELEY ENERGIA LTD,BKY,66000,,,0.66882
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,AUD,PEN,,,ASX,,,,25410.65,25410.65,0.66882
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,PositionComponent,AUD,PEN,,,ASX,PENINSULA ENERGY LTD,PEN,80000,,,0.66882
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,AUD,XJO,,,ASX,,,,9363.38,7490.7,0.66882
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,PositionComponent,AUD,XJO,,,ASX,AP 20JUL17 5550.0 P,XJOHW8,-2,,,0.66882
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,CAD,126537850,,,GLOBALCON,,,,0,0,0.6682
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,PositionComponent,CAD,126537850,,,GLOBALCON,NEXGEN ENERGY LTD,NXE,40000,,,0.6682
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,CAD,126961833,,,GLOBALCON,,,,0,0,0.6682
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,PositionComponent,CAD,126961833,,,GLOBALCON,FISSION URANIUM CORP,FCU,90000,,,0.6682
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,CAD,14891890,,,GLOBALCON,,,,0,0,0.6682
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,PositionComponent,CAD,14891890,,,GLOBALCON,LARAMIDE RESOURCES,LAM,10000,,,0.6682
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,CAD,14893844,,,GLOBALCON,,,,0,0,0.6682
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,PositionComponent,CAD,14893844,,,GLOBALCON,URANIUM PARTICIPATION CORP,U,13500,,,0.6682
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,CAD,28377446,,,GLOBALCON,,,,0,0,0.6682
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,PositionComponent,CAD,28377446,,,GLOBALCON,UEX CORPORATION,UEX,84000,,,0.6682
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,CAD,36350155,,,GLOBALCON,,,,0,0,0.6682
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,PositionComponent,CAD,36350155,,,GLOBALCON,MEGA URANIUM LTD,MGA,125000,,,0.6682
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,CAD,37060554,,,GLOBALCON,,,,0,0,0.6682
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,PositionComponent,CAD,37060554,,,GLOBALCON,UR-ENERGY INC,URE,5000,,,0.6682
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,CAD,41943554,,,GLOBALCON,,,,0,0,0.6682
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,PositionComponent,CAD,41943554,,,GLOBALCON,DENISON MINES CORP,DML,90000,,,0.6682
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,94305746,,,GLOBALCON,,,,0,0,0.88197
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,94305746,,,GLOBALCON,ISHARES USD HY CORP USD DIST,IHYU,2423,,,0.88197
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,BBDBCN,,,BONDDESK,,,,16206.87,12965.5,0.88197
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,BBDBCN,,,BONDDESK,BBDBCN 5 3/4 03/15/22,BBDBCN 5 3/4 03/15/22 2AR8,25,,12965.5,0.88197
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,IUES,,,EBS,,,,97724.39,97724.39,0.88197
+MarginDetailSecuritiesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,IUES,,,EBS,ISHARES S&P 500 ENERGY,IUES,20000,,,0.88197
+MarginDetailFuturesRiskBased,Header,SubSectionName,Discriminator,Currency,CombinedPortfolioName,ProductGroupName,ClassGroupName,Exchange,Description,Symbol,Quantity,InitialMargin,MaintenanceMargin,ConversionRateToBase
+MarginDetailFuturesRiskBased,Data,BaseCurrencySummary,ProductGroups,EUR,,,,,,,,0,0,1
+MarginDetailFuturesRiskBased,Data,BaseCurrencySummary,CombinedPortfolios,EUR,,,,,,,,2287470.8708391,1766114.5860378,1
+MarginDetailFuturesRiskBased,Data,BaseCurrencySummary,Total,EUR,,,,,,,,2287470.8708391,1766114.5860378,1
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,CAD,BAX,,,CDE,,,,47700,38160,0.6682
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,CAD,BAX,,,CDE,BAX 18DEC17,BAXZ17,-60,,,0.6682
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,CAD,BAX,,,CDE,BAX 17DEC18,BAXZ18,90,,,0.6682
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,06,,,ECBOT,,,,43756.25,35005,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,06,,,ECBOT,ZM 13OCT17,SM   OCT 17,112,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,06,,,ECBOT,ZM 14DEC17,SM   DEC 17,-109,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,06,,,ECBOT,ZM 12JAN18,ZM   JAN 18,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,07,,,ECBOT,,,,2802.5,2242,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,07,,,ECBOT,ZL 14JUL17,BO   JUL 17,-1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,07,,,ECBOT,ZL 14AUG17,BO   AUG 17,-1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,07,,,ECBOT,ZL 14SEP17,BO   SEP 17,-2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,07,,,ECBOT,ZL 13OCT17,ZL   OCT 17,-2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,07,,,ECBOT,ZL 12JAN18,BO   JAN 18,2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,07,,,ECBOT,ZL 14MAR18,BO   MAR 18,-1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,17,,,ECBOT,,,,0,0,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,17,,,ECBOT,ZB 20SEP17,ZB   SEP 17,-2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,17,,,ECBOT,ZB SEP17 151.0 P,P OZB  SEP 17  15100,-1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,17,,,ECBOT,ZB SEP17 158.0 C,C OZB  SEP 17  15800,-1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,21,,,ECBOT,,,,176605.31,141284.25,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,21,,,ECBOT,ZN 20SEP17,ZN   SEP 17,100,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,25,,,ECBOT,,,,0,0,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,25,,,ECBOT,ZF 29SEP17,FV   SEP 17,100,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,26,,,ECBOT,,,,16575,13260,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,26,,,ECBOT,ZT 29SEP17,TU   SEP 17,-60,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,BR,,,GLOBEX,,,,14625,11700,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,BR,,,GLOBEX,BRE 03JUL17,BRN7,6,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,C,,,ECBOT,,,,2368.75,1895,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,C,,,ECBOT,ZC 14SEP17,C   SEP 17,-2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,C,,,ECBOT,ZC 14DEC17,ZC   DEC 17,-4,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,C,,,ECBOT,ZC 14MAR18,C   MAR 18,-1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,C,,,ECBOT,ZC 14MAY18,C   MAY 18,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,C,,,ECBOT,ZC 13JUL18,C   JUL 18,2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,C,,,ECBOT,ZC 14DEC18,C   DEC 18,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,CC,,,NYBOT,,,,107000,85600,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,CC,,,NYBOT,CC 15SEP17,CCU7,428,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,CC,,,NYBOT,CC 15MAR18,CCH8,-428,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,CSC,,,GLOBEX,,,,10562.5,8450,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,CSC,,,GLOBEX,CSC 28JUN17,CSCM7,5,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,CSC,,,GLOBEX,CSC 30AUG17,CSCQ7,-5,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,CT,,,NYBOT,,,,450562.5,360450,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,CT,,,NYBOT,CT 16OCT17,CTV7,-1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,CT,,,NYBOT,CT 13DEC17,CTZ7,601,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,CT,,,NYBOT,CT 14MAR18,CTH8,-600,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,CX-GC,,,NYMEX,,,,6367.82,5094.25,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,CX-GC,,,NYMEX,GC 29AUG17,GCQ7,-2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,CX-GC,,,NYMEX,GC 27DEC17,GCZ7,-1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,CX-GC,,,NYMEX,GC AUG17 1235.0 P,OGQ7 P1235,-1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,CX-HG,,,NYMEX,,,,116179.02,92943.21,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,CX-HG,,,NYMEX,HG 27DEC17,HGZ7,-40,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,CX-SI,,,NYMEX,,,,2227.5,1650,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,CX-SI,,,NYMEX,SI 27DEC17,SIZ7,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,DY,,,GLOBEX,,,,22750,18200,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,DY,,,GLOBEX,DY 30AUG17,DYQ7,11,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,DY,,,GLOBEX,DY SEP17,DYU7,2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,EC,,,GLOBEX,,,,248204.32,198563.46,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,EC,,,GLOBEX,EUR 18SEP17,ECU7,36,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,ED,,,GLOBEX,,,,13196.88,10557.5,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,ED,,,GLOBEX,GE 17JUN19,GEM9,-12,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,ED,,,GLOBEX,GE 16SEP19,GEU9,-13,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,ED,,,GLOBEX,GE 16DEC19,GEZ9,-13,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,ED,,,GLOBEX,GE 16MAR20,GEH0,-13,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,ED,,,GLOBEX,GE 15JUN20,GEM0,-13,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,ED,,,GLOBEX,GE 14SEP20,GEU0,-10,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,FC,,,GLOBEX,,,,9000,7200,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,FC,,,GLOBEX,GF MAR18,GFH8,8,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,FC,,,GLOBEX,GF 27APR18,FCJ8,-8,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,JY,,,GLOBEX,,,,3293.1,2634.48,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,JY,,,GLOBEX,JPY 08SEP17 0.0086 P,JPUU7 P0860,-8,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,JY,,,GLOBEX,JPY 08SEP17 0.00885 P,JPUU7 P0885,4,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,KC,,,NYBOT,,,,3437.5,2750,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,KC,,,NYBOT,KC 20SEP17,KCU7,-2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,KC,,,NYBOT,KC 19DEC17,KCZ7,-4,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,KC,,,NYBOT,KC 21MAY18,KCK8,2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,KC,,,NYBOT,KC 20JUL18,KCN8,3,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,KC,,,NYBOT,KC 19SEP18,KCU8,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,KCW,,,ECBOT,,,,3125,2500,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,KCW,,,ECBOT,KE 14SEP17,KE   SEP 17,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,KCW,,,ECBOT,KE 14DEC17,KE   DEC 17,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,KCW,,,ECBOT,KE 14MAR18,KE   MAR 18,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,KCW,,,ECBOT,KE 13JUL18,KE   JUL 18,-1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,LC,,,GLOBEX,,,,618750,495000,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,LC,,,GLOBEX,LE 31OCT17,LCV7,1100,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,LC,,,GLOBEX,LE 29DEC17,LCZ7,-1100,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,NY-CL,,,NYMEX,,,,136289.69,88031.75,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL AUG17,CLQ7,11,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL NOV17,CLX7,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL DEC17,CLZ7,-2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL MAR18,CLH8,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL APR18,CLJ8,-2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL JUN18,CLM8,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL DEC18,CLZ8,2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL DEC20,CLZ0,-10,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL AUG17 44.0 P,LOQ7 P4400,-1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL AUG17 45.0 P,LOQ7 P4500,-2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL NOV17 43.0 P,LOX7 P4300,-6,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL DEC17 40.0 P,LOZ7 P4000,-42,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL DEC17 41.0 P,LOZ7 P4100,-5,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL DEC17 45.0 P,LOZ7 P4500,21,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL JAN18 40.0 P,LOF8 P4000,-2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL JAN18 45.0 P,LOF8 P4500,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL OCT17 53.0 C,LOV7 C5300,6,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL OCT17 59.5 C,LOV7 C5950,-12,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL NOV17 53.0 C,LOX7 C5300,6,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL NOV17 59.5 C,LOX7 C5950,-6,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL NOV17 60.0 C,LOX7 C6000,-6,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-CL,,,NYMEX,CL DEC17 52.0 C,LOZ7 C5200,10,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,NY-HO,,,NYMEX,,,,1986.61,1589.29,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-HO,,,NYMEX,HO NOV17,HOX7,-3,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-HO,,,NYMEX,HO DEC17,HOZ7,-1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-HO,,,NYMEX,HO JAN18,HOF8,2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-HO,,,NYMEX,HO MAR18,HOH8,-1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,NY-NG,,,NYMEX,,,,4625,3700,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-NG,,,NYMEX,NG OCT17,NGV7,-1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-NG,,,NYMEX,NG NOV17,NGX7,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-NG,,,NYMEX,NG FEB18,NGG8,-1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-NG,,,NYMEX,NG MAR18,NGH8,-2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-NG,,,NYMEX,NG APR18,NGJ8,-3,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-NG,,,NYMEX,NG MAY18,NGK8,3,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-NG,,,NYMEX,NG JUN18,NGM8,3,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,NY-PL,,,NYMEX,,,,5509.07,4407.26,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-PL,,,NYMEX,PL 27JUL17,PLN7,4,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,NY-RB,,,NYMEX,,,,3894.35,3115.48,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-RB,,,NYMEX,RB AUG17,RBQ7,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-RB,,,NYMEX,RB DEC17,RBZ7,3,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-RB,,,NYMEX,RB FEB18,RBG8,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,NY-RB,,,NYMEX,RB JUN18,RBM8,-2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,RU,,,GLOBEX,,,,14280,11424,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,RU,,,GLOBEX,RUR 15SEP17,6RU7,4,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,S,,,ECBOT,,,,46450,37160,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,S,,,ECBOT,ZS 14JUL17,ZS   JUL 17,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,S,,,ECBOT,ZS 14AUG17,ZS   AUG 17,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,S,,,ECBOT,ZS 14NOV17,ZS   NOV 17,100,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,S,,,ECBOT,ZS 12JAN18,ZS   JAN 18,-101,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,S,,,ECBOT,ZS 14MAR18,ZS   MAR 18,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,SB,,,NYBOT,,,,8400,6720,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,SB,,,NYBOT,SB OCT17,SBV7,6,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,SP,,,GLOBEX,,,,215306.92,158937.81,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,SP,,,GLOBEX,ES 15SEP17,ESU7,-4,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,SP,,,GLOBEX,ES 15DEC17,ESZ7,-16,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,SP,,,GLOBEX,ES 15SEP17 2200.0 P,ESU7 P2200,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,SP,,,GLOBEX,ES 15SEP17 2250.0 P,ESU7 P2250,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,SP,,,GLOBEX,ES 15SEP17 2300.0 P,ESU7 P2300,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,SP,,,GLOBEX,ES 15SEP17 2350.0 P,ESU7 P2350,2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,SP,,,GLOBEX,ES 15DEC17 2200.0 P,ESZ7 P2200,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,SP,,,GLOBEX,ES 15DEC17 2250.0 P,ESZ7 P2250,2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,SP,,,GLOBEX,ES 15DEC17 2300.0 P,ESZ7 P2300,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,SP,,,GLOBEX,ES 15DEC17 2330.0 P,ESZ7 P2330,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,SP,,,GLOBEX,ES 15DEC17 2350.0 P,ESZ7 P2350,2,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,SP,,,GLOBEX,ES 16MAR18 2300.0 P,ESH8 P2300,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,SP,,,GLOBEX,ES 16MAR18 2350.0 P,ESH8 P2350,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,SP,,,GLOBEX,ES 16MAR18 2400.0 P,ESH8 P2400,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,SP,,,GLOBEX,ES 16MAR18 2425.0 P,ESH8 P2425,1,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,CombinedPortfolio,USD,W,,,ECBOT,,,,249323.44,161490,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,W,,,ECBOT,ZW 14JUL17,ZW   JUL 17,90,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,W,,,ECBOT,ZW 14DEC17,ZW   DEC 17,97,,,0.88197
+MarginDetailFuturesRiskBased,Data,CombinedPortfolios,PositionComponent,USD,W,,,ECBOT,ZW 14MAR19,ZW   MAR 19,-90,,,0.88197
+PortfolioMarginDetail,Header,SubSectionName,Discriminator,Currency,PortfolioGroupName,ProductGroupName,Offset,ClassGroupName,Description,Symbol,Quantity,Margin,Extreme,ConversionRateToBase
+PortfolioMarginDetail,Data,BaseCurrencySummary,PortfolioGroup,EUR,,,,,,,,29484.168903,,1
+PortfolioMarginDetail,Data,BaseCurrencySummary,ProductGroup,EUR,,,,,,,,135.4529526,,1
+PortfolioMarginDetail,Data,BaseCurrencySummary,ClassGroup,EUR,,,,,,,,1018677.0610218,,1
+PortfolioMarginDetail,Data,BaseCurrencySummary,BondClassGroup,EUR,,,,,,,,0,,1
+PortfolioMarginDetail,Data,BaseCurrencySummary,ExtremeRisk,EUR,,,,,,,,0,,1
+PortfolioMarginDetail,Data,BaseCurrencySummary,Total,EUR,,,,,,,,1048296.6828774,,1
+PortfolioMarginDetail,Data,PortfolioGroups,PortfolioGroup,USD,USIDX,,0.50,,,,,33429.9,18655.9,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,ProductGroup,USD,USIDX,9,0.90,,,,,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,ClassGroup,USD,USIDX,9,,00018,,,,33429.9,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPX 30JUN17 2325.0 P,SPXW  170630P02325000,1,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPX 30JUN17 2400.0 P,SPXW  170630P02400000,-1,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPX 21JUL17 2250.0 P,SPX   170721P02250000,3,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPX 21JUL17 2275.0 P,SPX   170721P02275000,-3,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPX 21JUL17 2300.0 P,SPX   170721P02300000,-1,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPX 21JUL17 2325.0 P,SPX   170721P02325000,1,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPX 18AUG17 2300.0 P,SPX   170818P02300000,2,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPX 18AUG17 2350.0 P,SPX   170818P02350000,-2,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPX 18AUG17 2400.0 P,SPX   170818P02400000,-2,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPX 18AUG17 2425.0 P,SPX   170818P02425000,2,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPY 21DEC18 210.0 P,SPY   181221P00210000,1,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPY 21DEC18 220.0 P,SPY   181221P00220000,1,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPY 21DEC18 230.0 P,SPY   181221P00230000,1,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPY 21DEC18 240.0 P,SPY   181221P00240000,1,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPY 20DEC19 200.0 P,SPY   191220P00200000,2,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPY 20DEC19 210.0 P,SPY   191220P00210000,3,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPY 20DEC19 220.0 P,SPY   191220P00220000,10,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPY 20DEC19 230.0 P,SPY   191220P00230000,12,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPY 20DEC19 240.0 P,SPY   191220P00240000,10,,,0.88197
+PortfolioMarginDetail,Data,PortfolioGroups,PositionComponent,USD,USIDX,9,,00018,SPY 20DEC19 250.0 P,SPY   191220P00250000,1,,,0.88197
+PortfolioMarginDetail,Data,ProductGroups,ProductGroup,USD,,500,0.75,,,,,153.58,44.19,0.88197
+PortfolioMarginDetail,Data,ProductGroups,ClassGroup,USD,,500,,00500,,,,153.58,,0.88197
+PortfolioMarginDetail,Data,ProductGroups,PositionComponent,USD,,500,,00500,VIX 28JUN17 12.0 C,VIX   170628C00012000,5,,,0.88197
+PortfolioMarginDetail,Data,ProductGroups,PositionComponent,USD,,500,,00500,VIX 12JUL17 13.0 C,VIX   170712C00013000,3,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,AFG,,,,8766.91,6136.84,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,AFG,AMERICAN FINANCIAL GROUP INC,AFG,593,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,AGFS,,,,30380.01,7339.5,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,AGFS,AGROFRESH SOLUTIONS INC,AGFS,10000,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,AGII,,,,13531.8,9472.26,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,AGII,ARGO GROUP INTERNATIONAL,AGII,1520,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,AHL,,,,9652.01,6755.96,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,AHL,ASPEN INSURANCE HOLDINGS LTD,AHL,1283,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,ALE,,,,10314.72,7219.98,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,ALE,ALLETE INC,ALE,947,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,ANAT,,,,9334.94,6534.46,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,ANAT,AMERICAN NATIONAL INSURANCE,ANAT,539,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,ANH,,,,9326.34,6528.44,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,ANH,ANWORTH MORTGAGE ASSET CORP,ANH,10260,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,APLE,,,,10225.15,7157.61,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,APLE,APPLE HOSPITALITY REIT INC,APLE,3584,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,AVA,,,,9395.69,6576.47,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,AVA,AVISTA CORP,AVA,1461,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,AXS,,,,7533.95,5273.77,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,AXS,AXIS CAPITAL HOLDINGS LTD,AXS,787,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,BHLB,,,,6676.38,4673.47,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,BHLB,BERKSHIRE HILLS BANCORP INC,BHLB,1279,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,BMS,,,,9836.06,6885.25,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,BMS,BEMIS COMPANY,BMS,1394,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,BRKB,,,,2510.3,1757.18,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,BRKB,BERKSHIRE HATHAWAY INC-CL B,BRK B,100,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,BWINB,,,,36959.08,5409.97,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,BWINB,BALDWIN & LYONS INC -CL B,BWINB,2103,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,BXMT,,,,10251.46,7176.02,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,BXMT,BLACKSTONE MORTGAGE TRU-CL A,BXMT,2171,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,CCJ,,,,14140,9894.5,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,CCJ,CAMECO CORP,CCJ,10000,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,CIM,,,,10662.44,7463.7,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,CIM,CHIMERA INVESTMENT CORP,CIM,3761,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,CTT,,,,9270.48,6487.44,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,CTT,CATCHMARK TIMBER TRUST INC-A,CTT,5415,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,EEMV,,,,8319,5823.3,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,EEMV,ISHARES EDGE MSCI MIN VOL EM,EEMV,1000,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,EMDV,,,,7874.58,5512.15,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,EMDV,PROSHARES MSCI EMERGING MARK,EMDV,1000,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,FAF,,,,8153.17,5707.22,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,FAF,FIRST AMERICAN FINANCIAL,FAF,1202,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,GXP,,,,7263.19,5083.66,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,GXP,GREAT PLAINS ENERGY INC,GXP,1644,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,HIFR,,,,9306.31,6513.3,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,HIFR,INFRAREIT INC,HIFR,3186,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,HPT,,,,9551.97,6686.38,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,HPT,HOSPITALITY PROPERTIES TRUST,HPT,2110,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,ILG,,,,10179.75,7125.83,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,ILG,ILG INC,ILG,2450,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,JOE,,,,2790,1953,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,JOE,ST JOE CO/THE,JOE,1000,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,KRNY,,,,9526.5,6668.55,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,KRNY,KEARNY FINANCIAL CORP/MD,KRNY,4350,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,NHC,,,,11580.06,8106.04,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,NHC,NATIONAL HEALTHCARE CORP,NHC,1098,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,NWBI,,,,9028.69,6318.72,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,NWBI,NORTHWEST BANCSHARES INC,NWBI,3890,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,ORI,,,,12310.96,8616.2,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,ORI,OLD REPUBLIC INTL CORP,ORI,4206,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,PNM,,,,10969.34,7677.89,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,PNM,PNM RESOURCES INC,PNM,1863,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,POR,,,,7793.31,5454.93,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,POR,PORTLAND GENERAL ELECTRIC CO,POR,1117,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,SMDV,,,,8130,5691,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,SMDV,PROSHRS RSL 2000 DVD GRW ETF,SMDV,1000,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,SON,,,,9505.22,6653.65,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,SON,SONOCO PRODUCTS CO,SON,1243,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,SR,,,,9090.5,6363.35,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,SR,SPIRE INC,SR,867,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,SWX,,,,8954.78,6268.35,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,SWX,SOUTHWEST GAS HOLDINGS INC,SWX,816,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,THG,,,,9406.06,6583.98,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,THG,HANOVER INSURANCE GROUP INC/,THG,726,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,UEC,,,,21000,2249.1,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,UEC,URANIUM ENERGY CORP,UEC,14000,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,URA,,,,127465,89202.75,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,URA,GLOBAL X URANIUM ETF,URA,65000,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,URG,,,,32811.79,3407.25,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,URG,UR-ENERGY INC,URG,55000,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,UUUU,,,,40228.5,4252.5,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,UUUU,ENERGY FUELS INC,UUUU,25000,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,VXX,,,,538480.54,151092.33,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 30JUN17 142.0 P,SVXY  170630P00142000,-40,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 30JUN17 150.0 P,SVXY  170630P00150000,20,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 14JUL17 130.0 P,SVXY  170714P00130000,-40,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 14JUL17 140.0 P,SVXY  170714P00140000,20,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 15SEP17 120.0 P,SVXY  170915P00120000,50,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 15SEP17 125.0 P,SVXY  170915P00125000,10,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 18JAN19 125.0 P,SVXY  190118P00125000,25,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 18JAN19 165.0 P,SVXY  190118P00165000,-25,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 07JUL17 175.0 C,SVXY  170707C00175000,19,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 07JUL17 177.0 C,SVXY  170707C00177000,-38,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 21JUL17 158.0 C,SVXY  170721C00158000,-15,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 21JUL17 170.0 C,SVXY  170721C00170000,-40,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 21JUL17 180.0 C,SVXY  170721C00180000,-244,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 21JUL17 185.0 C,SVXY  170721C00185000,-100,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 15SEP17 180.0 C,SVXY  170915C00180000,100,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 15SEP17 190.0 C,SVXY  170915C00190000,122,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 15SEP17 195.0 C,SVXY  170915C00195000,50,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,SVXY 15SEP17 225.0 C,SVXY  170915C00225000,-200,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,VXX,PROSHARES SHORT VIX ST FUTUR,SVXY,7600,,,0.88197
+PortfolioMarginDetail,Data,ClassGroups,ClassGroup,USD,,,,XSLV,,,,6515,4560.15,0.88197
+PortfolioMarginDetail,Data,ClassGroups,PositionComponent,USD,,,,XSLV,POWERSHARES S&P SMALLCAP LOW,XSLV,1000,,,0.88197
+SpanMarginOverview,Header,Discriminator,Currency,Exchanges,InitialMargin,MaintenanceMargin,ConversionRateToBase
+SpanMarginOverview,Data,ExchangeSummary,AUD,ASX,82199.51,80326.83,0.66882
+SpanMarginOverview,Data,ExchangeSummary,CAD,CDE,47700,38160,0.6682
+SpanMarginOverview,Data,ExchangeSummary,EUR,"BVME, BVME.ETF, IDEM",210014.5,198246.2,1
+SpanMarginOverview,Data,ExchangeSummary,USD,BONDDESK,16206.87,12965.5,0.88197
+SpanMarginOverview,Data,ExchangeSummary,USD,"DTB, SOFFEX, IBIS, IBIS2, FWB, FWB2, SWB, SWB2, VIRTX, EBS, EUREXUK, EUREXCBL, VSE",97724.39,97724.39,0.88197
+SpanMarginOverview,Data,ExchangeSummary,USD,OCC,1298039.94,1188585.43,0.88197
+SpanMarginOverview,Data,ExchangeSummary,USD,ECBOT,541006.25,394836.25,0.88197
+SpanMarginOverview,Data,ExchangeSummary,USD,GLOBEX,1169968.72,922667.25,0.88197
+SpanMarginOverview,Data,ExchangeSummary,USD,"NYBOT, ICEUS, NYSELIFFE",569400,455520,0.88197
+SpanMarginOverview,Data,ExchangeSummary,USD,NYMEX,277079.06,200531.25,0.88197

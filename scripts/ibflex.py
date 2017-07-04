@@ -7,7 +7,7 @@ from time import sleep
 from xml.etree import ElementTree
 import requests
 
-from ibrokersflex import parse_flex_result
+from ibrokersflex import parse_flex_accounts
 
 _FLEX_QUERY_ID = '251102'
 _FLEX_QUERY_SERVER = 'gdcdyn.interactivebrokers.com'
@@ -66,7 +66,7 @@ def flex_request(token):
         sleep(5)
         attempt += 1
 
-    accounts = parse_flex_result(response_2.text)
+    accounts = parse_flex_accounts(response_2.text)
     return accounts
 
 

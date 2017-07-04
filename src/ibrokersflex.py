@@ -1,13 +1,14 @@
 from collections import OrderedDict
+from pprint import pprint
 from xml.etree import ElementTree
 from datetime import date
 
 
-def parse_flex_result(content):
+def parse_flex_accounts(content):
     """
     
     :param content: xml IBrokers Flex string
-    :return: dict key-ed by account id
+    :return: dict of account data key-ed by account id
     """
     accounts = dict()
     tree = ElementTree.fromstring(content)
@@ -42,3 +43,25 @@ def parse_flex_result(content):
         ordered_accounts[account_data['account_id']] = account_data
 
     return ordered_accounts
+
+
+def parse_flex_positions(content):
+    """
+
+    :param content: xml IBrokers Flex string
+    :return: dict of open positions key-ed by account id
+    """
+    tree = ElementTree.fromstring(content)
+    accounts = dict()
+    for node_account in tree.findall('FlexStatements/FlexStatement'):
+        account_id = node_account.get('accountId')
+        open_position_elements = node_account.findall('OpenPositions/OpenPosition')
+        accounts[account_id] = dict()
+        for position_element in open_position_elements:
+            position_data = dict()
+            for key in position_element.keys():
+                position_data[key] = position_element.get(key)
+
+            accounts[account_id][position_data['conid']] = position_data
+
+    return accounts
