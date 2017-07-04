@@ -2,7 +2,6 @@ import time
 from functools import lru_cache
 
 from bs4 import BeautifulSoup
-import requests
 import random
 import logging
 
