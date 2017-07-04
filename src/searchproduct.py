@@ -15,17 +15,27 @@ _URL_TEMPLATE = _PRODUCTS_URL + '?action=Conid%20Info&wlId=IB&conid={}&lang=en'
 @lru_cache(maxsize=None)
 def load_search_page(con_id):
     waiting_time = random.randrange(10, 20)
-    logging.info('waiting {} seconds before requesting data...'.format(waiting_time))
-    time.sleep(waiting_time)  # working around IBrokers anti-robots check
     target_url = _URL_TEMPLATE.format(con_id)
-    content = urlcaching.open_url(target_url, rejection_marker='please enter the text from the image below')
-    #session = requests.Session()
-    #response = session.get(target_url)
-    #content = response.content
+    rejection_marker = 'please enter the text from the image below'
+    content = urlcaching.open_url(target_url, throttle=waiting_time)
+    while rejection_marker in content:
+        waiting_time = random.randrange(10, 20)
+        time.sleep(waiting_time)
+        failed_key = urlcaching.get_cache_filename(target_url)
+        urlcaching.invalidate_key(failed_key)
+        html = BeautifulSoup(content, features='html.parser')
+        form = html.find('form')
+        fields = form.findAll('input')
+        form_data = dict((field.get('name'), field.get('value')) for field in fields)
+        captcha = html.find('img').get('src').split('=')[-1]
+        form_data['filter'] = captcha
+        form_data.pop(None)
+        result = urlcaching._requests_session.post(target_url, data=form_data)
+        content = result.text
 
     # TODO: testing if IBrokers returned an anti-robots form
     """
-    no result returned: b'</form>\n\n<br>\n<form type="post">\nTo continue please enter the text from the image below\n
+    no result returned: b'<form type="post">\nTo continue please enter the text from the image below\n
     <br>\n<img src="image.php?str=FXatg1">\n
     <!--img src="https://chatsrv1.interactivebrokers.com/cstools/contract_info/v3.8/image.php?str=FXatg1"-->
     <br>\nText: <input type="text" name="filter"><input type=\'hidden\' name=\'action\' value=\'Conid Info\'/>

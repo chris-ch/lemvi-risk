@@ -17,7 +17,7 @@ def from_ib_date(date_ddmmYYYY):
 
 
 def main(args):
-    urlcaching.set_cache_path(args.cache_path)
+    urlcaching.set_cache_path(args.cache_path, expiry_days=300)
     with open(args.ibrokers_data) as ibrokers_flex:
         flex_positions = parse_flex_positions(ibrokers_flex.read())
         for account in flex_positions:
@@ -43,7 +43,7 @@ def main(args):
 
 
 if __name__ == '__main__':
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s:%(name)s:%(levelname)s:%(message)s')
+    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s:%(name)s:%(levelname)s:%(message)s')
     file_handler = logging.FileHandler('ibproducts.log', mode='w')
     formatter = logging.Formatter('%(asctime)s:%(name)s:%(levelname)s:%(message)s')
     file_handler.setFormatter(formatter)
