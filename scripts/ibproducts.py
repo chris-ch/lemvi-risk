@@ -3,6 +3,8 @@ import argparse
 from datetime import datetime
 from pprint import pprint
 
+from webscrapetools import urlcaching
+
 from ibrokersflex import parse_flex_positions
 from searchproduct import search_product, load_search_page
 
@@ -15,6 +17,7 @@ def from_ib_date(date_ddmmYYYY):
 
 
 def main(args):
+    urlcaching.set_cache_path(args.cache_path)
     with open(args.ibrokers_data) as ibrokers_flex:
         flex_positions = parse_flex_positions(ibrokers_flex.read())
         for account in flex_positions:
@@ -50,6 +53,7 @@ if __name__ == '__main__':
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument('--ibrokers-data', type=str, help='Location of InteractiveBrokers Flex response', required=True)
+    parser.add_argument('--cache-path', type=str, help='Cache path for InteractiveBorkers response', default='.')
 
     args = parser.parse_args()
     main(args)
