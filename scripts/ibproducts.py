@@ -1,6 +1,6 @@
 import logging
 import argparse
-from datetime import datetime
+from datetime import datetime, timedelta
 from pprint import pprint
 
 from webscrapetools import urlcaching
@@ -18,6 +18,12 @@ def from_ib_date(date_ddmmYYYY):
 
 def main(args):
     urlcaching.set_cache_path(args.cache_path, expiry_days=300)
+    deadline = datetime.today()
+    if args.deadline:
+        deadline = datetime.strptime(args.deadline, '%Y-%m-%d')
+
+    deadline = deadline - timedelta(days=args.warning_period)
+
     with open(args.ibrokers_data) as ibrokers_flex:
         flex_positions = parse_flex_positions(ibrokers_flex.read())
         for account in flex_positions:
@@ -39,7 +45,8 @@ def main(args):
                         'first_notice_date': first_notice_date,
                         'last_trading_date': last_trading_date
                     }
-                    pprint(product_data)
+                    if (first_notice_date and deadline >= first_notice_date) or (last_trading_date and deadline >= last_trading_date):
+                        pprint(product_data)
 
 
 if __name__ == '__main__':
@@ -54,6 +61,8 @@ if __name__ == '__main__':
 
     parser.add_argument('--ibrokers-data', type=str, help='Location of InteractiveBrokers Flex response', required=True)
     parser.add_argument('--cache-path', type=str, help='Cache path for InteractiveBorkers response', default='.')
+    parser.add_argument('--deadline', type=str, help='Deadline for checking expiring products (YYYY-MM-DD format)')
+    parser.add_argument('--warning-period', type=int, help='Maximum number of days before deadline', default=3)
 
     args = parser.parse_args()
     main(args)
