@@ -29,7 +29,7 @@ def load_search_page(con_id):
         captcha = html.find('img').get('src').split('=')[-1]
         form_data['filter'] = captcha
         form_data.pop(None)
-        result = urlcaching._requests_session.post(target_url, data=form_data)
+        result = urlcaching.get_requests_session().post(target_url, data=form_data)
         content = result.text
 
     return content

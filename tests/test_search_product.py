@@ -1,7 +1,6 @@
 import unittest
 import os
 import logging
-from pprint import pprint
 
 from searchproduct import search_product
 
@@ -19,7 +18,8 @@ class SearchProductTestCase(unittest.TestCase):
 
     def test_extract_example(self):
         result = search_product(self.content)
-        pprint(result)
+        self.assertEqual(result['Futures Features']['Last Trading Date'], '15/12/2017')
+        self.assertEqual(result['Margin Requirements']['Overnight Initial Margin'], '7,600')
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s:%(name)s:%(levelname)s:%(message)s')
