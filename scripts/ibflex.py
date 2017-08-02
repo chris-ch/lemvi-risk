@@ -15,6 +15,14 @@ _FLEX_QUERY_PATH = 'Universal/servlet/FlexStatementService.SendRequest'
 _FLEX_QUERY_URL_PATTERN = Template('https://$server/$path?t=$token&q=$query_id&v=3')
 
 
+def serialize_message_unique(message_body, attachments):
+    return json.dumps({'message_body': message_body, 'attachments': attachments})
+
+
+def serialize_messages(message_body, attachments):
+    return ''
+
+
 def create_flex_request_step_1(token):
     flex_params = {
         'server': _FLEX_QUERY_SERVER,
@@ -66,46 +74,58 @@ def flex_request(token):
         sleep(5)
         attempt += 1
 
-    accounts = parse_flex_accounts(response_2.text)
-    return accounts, response_2.text
+    return response_2.text
 
 
 def main(args):
-    secrets_file_name = 'secrets.json'
-    secrets_file_path = os.path.abspath(secrets_file_name)
-
-
-    if args.ibrokers_flex_token is not None:
-        ibrokers_flex_token = args.ibrokers_flex_token
+    if args.use_ibrokers_response:
+        with open(args.use_ibrokers_response, 'r') as ibrokers_response_file:
+            ibrokers_response = ibrokers_response_file.read()
 
     else:
-        with open(secrets_file_path) as json_data:
-            secrets_content = json.load(json_data)
-            ibrokers_flex_token = secrets_content['ibrokers.flex.token']
+        secrets_file_name = 'secrets.json'
+        secrets_file_path = os.path.abspath(secrets_file_name)
 
-    accounts, ibrokers_response = flex_request(ibrokers_flex_token)
+        if args.ibrokers_flex_token is not None:
+            ibrokers_flex_token = args.ibrokers_flex_token
 
-    os.makedirs(args.output_path, exist_ok=True)
+        else:
+            with open(secrets_file_path) as json_data:
+                secrets_content = json.load(json_data)
+                ibrokers_flex_token = secrets_content['ibrokers.flex.token']
 
-    if args.save_ibrokers_data:
-        target_ibrokers_file = os.path.abspath(os.sep.join([args.output_path, args.save_ibrokers_data]))
-        with open(target_ibrokers_file, 'w') as ibrokers_data:
-            logging.info('saving InteractiveBorkers response to file {}'.format(target_ibrokers_file))
-            ibrokers_data.write(ibrokers_response)
+        ibrokers_response = flex_request(ibrokers_flex_token)
+        os.makedirs(args.output_path, exist_ok=True)
+        if args.save_ibrokers_data:
+            target_ibrokers_file = os.path.abspath(os.sep.join([args.output_path, args.save_ibrokers_data]))
+            with open(target_ibrokers_file, 'w') as ibrokers_data:
+                logging.info('saving InteractiveBorkers response to file {}'.format(target_ibrokers_file))
+                ibrokers_data.write(ibrokers_response)
 
+    accounts = parse_flex_accounts(ibrokers_response)
     total_cash, total_nav, attachments = create_nav_summary(accounts)
     message_body = '\n'.join(['*Daily reporting - NAV changes*', 'NAV: {0:,d}'.format(int(total_nav)),
                               'Cash: {0:,d}'.format(int(total_cash))])
 
-    output_content = serialize_message(message_body, attachments)
-    if args.output_file:
-        target_file = os.sep.join([args.output_path, args.output_file])
+    output_summary = serialize_message_unique(message_body, attachments)
+    if args.file_summary:
+        target_file = os.sep.join([args.output_path, args.file_summary])
         logging.info('saving data to {}'.format(os.path.abspath(target_file)))
-        with open(target_file, 'w') as output_file:
-            output_file.write(output_content)
+        with open(target_file, 'w') as file_summary:
+            file_summary.write(output_summary)
 
     else:
-        print(output_content)
+        print(output_summary)
+
+    output_accounts = serialize_messages(message_body, attachments)
+    if args.file_accounts:
+        target_file = os.sep.join([args.output_path, args.file_accounts])
+        logging.info('saving data to {}'.format(os.path.abspath(target_file)))
+        with open(target_file, 'w') as file_accounts:
+            file_accounts.write(output_accounts)
+
+    else:
+        print(output_accounts)
 
 
 def create_nav_summary(accounts):
@@ -147,11 +167,6 @@ def create_nav_summary(accounts):
 
     return total_cash, total_nav, attachments
 
-
-def serialize_message(message_body, attachments):
-    return json.dumps({'message_body': message_body, 'attachments': attachments})
-
-
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s:%(name)s:%(levelname)s:%(message)s')
     logging.getLogger('requests').setLevel(logging.WARNING)
@@ -163,8 +178,10 @@ if __name__ == '__main__':
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter
                                      )
     parser.add_argument('--ibrokers-flex-token', type=str, help='InteractiveBrokers Flex token')
+    parser.add_argument('--use-ibrokers-response', type=str, help='use specified file as InteractiveBrokers response')
     parser.add_argument('--output-path', type=str, help='output path', default='.')
-    parser.add_argument('--output-file', type=str, help='output file name')
+    parser.add_argument('--file-summary', type=str, help='output summary file name')
+    parser.add_argument('--file-accounts', type=str, help='output by account file name')
     parser.add_argument('--save-ibrokers-data', type=str, help='keep InteractiveBrokers response data')
 
     args = parser.parse_args()
