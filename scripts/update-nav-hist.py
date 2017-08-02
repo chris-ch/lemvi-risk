@@ -75,7 +75,7 @@ if __name__ == '__main__':
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter
                                      )
     parser.add_argument('--file-ibrokers-flex', type=str, help='InteractiveBrokers Flex response')
-    parser.add_argument('--file-secret', type=str, help='file including secret connection data', default='secret.json')
+    parser.add_argument('--file-secret', type=str, help='file including secret connection data', default='secrets.json')
     parser.add_argument('--config', type=str, help='file including secret connection data', default='config.json')
 
     args = parser.parse_args()
