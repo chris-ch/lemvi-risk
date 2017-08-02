@@ -19,8 +19,24 @@ def serialize_message_unique(message_body, attachments):
     return json.dumps({'message_body': message_body, 'attachments': attachments})
 
 
-def serialize_messages(message_body, attachments):
-    return ''
+def serialize_accounts(accounts):
+    items = list()
+    for account_id in accounts:
+        if account_id.endswith('F'):
+            # paired UK accounts are processed together with main US LLC account
+            continue
+
+        account_data = accounts[account_id]
+        uk_account_id = account_id + 'F'
+        if uk_account_id in accounts:
+            account_data['nav_end'] += accounts[uk_account_id]['nav_end']
+            account_data['nav_change'] += accounts[uk_account_id]['nav_change']
+
+        channel = 'reporting-{}'.format(account_data['account_id'].lower())
+        content = '{0}: {1:,d} ({2:,d})'.format(account_data['as_of_date'], account_data['nav_end'], account_data['nav_change'])
+        items.append({'channel': channel, 'message_body': content, 'attachments': []})
+
+    return json.dumps(items)
 
 
 def create_flex_request_step_1(token):
@@ -117,7 +133,7 @@ def main(args):
     else:
         print(output_summary)
 
-    output_accounts = serialize_messages(message_body, attachments)
+    output_accounts = serialize_accounts(accounts)
     if args.file_accounts:
         target_file = os.sep.join([args.output_path, args.file_accounts])
         logging.info('saving data to {}'.format(os.path.abspath(target_file)))
