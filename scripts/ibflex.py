@@ -74,7 +74,6 @@ def main(args):
     secrets_file_name = 'secrets.json'
     secrets_file_path = os.path.abspath(secrets_file_name)
 
-    attachments = list()
 
     if args.ibrokers_flex_token is not None:
         ibrokers_flex_token = args.ibrokers_flex_token
@@ -94,15 +93,45 @@ def main(args):
             logging.info('saving InteractiveBorkers response to file {}'.format(target_ibrokers_file))
             ibrokers_data.write(ibrokers_response)
 
+    total_cash, total_nav, attachments = create_nav_summary(accounts)
+    message_body = '\n'.join(['*Daily reporting - NAV changes*', 'NAV: {0:,d}'.format(int(total_nav)),
+                              'Cash: {0:,d}'.format(int(total_cash))])
+
+    output_content = serialize_message(message_body, attachments)
+    if args.output_file:
+        target_file = os.sep.join([args.output_path, args.output_file])
+        logging.info('saving data to {}'.format(os.path.abspath(target_file)))
+        with open(target_file, 'w') as output_file:
+            output_file.write(output_content)
+
+    else:
+        print(output_content)
+
+
+def create_nav_summary(accounts):
+    attachments = list()
     total_cash = 0.
     total_nav = 0.
+
     for account_id in accounts:
+        if account_id.endswith('F'):
+            # paired UK accounts are processed together with main US LLC account
+            continue
+
         account_data = accounts[account_id]
+        uk_account_id = account_id + 'F'
+        if uk_account_id in accounts:
+            account_data['nav_start'] += accounts[uk_account_id]['nav_start']
+            account_data['nav_end'] += accounts[uk_account_id]['nav_end']
+            account_data['nav_change'] += accounts[uk_account_id]['nav_change']
+            account_data['cash'] += accounts[uk_account_id]['cash']
+
         attachment_description = '{} ({}) - {}'.format(
             account_data['account_id'],
             account_data['account_alias'],
             account_data['currency']
         )
+
         attachment = {'color': '#F35A00', 'text': attachment_description}
         account_fields = [
             {'title': 'NAV change ({0}, from {1:,d} to {2:,d})'.format(account_data['as_of_date'],
@@ -116,18 +145,7 @@ def main(args):
         total_cash += accounts[account_id]['cash']
         total_nav += accounts[account_id]['nav_end']
 
-    message_body = '\n'.join(['*Daily reporting - NAV changes*', 'NAV: {0:,d}'.format(int(total_nav)),
-                              'Cash: {0:,d}'.format(int(total_cash))])
-
-    output_content = serialize_message(message_body, attachments)
-    if args.output_file:
-        target_file = os.sep.join([args.output_path, args.output_file])
-        logging.info('saving data to {}'.format(os.path.abspath(target_file)))
-        with open(target_file, 'w') as output_file:
-            output_file.write(output_content)
-
-    else:
-        print(output_content)
+    return total_cash, total_nav, attachments
 
 
 def serialize_message(message_body, attachments):
