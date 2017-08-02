@@ -9,8 +9,6 @@ import gspread
 from gservices import authorize_services
 from ibrokersflex import parse_flex_accounts
 
-GOOGLE_SHEET_ID = '1cKb7xtvxbJJ11w_1oOre_NP0Nxg1meNTNAkrEijOmb0'
-
 
 def from_excel_datetime(excel_date):
     return datetime.fromordinal(datetime(1900, 1, 1).toordinal() + int(excel_date) - 2)
@@ -50,7 +48,7 @@ def main(args):
                 account_data = accounts[account]
                 last_update = from_excel_date(sheet.acell('A2').numeric_value)
                 update_date = account_data['as_of_date']
-                if last_update <= update_date:
+                if last_update < update_date:
                     nav_us = account_data['nav_end']
                     account_uk = account + 'F'
                     if account_uk in accounts:
