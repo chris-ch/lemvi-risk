@@ -22,21 +22,61 @@ def serialize_message_unique(message_body, attachments):
 def serialize_accounts(accounts):
     items = list()
     for account_id in accounts:
-        if account_id.endswith('F'):
-            # paired UK accounts are processed together with main US LLC account
-            continue
-
         account_data = accounts[account_id]
-        uk_account_id = account_id + 'F'
-        if uk_account_id in accounts:
-            account_data['nav_end'] += accounts[uk_account_id]['nav_end']
-            account_data['nav_change'] += accounts[uk_account_id]['nav_change']
-
         channel = 'reporting-{}'.format(account_data['account_id'].lower())
         content = '{0}: {1:,d} ({2:,d})'.format(account_data['as_of_date'], account_data['nav_end'], account_data['nav_change'])
         items.append({'channel': channel, 'message_body': content, 'attachments': []})
 
     return json.dumps(items)
+
+
+def consolidate_uk_accounts(accounts):
+    consolidated_accounts = dict()
+    for account_id in accounts:
+        if account_id.endswith('F'):
+            # paired UK accounts are processed together with main US LLC account
+            continue
+
+        account_data = accounts[account_id].copy()
+        uk_account_id = account_id + 'F'
+        if uk_account_id in accounts:
+            account_data['nav_start'] += accounts[uk_account_id]['nav_start']
+            account_data['nav_end'] += accounts[uk_account_id]['nav_end']
+            account_data['nav_change'] += accounts[uk_account_id]['nav_change']
+            account_data['cash'] += accounts[uk_account_id]['cash']
+
+        consolidated_accounts[account_id] = account_data
+
+    return consolidated_accounts
+
+
+def create_nav_summary(accounts):
+    attachments = list()
+    total_cash = 0.
+    total_nav = 0.
+
+    for account_id in accounts:
+        account_data = accounts[account_id]
+        attachment_description = '{} ({}) - {}'.format(
+            account_data['account_id'],
+            account_data['account_alias'],
+            account_data['currency']
+        )
+
+        attachment = {'color': '#F35A00', 'text': attachment_description}
+        account_fields = [
+            {'title': 'NAV change ({0}, from {1:,d} to {2:,d})'.format(account_data['as_of_date'],
+                                                                       account_data['nav_start'],
+                                                                       account_data['nav_end']),
+             'value': '{0:,d}'.format(account_data['nav_change']), 'short': False}
+        ]
+        attachment['fields'] = account_fields
+        attachments.append(attachment)
+
+        total_cash += accounts[account_id]['cash']
+        total_nav += accounts[account_id]['nav_end']
+
+    return total_cash, total_nav, attachments
 
 
 def create_flex_request_step_1(token):
@@ -119,7 +159,8 @@ def main(args):
                 ibrokers_data.write(ibrokers_response)
 
     accounts = parse_flex_accounts(ibrokers_response)
-    total_cash, total_nav, attachments = create_nav_summary(accounts)
+    consolidated_accounts = consolidate_uk_accounts(accounts)
+    total_cash, total_nav, attachments = create_nav_summary(consolidated_accounts)
     message_body = '\n'.join(['*Daily reporting - NAV changes*', 'NAV: {0:,d}'.format(int(total_nav)),
                               'Cash: {0:,d}'.format(int(total_cash))])
 
@@ -133,7 +174,7 @@ def main(args):
     else:
         print(output_summary)
 
-    output_accounts = serialize_accounts(accounts)
+    output_accounts = serialize_accounts(consolidated_accounts)
     if args.file_accounts:
         target_file = os.sep.join([args.output_path, args.file_accounts])
         logging.info('saving data to {}'.format(os.path.abspath(target_file)))
@@ -142,46 +183,6 @@ def main(args):
 
     else:
         print(output_accounts)
-
-
-def create_nav_summary(accounts):
-    attachments = list()
-    total_cash = 0.
-    total_nav = 0.
-
-    for account_id in accounts:
-        if account_id.endswith('F'):
-            # paired UK accounts are processed together with main US LLC account
-            continue
-
-        account_data = accounts[account_id]
-        uk_account_id = account_id + 'F'
-        if uk_account_id in accounts:
-            account_data['nav_start'] += accounts[uk_account_id]['nav_start']
-            account_data['nav_end'] += accounts[uk_account_id]['nav_end']
-            account_data['nav_change'] += accounts[uk_account_id]['nav_change']
-            account_data['cash'] += accounts[uk_account_id]['cash']
-
-        attachment_description = '{} ({}) - {}'.format(
-            account_data['account_id'],
-            account_data['account_alias'],
-            account_data['currency']
-        )
-
-        attachment = {'color': '#F35A00', 'text': attachment_description}
-        account_fields = [
-            {'title': 'NAV change ({0}, from {1:,d} to {2:,d})'.format(account_data['as_of_date'],
-                                                                       account_data['nav_start'],
-                                                                       account_data['nav_end']),
-             'value': '{0:,d}'.format(account_data['nav_change']), 'short': False}
-        ]
-        attachment['fields'] = account_fields
-        attachments.append(attachment)
-
-        total_cash += accounts[account_id]['cash']
-        total_nav += accounts[account_id]['nav_end']
-
-    return total_cash, total_nav, attachments
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s:%(name)s:%(levelname)s:%(message)s')
