@@ -6,14 +6,6 @@ import lxml.etree
 from decimal import Decimal
 
 
-def from_excel_datetime(excel_date):
-    return datetime.fromordinal(datetime(1900, 1, 1).toordinal() + int(excel_date) - 2)
-
-
-def from_excel_date(excel_date):
-    return from_excel_datetime(excel_date).date()
-
-
 def main():
     parser = argparse.ArgumentParser(description='Parsing historical cash flows.',
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter

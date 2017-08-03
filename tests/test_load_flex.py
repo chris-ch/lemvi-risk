@@ -2,7 +2,11 @@ import unittest
 import os
 import logging
 
-from ibrokersflex import parse_flex_accounts, parse_flex_positions
+from datetime import date
+
+from decimal import Decimal
+
+from ibrokersflex import parse_flex_accounts, parse_flex_positions, parse_flex_flows
 
 
 class LoadFlexResultsTestCase(unittest.TestCase):
@@ -29,6 +33,29 @@ class LoadFlexResultsTestCase(unittest.TestCase):
 
         self.assertAlmostEqual(total_cash, 7805555, places=0)
         self.assertAlmostEqual(total_nav, 11699176, places=0)
+
+    def test_load_flows(self):
+        flows_none = parse_flex_flows(self.content, indicator='Translations', currency='USD')
+        self.assertIsNone(flows_none)
+        flows = parse_flex_flows(self.content, indicator='Translations', currency='EUR')
+        self.assertFalse(date(2017, 8, 2) in flows.index)
+        self.assertTrue(date(2017, 8, 1) in flows.index)
+        result = flows.loc[date(2017, 8, 1)]
+        expected = {
+            'U1760542': Decimal('1007.508474'),
+            'U1812038': Decimal('3971.417343'),
+            'U1812091': Decimal('-1851.280363'),
+            'U1812119': Decimal('2112.43022'),
+            'U1812946': Decimal('1661.541465'),
+            'U1812955': Decimal('45.861602'),
+            'U1932389': Decimal('54.865626'),
+            'U1935148': Decimal('-255.148445'),
+            'U2036485': Decimal('1469.745805'),
+            'U2075304': Decimal('186.957103'),
+            'U2106037': Decimal('278.897959'),
+            'U2157441': Decimal('473.0886'),
+        }
+        self.assertDictEqual(result.to_dict(), expected)
 
     def test_load_positions(self):
         positions = parse_flex_positions(self.content)
