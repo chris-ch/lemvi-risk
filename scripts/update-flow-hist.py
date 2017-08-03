@@ -7,7 +7,7 @@ from datetime import datetime
 import gspread
 
 from gservices import authorize_services
-from ibrokersflex import parse_flex_accounts
+from ibrokersflex import parse_flex_flows
 
 
 def from_excel_datetime(excel_date):
@@ -16,6 +16,26 @@ def from_excel_datetime(excel_date):
 
 def from_excel_date(excel_date):
     return from_excel_datetime(excel_date).date()
+
+
+def upload_flows(flow_date, flows, google_sheet_id, svc_sheet):
+    workbook = svc_sheet.open_by_key(google_sheet_id)
+    sheet = workbook.worksheet('Flows EUR')
+    header = sheet.row_values(1)
+    accounts = header[1:]
+    last_row = sheet.row_values(2)
+    last_date = datetime.strptime(last_row[0], '%Y-%m-%d').date()
+    if flow_date > last_date:
+        account_positions = {account: (count + 2) for count, account in enumerate(accounts) if account != ''}
+        new_row = [0] * len(last_row)
+        new_row[0] = flow_date
+        for account in flows:
+            new_row[account_positions[account]] = flows[account]
+
+        sheet.insert_row(new_row, index=2)
+
+    else:
+        logging.info('Google flows sheet already up to date')
 
 
 def main(args):
@@ -28,7 +48,6 @@ def main(args):
     logging.info('using InteractiveBorkers flex file "{}"'.format(full_flex_path))
     with open(full_flex_path, 'r') as ibrokers_response_file:
         ibrokers_response = ibrokers_response_file.read()
-        accounts = parse_flex_accounts(ibrokers_response)
         secrets_file_path = os.path.abspath(args.file_secret)
         logging.info('using secrets file "{}"'.format(secrets_file_path))
         with open(secrets_file_path) as json_data:
@@ -36,33 +55,12 @@ def main(args):
             google_credential = secrets_content['google.credential']
             authorized_http, credentials = authorize_services(google_credential)
             svc_sheet = gspread.authorize(credentials)
-            workbook = svc_sheet.open_by_key(config['google.sheet.id'])
-            for account in [name for name in accounts if not name.endswith("F")]:
-                if account not in [tab.title for tab in workbook.worksheets()]:
-                    column_names = ['Date', 'NAV US', 'NAV UK', 'Total NAV']
-                    sheet = workbook.add_worksheet(account, rows=2, cols=len(column_names))
-
-                else:
-                    sheet = workbook.worksheet(account)
-
-                account_data = accounts[account]
-                last_update = from_excel_date(sheet.acell('A2').numeric_value)
-                update_date = account_data['as_of_date']
-                if last_update < update_date:
-                    nav_us = account_data['nav_end']
-                    account_uk = account + 'F'
-                    if account_uk in accounts:
-                        nav_uk = accounts[account_uk]['nav_end']
-
-                    else:
-                        nav_uk = 0
-
-                    values = [update_date, nav_us, nav_uk, nav_us + nav_uk]
-                    sheet.insert_row(values, index=2)
-                    logging.info('updated account {} as of {}'.format(account, last_update))
-
-                else:
-                    logging.info('account {} already up to date {}'.format(account, last_update))
+            google_sheet_flow_id = config['google.sheet.flows.id']
+            flows = parse_flex_flows(ibrokers_response, indicator='trans', currency='EUR')
+            if flows is not None:
+                last_flow_row = flows.iloc[0]
+                flow_date = flows.index[0]
+                upload_flows(flow_date, last_flow_row.to_dict(), google_sheet_flow_id, svc_sheet)
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s:%(name)s:%(levelname)s:%(message)s')
