@@ -18,36 +18,6 @@ def from_excel_date(excel_date):
     return from_excel_datetime(excel_date).date()
 
 
-def upload_navs(accounts, google_sheet_id, svc_sheet):
-    workbook = svc_sheet.open_by_key(google_sheet_id)
-    for account in [name for name in accounts if not name.endswith("F")]:
-        if account not in [tab.title for tab in workbook.worksheets()]:
-            column_names = ['Date', 'NAV US', 'NAV UK', 'Total NAV']
-            sheet = workbook.add_worksheet(account, rows=2, cols=len(column_names))
-
-        else:
-            sheet = workbook.worksheet(account)
-
-        account_data = accounts[account]
-        last_update = from_excel_date(sheet.acell('A2').numeric_value)
-        update_date = account_data['as_of_date']
-        if last_update < update_date:
-            nav_us = account_data['nav_end']
-            account_uk = account + 'F'
-            if account_uk in accounts:
-                nav_uk = accounts[account_uk]['nav_end']
-
-            else:
-                nav_uk = 0
-
-            values = [update_date, nav_us, nav_uk, nav_us + nav_uk]
-            sheet.insert_row(values, index=2)
-            logging.info('updated account {} as of {}'.format(account, last_update))
-
-        else:
-            logging.info('account {} already up to date {}'.format(account, last_update))
-
-
 def main(args):
     full_config_path = os.path.abspath(args.config)
     logging.info('using config file "{}"'.format(full_config_path))
@@ -66,8 +36,33 @@ def main(args):
             google_credential = secrets_content['google.credential']
             authorized_http, credentials = authorize_services(google_credential)
             svc_sheet = gspread.authorize(credentials)
-            google_sheet_nav_id = config['google.sheet.navs.id']
-            upload_navs(accounts, google_sheet_nav_id, svc_sheet)
+            workbook = svc_sheet.open_by_key(config['google.sheet.id'])
+            for account in [name for name in accounts if not name.endswith("F")]:
+                if account not in [tab.title for tab in workbook.worksheets()]:
+                    column_names = ['Date', 'NAV US', 'NAV UK', 'Total NAV']
+                    sheet = workbook.add_worksheet(account, rows=2, cols=len(column_names))
+
+                else:
+                    sheet = workbook.worksheet(account)
+
+                account_data = accounts[account]
+                last_update = from_excel_date(sheet.acell('A2').numeric_value)
+                update_date = account_data['as_of_date']
+                if last_update < update_date:
+                    nav_us = account_data['nav_end']
+                    account_uk = account + 'F'
+                    if account_uk in accounts:
+                        nav_uk = accounts[account_uk]['nav_end']
+
+                    else:
+                        nav_uk = 0
+
+                    values = [update_date, nav_us, nav_uk, nav_us + nav_uk]
+                    sheet.insert_row(values, index=2)
+                    logging.info('updated account {} as of {}'.format(account, last_update))
+
+                else:
+                    logging.info('account {} already up to date {}'.format(account, last_update))
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s:%(name)s:%(levelname)s:%(message)s')
