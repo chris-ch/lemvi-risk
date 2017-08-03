@@ -26,12 +26,13 @@ def upload_flows(flow_date, flows, google_sheet_id, svc_sheet):
     last_row = sheet.row_values(2)
     last_date = datetime.strptime(last_row[0], '%Y-%m-%d').date()
     if flow_date > last_date:
-        account_positions = {account: (count + 2) for count, account in enumerate(accounts) if account != ''}
-        new_row = [0] * len(last_row)
+        account_positions = {account: count for count, account in enumerate(accounts) if account != ''}
+        new_row = [''] * len(last_row)
         new_row[0] = flow_date
         for account in flows:
-            new_row[account_positions[account]] = flows[account]
+            new_row[account_positions[account] + 1] = flows[account]
 
+        logging.info('inserting new row: {}'.format(str(new_row)))
         sheet.insert_row(new_row, index=2)
 
     else:
@@ -56,7 +57,7 @@ def main(args):
             authorized_http, credentials = authorize_services(google_credential)
             svc_sheet = gspread.authorize(credentials)
             google_sheet_flow_id = config['google.sheet.flows.id']
-            flows = parse_flex_flows(ibrokers_response, indicator='trans', currency='EUR')
+            flows = parse_flex_flows(ibrokers_response, indicator='transfert', currency='EUR')
             if flows is not None:
                 last_flow_row = flows.iloc[0]
                 flow_date = flows.index[0]
