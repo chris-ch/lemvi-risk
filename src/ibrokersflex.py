@@ -85,6 +85,7 @@ def parse_flex_flows(content, indicator='transfer', currency='EUR'):
         return None
 
     transfers_df = transfers_flat.loc[currency].unstack(level=0, fill_value=0)['amount']
+    transfers_df.sort_index(ascending=False)
     return transfers_df
 
 

@@ -6,8 +6,9 @@ from string import Template
 from time import sleep
 from xml.etree import ElementTree
 import requests
+from decimal import Decimal
 
-from ibrokersflex import parse_flex_accounts
+from ibrokersflex import parse_flex_accounts, parse_flex_flows
 
 _FLEX_QUERY_ID = '251102'
 _FLEX_QUERY_SERVER = 'gdcdyn.interactivebrokers.com'
@@ -176,13 +177,55 @@ def main(args):
 
     output_accounts = serialize_accounts(consolidated_accounts)
     if args.file_accounts:
-        target_file = os.sep.join([args.output_path, args.file_accounts])
-        logging.info('saving data to {}'.format(os.path.abspath(target_file)))
-        with open(target_file, 'w') as file_accounts:
-            file_accounts.write(output_accounts)
+        navs_file_path = os.sep.join([args.output_path, args.file_accounts])
+        logging.info('saving NAVs data to {}'.format(os.path.abspath(navs_file_path)))
+        with open(navs_file_path, 'w') as file_navs:
+            file_navs.write(output_accounts)
 
     else:
         print(output_accounts)
+
+    output_flows = parse_flex_flows(ibrokers_response, indicator='trans', currency='EUR')
+    if output_flows is not None:
+        last_flow_row = output_flows.iloc[0]
+        flow_date = output_flows.index[0]
+        if args.file_flows:
+            flows_file_path = os.sep.join([args.output_path, args.file_flows])
+            logging.info('saving flows data to {}'.format(os.path.abspath(flows_file_path)))
+
+            class ComplexEncoder(json.JSONEncoder):
+
+                def default(self, item):
+                    if isinstance(item, Decimal):
+                        return str(item)
+
+                    return json.JSONEncoder.default(self, item)
+
+            with open(flows_file_path, 'w') as flows_file:
+                inflows = last_flow_row[last_flow_row > 0]
+                outflows = last_flow_row[last_flow_row < 0]
+                message = 'flows for {}'.format(flow_date)
+                inflow_fields = list()
+                for account in inflows.to_dict():
+                    inflow_field = {'title': '{}'.format(account), "value": '{:d}'.format(int(inflows[account])), 'short': False}
+                    inflow_fields.append(inflow_field)
+
+                outflow_fields = list()
+                for account in outflows.to_dict():
+                    outflow_field = {'title': '{}'.format(account), "value": '{:d}'.format(int(outflows[account])), 'short': False}
+                    outflow_fields.append(outflow_field)
+
+                attachment_inflows = {'color': '#F35A00', 'text': '*Inflows*', 'fields': inflow_fields}
+                attachment_outflows = {'color': '#F35A00', 'text': '*Outflows*', 'fields': outflow_fields}
+                attachments = [attachment_inflows, attachment_outflows]
+                slack_content = [{'channel': 'reporting-flows', 'message_body': message, "attachments": attachments}]
+                flows_file.write(json.dumps(slack_content, cls=ComplexEncoder))
+
+        else:
+            print(last_flow_row.to_dict())
+
+    else:
+        logging.info('found no in- or out-flow')
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s:%(name)s:%(levelname)s:%(message)s')
@@ -197,8 +240,9 @@ if __name__ == '__main__':
     parser.add_argument('--ibrokers-flex-token', type=str, help='InteractiveBrokers Flex token')
     parser.add_argument('--use-ibrokers-response', type=str, help='use specified file as InteractiveBrokers response')
     parser.add_argument('--output-path', type=str, help='output path', default='.')
-    parser.add_argument('--file-summary', type=str, help='output summary file name')
-    parser.add_argument('--file-accounts', type=str, help='output by account file name')
+    parser.add_argument('--file-summary', type=str, help='summary file name')
+    parser.add_argument('--file-accounts', type=str, help='navs by account file name')
+    parser.add_argument('--file-flows', type=str, help='flows by account file name')
     parser.add_argument('--save-ibrokers-data', type=str, help='keep InteractiveBrokers response data')
 
     args = parser.parse_args()
