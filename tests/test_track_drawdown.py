@@ -27,7 +27,8 @@ def extract_flows(flows_data):
 
         converted_flows.append(flow_data)
 
-    return pandas.DataFrame(converted_flows)
+    flows = pandas.DataFrame(converted_flows).set_index('Date').sort_index(ascending=True)
+    return flows
 
 
 def extract_navs(navs_data):
@@ -47,7 +48,8 @@ def extract_navs(navs_data):
         account_navs['account'] = account
         concat_navs = pandas.concat([concat_navs, account_navs])
 
-    return concat_navs
+    navs = concat_navs.pivot(index='Date', columns='account', values='Total NAV').sort_index(ascending=True)
+    return navs
 
 
 class TrackDrawdownTestCase(unittest.TestCase):
@@ -57,19 +59,30 @@ class TrackDrawdownTestCase(unittest.TestCase):
         logging.info('loading example navs file: {}'.format(example_navs_file_path))
         with open(example_navs_file_path, 'r') as navs_file:
             navs_data = json.load(navs_file)
-            self.flows = extract_navs(navs_data)[['Date', 'Total NAV', 'account']]
-            print(self.flows.columns)
+            self.navs = extract_navs(navs_data)
 
         example_flows_file_path = os.path.abspath(os.sep.join(['tests-data', 'google-flows-data.json']))
         logging.info('loading example flows file: {}'.format(example_flows_file_path))
         with open(example_flows_file_path, 'r') as flows_file:
             flows_data = json.load(flows_file)
-            self.navs = extract_flows(flows_data)
+            self.flows = extract_flows(flows_data)
 
     def test_drawdown(self):
-        concatenated = pandas.concat([self.navs, self.flows])
-        result = concatenated.sort_values('Date', ascending=False)
-        print(result.head())
+        # HWM = IF(NAV_ADJ >= NAV_PREV, NAV, HWM_ADJ)
+        # NAV_ADJ = NAV + FLOW
+        # HWM_ADJ = HWM_UNADJ_PREV + FLOW
+        (flows, navs) = self.flows.align(self.navs)
+        flows = flows.fillna(0).unstack()
+        navs_prev = navs.shift().unstack()
+        navs = navs.unstack()
+        navs_prev_adj = navs_prev + flows
+        update_required = navs > navs_prev_adj
+        navs_prev_adj[update_required] = navs
+        drawdowns = navs - navs_prev_adj
+        print(drawdowns.loc['U1760542'].tail(10))
+        #print(flows.loc['U1760542'].tail(10))
+        #print(high_watermarks_unadj_prev.loc['U1760542'].tail(10))
+        #print(high_watermarks_adj.loc['U1760542'].tail(10))
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s:%(name)s:%(levelname)s:%(message)s')
