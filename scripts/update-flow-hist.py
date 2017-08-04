@@ -57,7 +57,7 @@ def main(args):
             authorized_http, credentials = authorize_services(google_credential)
             svc_sheet = gspread.authorize(credentials)
             google_sheet_flow_id = config['google.sheet.flows.id']
-            flows = parse_flex_flows(ibrokers_response, indicator='transfert', currency='EUR')
+            flows = parse_flex_flows(ibrokers_response, indicator='transfer', currency='EUR')
             if flows is not None:
                 last_flow_row = flows.iloc[0]
                 flow_date = flows.index[0]

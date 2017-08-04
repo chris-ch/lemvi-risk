@@ -20,7 +20,6 @@ def extract_flows(flows_data):
     for account, flows in flows_data.items():
         converted_flows = list()
         for flow in flows:
-            print(flow)
             converted_flow = {
                 'Date': datetime.strptime(flow['Date'], '%Y-%m-%d'),
                 'NAV UK': to_decimal(flow['NAV UK']),
