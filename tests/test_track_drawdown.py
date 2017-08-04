@@ -7,12 +7,14 @@ from datetime import datetime
 import pandas
 from decimal import Decimal
 
+from matplotlib import pyplot
+
 
 def to_decimal(value):
     if type(value) == str:
         value = value.replace(',', '').replace("'", '')
 
-    return Decimal(value)
+    return float(Decimal(value))
 
 
 def extract_flows(flows_data):
@@ -72,17 +74,22 @@ class TrackDrawdownTestCase(unittest.TestCase):
         # NAV_ADJ = NAV + FLOW
         # HWM_ADJ = HWM_UNADJ_PREV + FLOW
         (flows, navs) = self.flows.align(self.navs)
-        flows = flows.fillna(0).unstack()
-        navs_prev = navs.shift().unstack()
+        cum_flows = flows.fillna(0).cumsum()
+        navs_adj = navs - cum_flows
+        hwm = navs_adj.cummax().unstack()
         navs = navs.unstack()
-        navs_prev_adj = navs_prev + flows
-        update_required = navs > navs_prev_adj
-        navs_prev_adj[update_required] = navs
-        drawdowns = navs - navs_prev_adj
-        print(drawdowns.loc['U1760542'].tail(10))
-        #print(flows.loc['U1760542'].tail(10))
-        #print(high_watermarks_unadj_prev.loc['U1760542'].tail(10))
-        #print(high_watermarks_adj.loc['U1760542'].tail(10))
+        navs_adj = navs_adj.unstack()
+        cum_flows = cum_flows.unstack()
+        drawdowns = navs_adj - hwm
+        hwm_adj = navs - drawdowns
+
+        account = 'U1812119'
+        print(navs_adj.loc[account].head())
+        print(hwm.loc[account].head())
+        navs.loc[account].plot()
+        hwm_adj.loc[account].plot()
+        cum_flows.loc[account].plot()
+        pyplot.show()
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s:%(name)s:%(levelname)s:%(message)s')
