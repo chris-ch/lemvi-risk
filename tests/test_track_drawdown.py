@@ -14,7 +14,7 @@ def to_decimal(value):
     if type(value) == str:
         value = value.replace(',', '').replace("'", '')
 
-    return float(Decimal(value))
+    return Decimal(value)
 
 
 def extract_flows(flows_data):
@@ -54,6 +54,18 @@ def extract_navs(navs_data):
     return navs
 
 
+def compute_high_watermark(flows, navs):
+    (aligned_flows, aligned_navs) = flows.align(navs)
+    cum_flows = aligned_flows.fillna(0).cumsum()
+    navs_adj = aligned_navs - cum_flows
+    hwm = navs_adj.cummax().unstack()
+    navs = aligned_navs.unstack()
+    navs_adj = navs_adj.unstack()
+    drawdowns = navs_adj - hwm
+    hwm_adj = navs - drawdowns
+    return hwm_adj, navs
+
+
 class TrackDrawdownTestCase(unittest.TestCase):
 
     def setUp(self):
@@ -70,26 +82,13 @@ class TrackDrawdownTestCase(unittest.TestCase):
             self.flows = extract_flows(flows_data)
 
     def test_drawdown(self):
-        # HWM = IF(NAV_ADJ >= NAV_PREV, NAV, HWM_ADJ)
-        # NAV_ADJ = NAV + FLOW
-        # HWM_ADJ = HWM_UNADJ_PREV + FLOW
-        (flows, navs) = self.flows.align(self.navs)
-        cum_flows = flows.fillna(0).cumsum()
-        navs_adj = navs - cum_flows
-        hwm = navs_adj.cummax().unstack()
-        navs = navs.unstack()
-        navs_adj = navs_adj.unstack()
-        cum_flows = cum_flows.unstack()
-        drawdowns = navs_adj - hwm
-        hwm_adj = navs - drawdowns
-
+        hwm, navs = compute_high_watermark(self.flows, self.navs)
         account = 'U1812119'
-        print(navs_adj.loc[account].head())
-        print(hwm.loc[account].head())
-        navs.loc[account].plot()
-        hwm_adj.loc[account].plot()
-        cum_flows.loc[account].plot()
+        navs.loc[account].astype(float).plot()
+        hwm.loc[account].astype(float).plot()
         pyplot.show()
+
+
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s:%(name)s:%(levelname)s:%(message)s')
