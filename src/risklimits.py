@@ -73,4 +73,4 @@ def compute_high_watermark(flows, navs):
     navs_adj = navs_adj.unstack()
     drawdowns = navs_adj - hwm
     hwm_adj = navs - drawdowns
-    return hwm_adj, drawdowns
+    return hwm_adj.unstack().transpose(), drawdowns.unstack().transpose()

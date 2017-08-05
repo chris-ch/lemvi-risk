@@ -39,8 +39,10 @@ def main(args):
             navs[tab.title] = tab.get_all_records()
 
         hwms, drawdowns = compute_high_watermark(extract_flows(flows), extract_navs(navs))
-        print(hwms)
-        print(drawdowns)
+        print(hwms.sort_index(ascending=False))
+        print(drawdowns.sort_index(ascending=False))
+        hwms.sort_index(ascending=False).to_csv('hwms.csv')
+        drawdowns.sort_index(ascending=False).to_csv('drawdowns.csv')
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s:%(name)s:%(levelname)s:%(message)s')

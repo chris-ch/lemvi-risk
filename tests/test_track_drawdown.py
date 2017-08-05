@@ -25,10 +25,10 @@ class TrackDrawdownTestCase(unittest.TestCase):
     def test_drawdown(self):
         hwms, drawdowns = compute_high_watermark(self.flows, self.navs)
         account = 'U1812119'
-        self.assertEqual(hwms.loc[account][date(2017, 6, 28)], 1951550)
-        self.assertEqual(hwms.loc[account][date(2017, 6, 29)], 1801550)
-        self.assertEqual(hwms.loc[account][date(2017, 8, 2)], 2101550)
-        self.assertEqual(drawdowns.loc[account][date(2017, 8, 2)], -501012)
+        self.assertEqual(hwms[account].loc[date(2017, 6, 28)], 1951550)
+        self.assertEqual(hwms[account].loc[date(2017, 6, 29)], 1801550)
+        self.assertEqual(hwms[account].loc[date(2017, 8, 2)], 2101550)
+        self.assertEqual(drawdowns[account].loc[date(2017, 8, 2)], -501012)
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s:%(name)s:%(levelname)s:%(message)s')
