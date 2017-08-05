@@ -12,6 +12,11 @@ def _to_decimal(value):
 
 
 def extract_flows(flows_data):
+    """
+    Flows records from Google sheet.
+    :param flows_data:
+    :return:
+    """
     converted_flows = list()
     for row in flows_data:
         flow_data = {'Date': datetime.strptime(row['Date'], '%Y-%m-%d').date()}
@@ -28,6 +33,11 @@ def extract_flows(flows_data):
 
 
 def extract_navs(navs_data):
+    """
+    dict() of Navs records from Google sheet.
+    :param navs_data:
+    :return:
+    """
     concat_navs = pandas.DataFrame()
     for account, nav_data in navs_data.items():
         converted_flows = list()

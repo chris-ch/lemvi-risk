@@ -5,6 +5,7 @@ import os
 from datetime import datetime
 
 import gservices
+from risklimits import extract_navs, compute_high_watermark, extract_flows
 
 
 def from_excel_datetime(excel_date):
@@ -31,14 +32,15 @@ def main(args):
         google_sheet_flow_id = config['google.sheet.flows.id']
         workbook_flows = svc_sheet.open_by_key(google_sheet_flow_id)
         flows = workbook_flows.worksheet_by_title('Flows EUR').get_all_records()
-        print(flows)
         google_sheet_nav_id = config['google.sheet.navs.id']
         workbook_navs = svc_sheet.open_by_key(google_sheet_nav_id)
         navs = dict()
         for tab in workbook_navs.worksheets():
             navs[tab.title] = tab.get_all_records()
 
-        print(navs)
+        hwms, drawdowns = compute_high_watermark(extract_flows(flows), extract_navs(navs))
+        print(hwms)
+        print(drawdowns)
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s:%(name)s:%(levelname)s:%(message)s')
