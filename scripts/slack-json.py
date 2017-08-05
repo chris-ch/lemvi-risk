@@ -19,7 +19,12 @@ def main(args):
             slack_api_token = secrets_content['slack.api.token']
 
     slack_client = SlackClient(slack_api_token)
-    json_messages = json.loads(open(args.file, 'r').read())
+    slack_file_path = os.path.abspath(args.file)
+    if not os.path.exists(slack_file_path):
+        logging.warning('file {} not found: skipping'.format(slack_file_path))
+        return
+
+    json_messages = json.loads(open(slack_file_path, 'r').read())
     for json_message in json_messages:
         message_body = json_message['message_body']
         attachments = json_message['attachments']
