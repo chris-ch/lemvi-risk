@@ -4,9 +4,7 @@ import logging
 import os
 from datetime import datetime
 
-import gspread
-
-from gservices import authorize_services
+import gservices
 from ibrokersflex import parse_flex_accounts
 
 
@@ -26,10 +24,11 @@ def upload_navs(accounts, google_sheet_id, svc_sheet):
             sheet = workbook.add_worksheet(account, rows=2, cols=len(column_names))
 
         else:
-            sheet = workbook.worksheet(account)
+            sheet = workbook.worksheet_by_title(account)
 
         account_data = accounts[account]
-        last_update = from_excel_date(sheet.acell('A2').numeric_value)
+        last_update_cell = sheet.cell('A2')
+        last_update = datetime.strptime(last_update_cell.value, '%Y-%m-%d').date()
         update_date = account_data['as_of_date']
         if last_update < update_date:
             nav_us = account_data['nav_end']
@@ -40,8 +39,8 @@ def upload_navs(accounts, google_sheet_id, svc_sheet):
             else:
                 nav_uk = 0
 
-            values = [update_date, nav_us, nav_uk, nav_us + nav_uk]
-            sheet.insert_row(values, index=2)
+            values = [update_date.strftime('%Y-%m-%d'), float(nav_us), float(nav_uk), float(nav_us + nav_uk)]
+            sheet.insert_rows(row=1, number=1, values=[values])
             logging.info('updated account {} as of {}'.format(account, last_update))
 
         else:
@@ -64,8 +63,8 @@ def main(args):
         with open(secrets_file_path) as json_data:
             secrets_content = json.load(json_data)
             google_credential = secrets_content['google.credential']
-            authorized_http, credentials = authorize_services(google_credential)
-            svc_sheet = gspread.authorize(credentials)
+            authorized_http, credentials = gservices.authorize_services(google_credential)
+            svc_sheet = gservices.create_service_sheets(credentials)
             google_sheet_nav_id = config['google.sheet.navs.id']
             upload_navs(accounts, google_sheet_nav_id, svc_sheet)
 

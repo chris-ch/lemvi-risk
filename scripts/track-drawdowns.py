@@ -4,10 +4,7 @@ import logging
 import os
 from datetime import datetime
 
-import gspread
-
-from gservices import authorize_services
-from ibrokersflex import parse_flex_flows
+import gservices
 
 
 def from_excel_datetime(excel_date):
@@ -29,13 +26,12 @@ def main(args):
     with open(secrets_file_path) as json_data:
         secrets_content = json.load(json_data)
         google_credential = secrets_content['google.credential']
-        authorized_http, credentials = authorize_services(google_credential)
-        svc_sheet = gspread.authorize(credentials)
+        authorized_http, credentials = gservices.authorize_services(google_credential)
+        svc_sheet = gservices.create_service_sheets(credentials)
         google_sheet_flow_id = config['google.sheet.flows.id']
         workbook_flows = svc_sheet.open_by_key(google_sheet_flow_id)
-        flows = workbook_flows.worksheet('Flows EUR').get_all_records()
+        flows = workbook_flows.worksheet_by_title('Flows EUR').get_all_records()
         print(flows)
-
         google_sheet_nav_id = config['google.sheet.navs.id']
         workbook_navs = svc_sheet.open_by_key(google_sheet_nav_id)
         navs = dict()

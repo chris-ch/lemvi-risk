@@ -4,9 +4,7 @@ import logging
 import os
 from datetime import datetime
 
-import gspread
-
-from gservices import authorize_services
+import gservices
 from ibrokersflex import parse_flex_flows
 
 
@@ -20,23 +18,23 @@ def from_excel_date(excel_date):
 
 def upload_flows(flow_date, flows, google_sheet_id, svc_sheet):
     workbook = svc_sheet.open_by_key(google_sheet_id)
-    sheet = workbook.worksheet('Flows EUR')
-    header = sheet.row_values(1)
+    sheet = workbook.worksheet_by_title('Flows EUR')
+    header = sheet.get_row(1)
     accounts = header[1:]
-    last_row = sheet.row_values(2)
+    last_row = sheet.get_row(2)
     last_date = datetime.strptime(last_row[0], '%Y-%m-%d').date()
     if flow_date > last_date:
         account_positions = {account: count for count, account in enumerate(accounts) if account != ''}
         new_row = [''] * len(last_row)
-        new_row[0] = flow_date
+        new_row[0] = flow_date.strftime('%Y-%m-%d')
         for account in flows:
-            new_row[account_positions[account] + 1] = flows[account]
+            new_row[account_positions[account] + 1] = float(flows[account])
 
         logging.info('inserting new row: {}'.format(str(new_row)))
-        sheet.insert_row(new_row, index=2)
+        sheet.insert_rows(row=1, number=1, values=[new_row])
 
     else:
-        logging.info('Google flows sheet already up to date')
+        logging.info('Google flows sheet already up to date (latest update: {}, last flow: {})'.format(last_date, flow_date))
 
 
 def main(args):
@@ -54,8 +52,8 @@ def main(args):
         with open(secrets_file_path) as json_data:
             secrets_content = json.load(json_data)
             google_credential = secrets_content['google.credential']
-            authorized_http, credentials = authorize_services(google_credential)
-            svc_sheet = gspread.authorize(credentials)
+            authorized_http, credentials = gservices.authorize_services(google_credential)
+            svc_sheet = gservices.create_service_sheets(credentials)
             google_sheet_flow_id = config['google.sheet.flows.id']
             flows = parse_flex_flows(ibrokers_response, indicator='transfer', currency='EUR')
             if flows is not None:

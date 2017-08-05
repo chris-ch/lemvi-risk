@@ -1,7 +1,7 @@
 import logging
 import httplib2
+import pygsheets
 from apiclient import discovery
-from gspread.utils import rowcol_to_a1
 from oauth2client.service_account import ServiceAccountCredentials
 
 _GOOGLE_DRIVE_SCOPE = 'https://www.googleapis.com/auth/drive'
@@ -40,46 +40,6 @@ def setup_services(credentials_json):
     return svc_drive, svc_sheets
 
 
-def save_sheet(svc_sheet, spreadsheet_id, tab_name, header, records):
-    """
-    Saves indicated records to sheet.
-
-    :param svc_sheet:
-    :param spreadsheet_id:
-    :param tab_name:
-    :param header:
-    :param records: list of dict to be saved (records-like format)
-    :return:
-    """
-    if len(records) == 0:
-        return
-
-    count_columns = len(header)
-    count_rows = len(records) + 1
-    workbook = svc_sheet.open_by_key(spreadsheet_id)
-    sheets = dict()
-    for sheet in workbook.worksheets():
-        sheets[sheet.title] = sheet
-
-    if tab_name not in sheets:
-        worksheet = workbook.add_worksheet(tab_name, count_rows, count_columns)
-
-    else:
-        worksheet = sheets[tab_name]
-
-    worksheet.resize(rows=count_rows, cols=count_columns)
-    range_text = 'A1:{}'.format(rowcol_to_a1(count_rows, count_columns))
-    logging.info('accessing range {}'.format(range_text))
-    cells = worksheet.range(range_text)
-    for cell in cells:
-        count_row = cell.row - 1
-        count_col = cell.col - 1
-        field = header[count_col]
-        if count_row == 0:
-            cell.value = field
-
-        else:
-            row_data = records[count_row - 1]
-            cell.value = row_data[field]
-
-    worksheet.update_cells(cells)
+def create_service_sheets(credentials):
+    sheets_client = pygsheets.Client(oauth=credentials)
+    return sheets_client
