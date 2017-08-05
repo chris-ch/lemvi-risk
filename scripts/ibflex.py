@@ -207,16 +207,16 @@ def main(args):
                 message = 'flows for {}'.format(flow_date)
                 inflow_fields = list()
                 for account in inflows.to_dict():
-                    inflow_field = {'title': '{}'.format(account), "value": '{:d}'.format(int(inflows[account])), 'short': False}
+                    inflow_field = {'title': '{}'.format(account), "value": '{0:,d}'.format(int(inflows[account])), 'short': False}
                     inflow_fields.append(inflow_field)
 
                 outflow_fields = list()
                 for account in outflows.to_dict():
-                    outflow_field = {'title': '{}'.format(account), "value": '{:d}'.format(int(outflows[account])), 'short': False}
+                    outflow_field = {'title': '{}'.format(account), "value": '{0:,d}'.format(int(outflows[account])), 'short': False}
                     outflow_fields.append(outflow_field)
 
-                attachment_inflows = {'color': '#F35A00', 'text': '*Inflows*', 'fields': inflow_fields}
-                attachment_outflows = {'color': '#F35A00', 'text': '*Outflows*', 'fields': outflow_fields}
+                attachment_inflows = {'color': '#F35A00', 'text': 'Inflows', 'fields': inflow_fields}
+                attachment_outflows = {'color': '#F35A00', 'text': 'Outflows', 'fields': outflow_fields}
                 attachments = [attachment_inflows, attachment_outflows]
                 slack_content = [{'channel': 'reporting-flows', 'message_body': message, "attachments": attachments}]
                 flows_file.write(json.dumps(slack_content, cls=ComplexEncoder))
