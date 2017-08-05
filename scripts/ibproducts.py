@@ -95,7 +95,7 @@ if __name__ == '__main__':
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument('--ibrokers-data', type=str, help='Location of InteractiveBrokers Flex response', required=True)
-    parser.add_argument('--cache-path', type=str, help='Cache path for InteractiveBorkers response', default='.')
+    parser.add_argument('--cache-path', type=str, help='Cache path for InteractiveBrokers response', default='.')
     parser.add_argument('--deadline', type=str, help='Deadline for checking expiring products (YYYY-MM-DD format)')
     parser.add_argument('--warning-period', type=int, help='Maximum number of days before deadline', default=0)
     parser.add_argument('--output-path', type=str, help='output path', default='.')

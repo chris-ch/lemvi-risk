@@ -54,7 +54,7 @@ def main(args):
         config = json.load(config_file)
 
     full_flex_path = os.path.abspath(args.file_ibrokers_flex)
-    logging.info('using InteractiveBorkers flex file "{}"'.format(full_flex_path))
+    logging.info('using InteractiveBrokers flex file "{}"'.format(full_flex_path))
     with open(full_flex_path, 'r') as ibrokers_response_file:
         ibrokers_response = ibrokers_response_file.read()
         accounts = parse_flex_accounts(ibrokers_response)

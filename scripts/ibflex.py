@@ -156,7 +156,7 @@ def main(args):
         if args.save_ibrokers_data:
             target_ibrokers_file = os.path.abspath(os.sep.join([args.output_path, args.save_ibrokers_data]))
             with open(target_ibrokers_file, 'w') as ibrokers_data:
-                logging.info('saving InteractiveBorkers response to file {}'.format(target_ibrokers_file))
+                logging.info('saving InteractiveBrokers response to file {}'.format(target_ibrokers_file))
                 ibrokers_data.write(ibrokers_response)
 
     accounts = parse_flex_accounts(ibrokers_response)
