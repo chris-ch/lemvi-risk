@@ -1,6 +1,8 @@
 from collections import OrderedDict
 
 import io
+
+import lxml
 from lxml import etree
 from datetime import date
 from datetime import datetime
@@ -52,7 +54,7 @@ def parse_flex_accounts(content):
     return ordered_accounts
 
 
-def parse_flex_flows(content, indicator='transfer', currency='EUR'):
+def parse_flex_flows(content):
     """
 
     :param content: xml IBrokers Flex string
@@ -61,30 +63,26 @@ def parse_flex_flows(content, indicator='transfer', currency='EUR'):
     :return: dict of flows data key-ed by account id or None if no data available
     """
     transfers = list()
-    tree = build_tree_from_str(content)
-    for statement in tree.findall('FlexStatements/FlexStatement'):
-        account_id = statement.get('accountId')
-        date_yyyymmdd = statement.get('toDate')
-        as_of_date = datetime.strptime(date_yyyymmdd, '%Y%m%d').date()
-        for line in statement.findall('.//StatementOfFundsLine'):
-            activity_description = line.get('activityDescription')
-            if indicator.lower() in activity_description.lower():
-                currency_line = line.get('currency')
-                amount = Decimal(line.get('amount'))
-                if account_id.endswith('F'):
-                    account_id = account_id[:-1]
 
-                transfer = {'account': account_id, 'date': as_of_date, 'currency': currency_line, 'amount': amount}
-                transfers.append(transfer)
+    tree = build_tree_from_str(content)
+    for statement in tree.findall('//FlexStatement'):
+        account_id = statement.get('accountId')
+        as_of_date = datetime.strptime(statement.get('toDate'), '%Y%m%d').date()
+        for line in statement.findall('.//Transfers/Transfer'):
+            amount_cash = Decimal(line.get('cashTransfer'))
+            amount_position = Decimal(line.get('positionAmountInBase'))
+            if account_id.lower().endswith('f'):
+                account_id = account_id[:-1]
+
+            transfer = {'account': account_id, 'date': as_of_date, 'amount_cash': amount_cash,
+                        'amount_position': amount_position, 'amount': amount_cash + amount_position}
+            transfers.append(transfer)
 
     if len(transfers) == 0:
         return None
 
-    transfers_flat = pandas.DataFrame(transfers).groupby(['currency', 'account', 'date']).sum()
-    if currency not in transfers_flat.index:
-        return None
-
-    transfers_df = transfers_flat.loc[currency].unstack(level=0, fill_value=0)['amount']
+    transfers_flat = pandas.DataFrame(transfers).groupby(['account', 'date']).sum()
+    transfers_df = transfers_flat.unstack(level=0, fill_value=0)['amount']
     transfers_df.sort_index(ascending=False)
     return transfers_df
 
@@ -115,5 +113,5 @@ def build_tree_from_str(content):
     stream = io.StringIO()
     stream.write(content)
     stream.seek(0)
-    tree = etree.parse(stream)
+    tree = lxml.etree.parse(stream)
     return tree

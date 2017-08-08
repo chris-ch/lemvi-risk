@@ -185,7 +185,7 @@ def main(args):
     else:
         print(output_accounts)
 
-    output_flows = parse_flex_flows(ibrokers_response, indicator='transfer', currency='EUR')
+    output_flows = parse_flex_flows(ibrokers_response)
     if output_flows is not None:
         last_flow_row = output_flows.iloc[0]
         flow_date = output_flows.index[0]

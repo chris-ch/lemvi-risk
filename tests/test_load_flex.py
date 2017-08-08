@@ -21,39 +21,27 @@ class LoadFlexResultsTestCase(unittest.TestCase):
 
     def test_load_accounts(self):
         accounts = parse_flex_accounts(self.content)
-        self.assertEqual(accounts['U1812119']['nav_change'], -67697)
+        self.assertEqual(accounts['U1812119']['nav_change'], 93262)
         self.assertEqual(accounts['U1812946']['account_alias'], 'Vol 946')
-        self.assertEqual(accounts['U1812119']['cash'], 1350944)
-        self.assertEqual(accounts['U1812946']['cash'], 1511983)
+        self.assertEqual(accounts['U1812119']['cash'], 1520018)
+        self.assertEqual(accounts['U1812946']['cash'], 1515189)
         total_cash = 0.
         total_nav = 0.
         for account_code in accounts:
             total_cash += accounts[account_code]['cash']
             total_nav += accounts[account_code]['nav_end']
 
-        self.assertAlmostEqual(total_cash, 7805555, places=0)
-        self.assertAlmostEqual(total_nav, 11699176, places=0)
+        self.assertAlmostEqual(total_cash, 8245576, places=0)
+        self.assertAlmostEqual(total_nav, 12176892, places=0)
 
     def test_load_flows(self):
-        flows_none = parse_flex_flows(self.content, indicator='Translations', currency='USD')
-        self.assertIsNone(flows_none)
-        flows = parse_flex_flows(self.content, indicator='Translations', currency='EUR')
-        self.assertFalse(date(2017, 8, 2) in flows.index)
-        self.assertTrue(date(2017, 8, 1) in flows.index)
-        result = flows.loc[date(2017, 8, 1)]
+        flows = parse_flex_flows(self.content)
+        self.assertTrue(date(2017, 8, 7) in flows.index)
+        self.assertTrue(date(2017, 8, 6) not in flows.index)
+        result = flows.loc[date(2017, 8, 7)]
         expected = {
-            'U1760542': Decimal('1007.508474'),
-            'U1812038': Decimal('3971.417343'),
-            'U1812091': Decimal('-1851.280363'),
-            'U1812119': Decimal('2112.43022'),
-            'U1812946': Decimal('1661.541465'),
-            'U1812955': Decimal('45.861602'),
-            'U1932389': Decimal('54.865626'),
-            'U1935148': Decimal('-255.148445'),
-            'U2036485': Decimal('1469.745805'),
-            'U2075304': Decimal('186.957103'),
-            'U2106037': Decimal('278.897959'),
-            'U2157441': Decimal('473.0886'),
+            'U1812119': Decimal('-650000'),
+            'U2036485': Decimal('250000'),
         }
         self.assertDictEqual(result.to_dict(), expected)
 
