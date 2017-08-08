@@ -39,8 +39,34 @@ def main(args):
             navs[tab.title] = tab.get_all_records()
 
         hwms, drawdowns = compute_high_watermark(extract_flows(flows), extract_navs(navs))
-        print(hwms.sort_index(ascending=False))
-        print(drawdowns.sort_index(ascending=False))
+        google_sheet_risk_limits_id = config['google.sheet.risk_limits.id']
+        workbook_risk_limits = svc_sheet.open_by_key(google_sheet_risk_limits_id)
+        sheet_hwm = workbook_risk_limits.worksheet_by_title('Adjusted High Watermarks')
+        sheet_drawdowns = workbook_risk_limits.worksheet_by_title('Drawdowns')
+        sheet_limits = workbook_risk_limits.worksheet_by_title('Risk Limits')
+        header_hwms = sheet_hwm.get_row(1, returnas='matrix')
+        header_drawdowns = sheet_drawdowns.get_row(1, returnas='matrix')
+        last_hwm_update = datetime.strptime(sheet_hwm.cell('A2').value, '%Y-%m-%d').date()
+        last_drawdown_update = datetime.strptime(sheet_drawdowns.cell('A2').value, '%Y-%m-%d').date()
+
+        last_hwms = hwms[hwms.index > last_hwm_update].sort_index(ascending=False)
+        for as_of_date, row in last_hwms.iterrows():
+            row_data = [as_of_date.strftime('%Y-%m-%d')]
+            for account_id in header_hwms[1:]:
+                value = row.to_dict()[account_id]
+                row_data.append(float(value))
+
+            sheet_hwm.insert_rows(row=1, number=1, values=[row_data])
+
+        last_drawdowns = drawdowns[drawdowns.index > last_drawdown_update].sort_index(ascending=False)
+        for as_of_date, row in last_drawdowns.iterrows():
+            row_data = [as_of_date.strftime('%Y-%m-%d')]
+            for account_id in header_drawdowns[1:]:
+                value = row.to_dict()[account_id]
+                row_data.append(float(value))
+
+            sheet_drawdowns.insert_rows(row=1, number=1, values=[row_data])
+
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s:%(name)s:%(levelname)s:%(message)s')

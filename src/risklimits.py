@@ -19,9 +19,15 @@ def extract_flows(flows_data):
     """
     converted_flows = list()
     for row in flows_data:
-        flow_data = {'Date': datetime.strptime(row['Date'], '%Y-%m-%d').date()}
+        if 'date' in row:
+            row_date = row['date']
+
+        else:
+            row_date = row['Date']
+
+        flow_data = {'Date': datetime.strptime(row_date, '%Y-%m-%d').date()}
         for key in row:
-            if key == 'Date':
+            if key.lower() == 'date':
                 continue
 
             flow_data[key] = _to_decimal(row[key])
