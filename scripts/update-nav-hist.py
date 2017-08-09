@@ -4,6 +4,8 @@ import logging
 import os
 from datetime import datetime
 
+import tenacity as tenacity
+
 import gservices
 from ibrokersflex import parse_flex_accounts
 
@@ -47,6 +49,7 @@ def upload_navs(accounts, google_sheet_id, svc_sheet):
             logging.info('account {} already up to date {}'.format(account, last_update))
 
 
+@tenacity.retry(wait=tenacity.wait_fixed(1), stop=tenacity.stop_after_attempt(5))
 def main(args):
     full_config_path = os.path.abspath(args.config)
     logging.info('using config file "{}"'.format(full_config_path))

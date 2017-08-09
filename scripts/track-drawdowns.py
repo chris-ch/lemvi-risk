@@ -4,6 +4,8 @@ import logging
 import os
 from datetime import datetime
 
+import tenacity
+
 import gservices
 from risklimits import extract_navs, compute_high_watermark, extract_flows
 
@@ -16,6 +18,7 @@ def from_excel_date(excel_date):
     return from_excel_datetime(excel_date).date()
 
 
+@tenacity.retry(wait=tenacity.wait_fixed(1), stop=tenacity.stop_after_attempt(5))
 def main(args):
     full_config_path = os.path.abspath(args.config)
     logging.info('using config file "{}"'.format(full_config_path))
