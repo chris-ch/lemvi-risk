@@ -19,6 +19,14 @@ def from_excel_date(excel_date):
 
 
 def upload_flows(flow_date, flows, google_sheet_id, svc_sheet):
+    """
+
+    :param flow_date:
+    :param flows:
+    :param google_sheet_id:
+    :param svc_sheet:
+    :return:
+    """
     workbook = svc_sheet.open_by_key(google_sheet_id)
     sheet = workbook.worksheet_by_title('Flows EUR')
     header = sheet.get_row(1)
@@ -27,9 +35,16 @@ def upload_flows(flow_date, flows, google_sheet_id, svc_sheet):
     last_date = datetime.strptime(last_row[0], '%Y-%m-%d').date()
     if flow_date > last_date:
         account_positions = {account: count for count, account in enumerate(accounts) if account != ''}
-        new_row = [''] * len(last_row)
+        row_length = len(accounts) + 1
+        if row_length > len(last_row):
+            # TODO: increase sheet size?
+            pass
+
+        new_row = [''] * row_length
         new_row[0] = flow_date.strftime('%Y-%m-%d')
         for account in flows:
+            account_position = account_positions[account]
+            logging.info('setting account {} at position {}'.format(account, account_position))
             new_row[account_positions[account] + 1] = float(flows[account])
 
         logging.info('inserting new row: {}'.format(str(new_row)))
