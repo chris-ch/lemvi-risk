@@ -56,8 +56,12 @@ def main(args):
         for as_of_date, row in last_hwms.iterrows():
             row_data = [as_of_date.strftime('%Y-%m-%d')]
             for account_id in header_hwms[1:]:
-                value = row.to_dict()[account_id]
-                row_data.append(float(value))
+                if account_id in row.to_dict():
+                    value = row.to_dict()[account_id]
+                    row_data.append(float(value))
+
+                else:
+                    row_data.append(0.)
 
             sheet_hwm.insert_rows(row=1, number=1, values=[row_data])
 
