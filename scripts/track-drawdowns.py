@@ -18,7 +18,7 @@ def from_excel_date(excel_date):
     return from_excel_datetime(excel_date).date()
 
 
-@tenacity.retry(wait=tenacity.wait_fixed(1), stop=tenacity.stop_after_attempt(5))
+@tenacity.retry(wait=tenacity.wait_fixed(100), stop=tenacity.stop_after_attempt(5))
 def main(args):
     full_config_path = os.path.abspath(args.config)
     logging.info('using config file "{}"'.format(full_config_path))
