@@ -8,8 +8,8 @@ def _to_decimal(value):
     if type(value) == str:
         value = value.replace(',', '').replace("'", '')
 
-    if value.strip() == '':
-        return Decimal(0)
+        if value.strip() == '':
+            return Decimal(0)
 
     return Decimal(value)
 
