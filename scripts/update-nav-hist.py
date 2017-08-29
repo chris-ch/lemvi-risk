@@ -34,7 +34,7 @@ def upload_navs(accounts, google_sheet_id, svc_sheet):
         update_date = account_data['as_of_date']
         last_update = None
         if last_update_cell_value.strip() != '':
-            last_update = datetime.strptime(last_update_cell.value, '%Y-%m-%d').date()
+            last_update = datetime.strptime(last_update_cell_value, '%Y-%m-%d').date()
 
         if last_update is None or last_update < update_date:
             nav_us = account_data['nav_end']
