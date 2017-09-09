@@ -1,3 +1,4 @@
+import logging
 from decimal import Decimal
 from datetime import datetime
 
@@ -50,7 +51,12 @@ def extract_navs(navs_data):
     concat_navs = pandas.DataFrame()
     for account, nav_data in navs_data.items():
         converted_flows = list()
+        logging.info('processing {} - {}'.format(account, nav_data))
         for item in nav_data:
+            if len(item) == 0:
+                # ignoring empty lines
+                continue
+
             converted_flow = {
                 'Date': datetime.strptime(item['Date'], '%Y-%m-%d').date(),
                 'NAV UK': _to_decimal(item['NAV UK']),
