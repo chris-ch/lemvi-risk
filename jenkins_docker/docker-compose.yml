@@ -28,7 +28,7 @@ services:
         source: ./jenkins-jobs-install/scripts
         target: /home/cli/scripts
 
-    command: [bash, "/home/cli/scripts/upload_report.bash", "lemvi-margin-report", "job-lemvi-margin-report.xml"]
+    command: [bash, "/home/cli/scripts/upload_reports.bash", "/home/cli/conf/upload_reports.txt"]
 
     depends_on:
       - master

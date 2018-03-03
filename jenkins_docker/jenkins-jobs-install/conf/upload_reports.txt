@@ -1,0 +1,2 @@
+lemvi-margin-report,job-lemvi-margin-report.xml,lemvi_risk_secrets,/run/secrets/lemvi_risk_secrets.json
+lemvi-nav-changes-report,job-lemvi-nav-changes-report.xml,lemvi_risk_secrets,/run/secrets/lemvi_risk_secrets.json

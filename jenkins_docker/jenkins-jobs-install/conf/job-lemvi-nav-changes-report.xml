@@ -6,7 +6,7 @@
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.0">
       <projectUrl>https://github.com/chris-ch/lemvi-risk/</projectUrl>
-      <displayName>Lemvi Risk Monitoring - Margin data</displayName>
+      <displayName>Lemvi Risk Monitoring - NAV changes</displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <com.chikli.hudson.plugin.naginator.NaginatorOptOutProperty plugin="naginator@1.17.2">
       <optOut>false</optOut>
@@ -34,7 +34,7 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec>H 9 * * 2-6</spec>
+      <spec>H 6 * * 2-6</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -42,6 +42,13 @@
     <hudson.tasks.Shell>
       <command>cat &gt; secrets.json &lt;&lt;EOF
 %%lemvi_risk_secrets%%
+EOF
+cat &gt; config.json &lt;&lt;EOF
+{
+  &quot;google.sheet.navs.id&quot;: &quot;1cKb7xtvxbJJ11w_1oOre_NP0Nxg1meNTNAkrEijOmb0&quot;,
+  &quot;google.sheet.flows.id&quot;: &quot;1c50CLh0oVVc6SVnHqiP30NReot46V74Ov1KimtXZNMg&quot;,
+  &quot;google.sheet.risk_limits.id&quot;: &quot;1dQHOLydwfmq2uh7Tdbw7hVIrb9I0zzAhphxgGvPNzP0&quot;
+}
 EOF</command>
     </hudson.tasks.Shell>
     <jenkins.plugins.shiningpanda.builders.VirtualenvBuilder plugin="shiningpanda@0.23">
@@ -59,28 +66,33 @@ EOF</command>
       <clear>false</clear>
       <systemSitePackages>false</systemSitePackages>
       <nature>shell</nature>
-      <command>PYTHONPATH=./src python scripts/ibftp.py --keep-raw-ibrokers --output-path data</command>
-      <ignoreExitCode>false</ignoreExitCode>
-    </jenkins.plugins.shiningpanda.builders.VirtualenvBuilder>
-    <jenkins.plugins.shiningpanda.builders.VirtualenvBuilder plugin="shiningpanda@0.23">
-      <pythonName>System-CPython-3.4</pythonName>
-      <home>Lemvi Reporting</home>
-      <clear>false</clear>
-      <systemSitePackages>false</systemSitePackages>
-      <nature>shell</nature>
-      <command>PYTHONPATH=./src python scripts/ibflex.py --output-path data --file-summary slack-nav.json --file-accounts slack-nav-accounts.json --save-ibrokers-data ibrokers-flex.xml
-PYTHONPATH=./src python scripts/ibproducts.py --ibrokers-data data/ibrokers-flex.xml --cache-path /var/jenkins_home/.cache-ib-products --output-path data --warning-period 1
-</command>
-      <ignoreExitCode>false</ignoreExitCode>
-    </jenkins.plugins.shiningpanda.builders.VirtualenvBuilder>
-    <jenkins.plugins.shiningpanda.builders.VirtualenvBuilder plugin="shiningpanda@0.23">
-      <pythonName>System-CPython-3.4</pythonName>
-      <home>Lemvi Reporting</home>
-      <clear>false</clear>
-      <systemSitePackages>false</systemSitePackages>
-      <nature>shell</nature>
-      <command>PYTHONPATH=./src python scripts/slack.py --channel report-daily-margins --message-type plain --use-file data/slack-margin.txt
-PYTHONPATH=./src python scripts/slack.py --channel report-daily-margins --message-type plain --use-file data/ibproducts.txt</command>
+      <command>echo
+echo ------------------------------------------
+echo          loading FLEX query
+echo ------------------------------------------
+echo
+PYTHONPATH=./src python scripts/ibflex.py --output-path data --file-summary slack-nav.json --file-accounts slack-nav-accounts.json --file-flows slack-flows.json --save-ibrokers-data ibrokers-flex.xml
+echo
+echo ------------------------------------------
+echo        updating Google sheets
+echo ------------------------------------------
+echo
+PYTHONPATH=./src python scripts/update-nav-hist.py --file-ibrokers-flex data/ibrokers-flex.xml
+PYTHONPATH=./src python scripts/update-flow-hist.py --file-ibrokers-flex data/ibrokers-flex.xml
+PYTHONPATH=./src python scripts/track-drawdowns.py --file-ibrokers-flex data/ibrokers-flex.xml
+echo
+echo ------------------------------------------
+echo        sending slack NAV messages
+echo ------------------------------------------
+echo
+PYTHONPATH=./src python scripts/slack.py --channel report-daily-navs --message-type json --use-file data/slack-nav.json
+PYTHONPATH=./src python scripts/slack-json.py --file data/slack-nav-accounts.json
+PYTHONPATH=./src python scripts/slack-json.py --file data/slack-flows.json
+echo
+echo ------------------------------------------
+echo              task completed
+echo ------------------------------------------
+echo</command>
       <ignoreExitCode>false</ignoreExitCode>
     </jenkins.plugins.shiningpanda.builders.VirtualenvBuilder>
   </builders>
