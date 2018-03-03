@@ -1,0 +1,39 @@
+version: "3.5"
+
+services:
+
+  master:
+    build: ./jenkins-master
+    ports:
+      - "50000:50000"
+
+  nginx:
+    build: ./jenkins-nginx
+    ports:
+       - "${HTTP_PORT}:80" # Need to make this configurable, as we'll want 80:80 in 'prod' environments
+    links:
+       - master:jenkins-master
+
+  installjobs:
+    build:
+      context: ./jenkins-jobs-install
+
+    secrets: [lemvi_risk_secrets.json]
+
+    volumes:
+      - type: bind
+        source: ./jenkins-jobs-install/conf
+        target: /home/cli/conf
+      - type: bind
+        source: ./jenkins-jobs-install/scripts
+        target: /home/cli/scripts
+
+    command: [bash, "/home/cli/scripts/upload_report.bash", "lemvi-margin-report", "job-lemvi-margin-report.xml"]
+
+    depends_on:
+      - master
+      - nginx
+
+secrets:
+  lemvi_risk_secrets.json:
+    file: ../secrets.json
