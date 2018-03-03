@@ -41,12 +41,15 @@ def main(args):
         logging.info('loading data for {} future contracts'.format(len(future_contracts)))
 
         for account, product_code, future_contract_position in future_contracts:
-            contract_description = future_contract_position['description']
-            logging.info('loading data for future contract {} / {} (account {})'.format(contract_description, product_code, account))
+            product_name = future_contract_position['description']
+            logging.info('loading data for future contract {} / {} (account {})'.format(product_name, product_code, account))
             page_content = load_search_page(product_code)
             product_details = search_product(page_content)
+            if 'Contract Information' not in product_details or 'Futures Features' not in product_details:
+                logging.warning('missing data for {}: skipping (outdated?)'.format(product_code))
+                continue
+
             product_description = product_details['Contract Information']['Description/Name']
-            product_name = contract_description
             expiration_date = from_ib_date(product_details['Futures Features']['Expiration Date'])
             first_notice_date = from_ib_date(product_details['Futures Features']['First Notice Date'])
             last_trading_date = from_ib_date(product_details['Futures Features']['Last Trading Date'])
