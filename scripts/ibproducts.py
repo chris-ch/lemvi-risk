@@ -29,35 +29,45 @@ def main(args):
     with open(args.ibrokers_data) as ibrokers_flex:
         flex_positions = parse_flex_positions(ibrokers_flex.read())
         expiring_products = defaultdict(list)
+
+        future_contracts = []
         for account in flex_positions:
             positions = flex_positions[account]
             for product_code in positions:
                 if positions[product_code]['assetCategory'] == 'FUT':
-                    page_content = load_search_page(product_code)
-                    product_details = search_product(page_content)
-                    product_description = product_details['Contract Information']['Description/Name']
-                    product_name = positions[product_code]['description']
-                    expiration_date = from_ib_date(product_details['Futures Features']['Expiration Date'])
-                    first_notice_date = from_ib_date(product_details['Futures Features']['First Notice Date'])
-                    last_trading_date = from_ib_date(product_details['Futures Features']['Last Trading Date'])
-                    product_data = {
-                        'product_description': product_description,
-                        'product_name': product_name,
-                        'expiration_date': expiration_date,
-                        'first_notice_date': first_notice_date,
-                        'last_trading_date': last_trading_date
-                    }
+                    future_contract_data = (account, product_code, positions[product_code])
+                    future_contracts.append(future_contract_data)
 
-                    first_notice_date_past = False
-                    if first_notice_date:
-                        first_notice_date_past = deadline >= first_notice_date
+        logging.info('loading data for {} future contracts'.format(len(future_contracts)))
 
-                    last_trading_date_past = False
-                    if last_trading_date:
-                        last_trading_date_past = deadline >= last_trading_date
+        for account, product_code, future_contract_position in future_contracts:
+            contract_description = future_contract_position['description']
+            logging.info('loading data for future contract {} / {} (account {})'.format(contract_description, product_code, account))
+            page_content = load_search_page(product_code)
+            product_details = search_product(page_content)
+            product_description = product_details['Contract Information']['Description/Name']
+            product_name = contract_description
+            expiration_date = from_ib_date(product_details['Futures Features']['Expiration Date'])
+            first_notice_date = from_ib_date(product_details['Futures Features']['First Notice Date'])
+            last_trading_date = from_ib_date(product_details['Futures Features']['Last Trading Date'])
+            product_data = {
+                'product_description': product_description,
+                'product_name': product_name,
+                'expiration_date': expiration_date,
+                'first_notice_date': first_notice_date,
+                'last_trading_date': last_trading_date
+            }
 
-                    if first_notice_date_past or last_trading_date_past:
-                        expiring_products[account].append(product_data)
+            first_notice_date_past = False
+            if first_notice_date:
+                first_notice_date_past = deadline >= first_notice_date
+
+            last_trading_date_past = False
+            if last_trading_date:
+                last_trading_date_past = deadline >= last_trading_date
+
+            if first_notice_date_past or last_trading_date_past:
+                expiring_products[account].append(product_data)
 
         output_message = ''
         for account in expiring_products:
